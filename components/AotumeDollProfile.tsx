@@ -106,14 +106,31 @@ export function AotumeDollProfile() {
         </section>
 
         <section className="section alt">
-          <div className="container aotume-purchase-grid">
-            <section className="aotume-purchase-card">
-              <p className="eyebrow">Официальный источник</p><h2>Где купить</h2>
-              <dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow">www.aotumedoll.us ↗</a></dd></div><div><dt>Контакт</dt><dd><a href="mailto:aotume.us@gmail.com" target="_blank" rel="noopener noreferrer nofollow">aotume.us@gmail.com ↗</a></dd></div></dl>
-            </section>
-            <section className="aotume-purchase-card">
+          <div className="container">
+            <div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Наличие, комплектацию и условия заказа необходимо подтверждать непосредственно у выбранного магазина или производителя.</p></div>
+            <div className="aotume-purchase-stack">
+              <section className="aotume-purchase-card aotume-moon-card">
+                <div className="aotume-recommendation-label">Для русскоязычной аудитории</div>
+                <div className="aotume-moon-layout">
+                  <div>
+                    <p className="eyebrow">Вариант покупки для России</p><h3>Moon-Doll</h3>
+                    <p>Для покупателей из России одним из вариантов заказа является международный магазин Moon-Doll.</p>
+                    <p>В магазине представлены куклы разных брендов, включая модели в аниме-стиле. Если нужной модели Aotume Doll нет в каталоге, возможность её заказа можно уточнить у менеджера Moon-Doll по ссылке, фотографии или названию модели.</p>
+                    <a className="button primary aotume-store-button" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll ↗</a>
+                  </div>
+                  <div className="aotume-store-checks"><strong>Перед заказом уточните</strong><ul><li>Наличие нужной модели</li><li>Материал и комплектацию</li><li>Итоговую цену</li><li>Вес</li><li>Сроки изготовления</li><li>Условия доставки в Россию</li><li>Доступные способы оплаты</li></ul></div>
+                </div>
+              </section>
+              <section className="aotume-purchase-card aotume-official-card">
+                <p className="eyebrow">Официальный источник</p><h3>Официальный сайт Aotume Doll</h3>
+                <p>Официальный сайт бренда можно использовать для просмотра каталога, характеристик и доступных вариантов кастомизации.</p>
+                <dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Aotume Doll в новой вкладке">www.aotumedoll.us ↗</a></dd></div><div><dt>Контакт бренда</dt><dd><a href="mailto:aotume.us@gmail.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Aotume Doll по электронной почте">aotume.us@gmail.com ↗</a></dd></div></dl>
+                <p className="aotume-source-note">Условия прямой доставки в Россию необходимо уточнять у Aotume Doll заранее.</p>
+              </section>
+            </div>
+            <section className="aotume-purchase-card aotume-delivery-card">
               <p className="eyebrow">Логистика</p><h2>Доставка</h2><p>На официальном сайте указаны отслеживаемая доставка и перевозчики UPS, FedEx, DHL и EMS. Опубликованы ориентировочные сроки около 20–30 рабочих дней, но индивидуальные заказы и таможня могут увеличить срок.</p>
-              <div className="notice aotume-shipping-warning"><strong>Важно перед оплатой</strong>На сайте присутствует противоречивая информация о географии доставки. Возможность отправки в Россию или другую страну необходимо подтвердить у Aotume Doll до оплаты.</div>
+              <div className="notice aotume-shipping-warning"><strong>Важно перед оплатой</strong>Anime Dolls World не является продавцом и не участвует в оформлении заказа. Наличие моделей Aotume Doll, комплектацию, итоговую стоимость, способы оплаты и доставку необходимо подтверждать непосредственно у выбранного магазина или производителя.</div>
             </section>
           </div>
         </section>

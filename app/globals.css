@@ -130,7 +130,7 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-material-card.featured { border-color:rgba(242,149,201,.28);background:radial-gradient(circle at 85% 10%,rgba(242,149,201,.13),transparent 30%),linear-gradient(145deg,#271c31,#18141e); }
 .aotume-material-card h3 { margin:16px 0;font-size:30px; }
 .aotume-material-card p,.aotume-content-card p,.aotume-custom-card p,.aotume-purchase-card p { color:var(--muted); }
-.aotume-two-column,.aotume-purchase-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
+.aotume-two-column { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
 .aotume-content-card h2,.aotume-purchase-card h2 { font-size:36px; }
 .aotume-custom-card { display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);gap:48px;padding:44px;border:1px solid rgba(185,150,255,.25);border-radius:30px;background:radial-gradient(circle at 82% 18%,rgba(185,150,255,.14),transparent 30%),linear-gradient(135deg,#24182f,#17131e); }
 .aotume-option-list { display:grid;grid-template-columns:repeat(2,1fr);gap:10px;align-content:center; }
@@ -140,7 +140,14 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-catalog-grid span { color:var(--gold);font-size:24px; }.aotume-catalog-grid p { margin:18px 0 0;font-weight:700; }
 .aotume-gallery-placeholder { min-height:340px;display:grid;place-items:center;align-content:center;padding:40px;text-align:center;border:1px dashed rgba(185,150,255,.34);border-radius:30px;background:radial-gradient(circle,rgba(185,150,255,.1),transparent 62%); }
 .aotume-gallery-placeholder>span { width:64px;height:64px;display:grid;place-items:center;margin-bottom:18px;border-radius:50%;background:rgba(185,150,255,.12);color:var(--violet);font-size:28px; }.aotume-gallery-placeholder h2 { margin-bottom:12px; }.aotume-gallery-placeholder p:last-child { color:var(--muted); }
-.aotume-purchase-card a { color:var(--pink);font-weight:700; }.aotume-purchase-card a:hover { color:#ffd3eb; }
+.aotume-purchase-stack { display:grid;gap:20px; }
+.aotume-moon-card { position:relative;padding:38px;border-color:rgba(242,149,201,.35);background:radial-gradient(circle at 88% 12%,rgba(242,149,201,.17),transparent 28%),linear-gradient(145deg,#291b33,#19141f);box-shadow:0 22px 60px rgba(0,0,0,.22); }
+.aotume-recommendation-label { position:absolute;right:24px;top:22px;padding:6px 10px;border:1px solid rgba(231,199,125,.3);border-radius:99px;background:rgba(231,199,125,.08);color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase; }
+.aotume-moon-layout { display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:42px;align-items:start; }.aotume-moon-layout h3,.aotume-official-card h3 { margin:0 0 16px;font-size:32px; }
+.aotume-store-button { margin-top:12px;color:#17101c!important; }.aotume-store-button:hover { color:#17101c!important; }
+.aotume-store-checks { padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(12,10,16,.32); }.aotume-store-checks strong { color:var(--gold);font-size:12px;letter-spacing:.08em;text-transform:uppercase; }.aotume-store-checks ul { margin:17px 0 0;padding-left:20px;color:#d7cfdc; }.aotume-store-checks li { margin-bottom:8px; }
+.aotume-official-card { display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.65fr);column-gap:42px;align-items:start; }.aotume-official-card .eyebrow,.aotume-official-card h3,.aotume-official-card>p { grid-column:1; }.aotume-official-card dl { grid-column:2;grid-row:1 / span 4; }.aotume-source-note { margin:12px 0 0!important;padding-top:14px;border-top:1px solid var(--line);font-size:13px; }
+.aotume-delivery-card { margin-top:30px; }.aotume-purchase-card a { color:var(--pink);font-weight:700; }.aotume-purchase-card a:hover { color:#ffd3eb; }
 .aotume-shipping-warning { display:grid;gap:6px;margin:22px 0 0;color:#d9cfb5!important; }.aotume-shipping-warning strong { color:var(--gold); }
 .aotume-checklist { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0;padding:0;list-style:none; }
 .aotume-checklist li { display:flex;align-items:center;gap:14px;min-height:68px;padding:13px 16px;border:1px solid var(--line);border-radius:17px;background:var(--panel);color:#d9d0dd;font-weight:700; }
@@ -226,7 +233,10 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .hero-content { padding:80px 0; }
   .hero h1 { font-size:55px; }
   .aotume-hero { padding-bottom:62px; }
-  .aotume-hero-grid,.aotume-two-column,.aotume-purchase-grid,.aotume-custom-card { grid-template-columns:1fr; }
+  .aotume-hero-grid,.aotume-two-column,.aotume-custom-card { grid-template-columns:1fr; }
+  .aotume-moon-layout,.aotume-official-card { grid-template-columns:1fr; }.aotume-official-card dl { grid-column:1;grid-row:auto;margin-top:14px; }
+  .aotume-recommendation-label { position:static;display:inline-flex;margin-bottom:24px; }
+  .aotume-moon-card { padding:28px 22px; }
   .aotume-monogram { display:none; }
   .aotume-feature-grid,.aotume-catalog-grid,.aotume-checklist { grid-template-columns:1fr; }
   .aotume-custom-card,.aotume-disclaimer { padding:28px 22px; }
