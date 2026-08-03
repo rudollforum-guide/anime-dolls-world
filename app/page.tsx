@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BrandCard } from "@/components/BrandCard";
 import { brands } from "@/data/brands";
 import { stores } from "@/data/stores";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = { title: "Anime Dolls World — каталог аниме- и фурри-кукол", description: "Независимый справочник брендов, магазинов, аниме- и фурри-кукол, выбора и ухода.", alternates: { canonical: "/" } };
 
@@ -14,5 +15,6 @@ export default function Home() {
     <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">Покупка</p><h2>Магазины и площадки</h2></div><p>Нейтральные ориентиры без обещаний по ценам, срокам и наличию.</p></div><div className="store-grid">{stores.map(store => <Link href={`/stores/${store.slug}/`} className="store-card" key={store.slug}><span className="tag">{store.eyebrow}</span><h3>{store.name}</h3><p>{store.summary}</p><span className="text-link">Открыть памятку →</span></Link>)}</div></div></section>
     <section className="section alt"><div className="container"><div className="placeholder-band"><span className="placeholder-icon">✦</span><p className="eyebrow">Будущее обновление</p><h2>Новые модели появятся здесь</h2><p className="lede" style={{margin:"0 auto"}}>Галереи и карточки моделей будут добавлены после проверки первичных источников и прав на изображения.</p></div></div></section>
     <div className="disclaimer-strip"><div className="container"><span>ⓘ</span><span>Сайт носит справочный характер, не продаёт товары и не гарантирует актуальность условий сторонних площадок. Перед покупкой проверяйте данные у производителя или продавца.</span></div></div>
+    <section className="telegram-section" aria-labelledby="telegram-title"><div className="container"><div className="telegram-cta"><div className="telegram-orbit" aria-hidden="true"><span className="telegram-icon">➤</span></div><div className="telegram-copy"><p className="eyebrow">Продолжение каталога</p><h2 id="telegram-title">Anime Dolls World в Telegram</h2><p className="telegram-lede">Новости брендов, новые модели, подборки, материалы по выбору и уходу.</p><p className="telegram-extra">В канале также размещается информация о закрытой группе для совершеннолетних участников.</p></div><div className="telegram-action"><a className="telegram-button" href={siteConfig.telegramUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть Telegram-канал Anime Dolls World в новой вкладке"><span className="telegram-icon" aria-hidden="true">➤</span><span>Открыть Telegram-канал</span></a><p className="telegram-warning"><strong>18+</strong> В закрытой группе публикуются дополнительные материалы для совершеннолетней аудитории. Условия доступа указаны в Telegram-канале.</p></div></div></div></section>
   </>;
 }

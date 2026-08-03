@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { siteConfig } from "@/data/site";
 
 const links = [
   ["Бренды", "/brands/"], ["Аниме", "/anime-dolls/"], ["Фурри", "/furry-dolls/"],
@@ -19,6 +20,10 @@ export function Header() {
         <button className="menu-button" aria-label={open ? "Закрыть меню" : "Открыть меню"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "×" : "☰"}</button>
         <nav className={open ? "nav open" : "nav"} aria-label="Главное меню">
           {links.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
+          <a className="telegram-nav" href={siteConfig.telegramUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть Telegram-канал Anime Dolls World в новой вкладке">
+            <span className="telegram-icon" aria-hidden="true">➤</span>
+            <span>Telegram</span>
+          </a>
         </nav>
       </div>
     </header>

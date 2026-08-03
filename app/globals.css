@@ -16,6 +16,9 @@ button { color:inherit; }
 .nav { display:flex; align-items:center; gap:22px; font-size:14px; color:#d7d0dc; }
 .nav a { transition:.2s; }
 .nav a:hover { color:var(--pink); }
+.nav .telegram-nav { display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid rgba(185,150,255,.2);border-radius:12px;background:rgba(185,150,255,.07);color:#e8def2;box-shadow:0 0 22px rgba(185,150,255,.08); }
+.nav .telegram-nav:hover { color:white;border-color:rgba(242,149,201,.38);background:rgba(185,150,255,.13);box-shadow:0 0 28px rgba(185,150,255,.16);transform:translateY(-1px); }
+.telegram-icon { display:inline-flex;align-items:center;justify-content:center;font-size:.9em;line-height:1;transform:rotate(-18deg); }
 .menu-button { display:none; background:none; border:0; font-size:26px; }
 .hero { min-height:720px; display:grid; align-items:center; overflow:hidden; position:relative; background:radial-gradient(circle at 78% 32%,rgba(195,111,255,.28),transparent 24%),radial-gradient(circle at 20% 20%,rgba(242,149,201,.15),transparent 28%),linear-gradient(130deg,#12101a 8%,#20142b 54%,#111017); }
 .hero:before,.hero:after { content:""; position:absolute; border-radius:44% 56% 58% 42%; filter:blur(1px); transform:rotate(25deg); }
@@ -66,6 +69,20 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .placeholder-icon { display:grid;place-items:center;width:58px;height:58px;margin:0 auto 18px;border-radius:50%;background:rgba(185,150,255,.14);font-size:24px;color:var(--violet); }
 .disclaimer-strip { padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#17131d; }
 .disclaimer-strip .container { display:flex;gap:16px;align-items:flex-start;color:var(--muted);font-size:13px; }
+.telegram-section { padding:76px 0;background:linear-gradient(180deg,#121017,#0f0d14); }
+.telegram-cta { position:relative;display:grid;grid-template-columns:90px minmax(0,1fr) minmax(300px,390px);gap:32px;align-items:center;padding:42px;border:1px solid rgba(185,150,255,.2);border-radius:30px;overflow:hidden;background:radial-gradient(circle at 12% 20%,rgba(185,150,255,.16),transparent 30%),linear-gradient(135deg,#21182c,#17131e 62%,#1d1726);box-shadow:0 24px 70px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.05); }
+.telegram-cta:after { content:"";position:absolute;width:260px;height:260px;right:-130px;top:-155px;border-radius:50%;border:1px solid rgba(242,149,201,.16);box-shadow:0 0 80px rgba(185,150,255,.08);pointer-events:none; }
+.telegram-orbit { width:78px;height:78px;display:grid;place-items:center;border-radius:25px;background:linear-gradient(145deg,rgba(185,150,255,.24),rgba(242,149,201,.14));border:1px solid rgba(255,255,255,.12);color:#e7d9ff;font-size:34px;box-shadow:0 0 38px rgba(185,150,255,.17); }
+.telegram-copy .eyebrow { margin-bottom:10px; }
+.telegram-copy h2 { margin-bottom:13px;font-size:clamp(32px,4vw,48px); }
+.telegram-lede { margin-bottom:8px;color:#e2dae7;font-size:17px; }
+.telegram-extra { margin:0;color:var(--muted);font-size:14px; }
+.telegram-action { position:relative;z-index:1; }
+.telegram-button { min-height:52px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;border-radius:15px;background:linear-gradient(135deg,var(--violet),var(--pink));color:#17101c;font-weight:800;box-shadow:0 12px 38px rgba(185,150,255,.22);transition:transform .2s,box-shadow .2s,filter .2s; }
+.telegram-button:hover { transform:translateY(-3px);filter:saturate(1.08);box-shadow:0 17px 46px rgba(185,150,255,.32); }
+.telegram-warning { margin:13px 3px 0;color:#958c9b;font-size:11px;line-height:1.55; }
+.telegram-warning strong { color:var(--pink); }
+.telegram-button:focus-visible,.telegram-nav:focus-visible,.footer-telegram:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 .page-hero { padding:56px 0 72px;background:radial-gradient(circle at 80% 20%,rgba(185,150,255,.13),transparent 27%),#15121c;border-bottom:1px solid var(--line); }
 .page-hero h1 { font-size:clamp(46px,7vw,78px);max-width:900px;margin-bottom:20px; }
 .lede { color:#cfc7d4;font-size:18px;max-width:780px; }
@@ -106,6 +123,8 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .footer-grid { display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:45px; }
 .footer-grid h2 { font-family:inherit;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold); }
 .footer-grid a { display:block;color:#a8a0ad;font-size:13px;margin:8px 0; }
+.footer-grid .footer-telegram { display:flex;align-items:flex-start;gap:7px;margin-top:15px;color:#cbb8e1; }
+.footer-grid .footer-telegram:hover { color:var(--pink); }
 .footer-grid p { color:#837b88;font-size:13px;max-width:280px;margin-top:16px; }
 .footer-18 { display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:2px 8px;font-weight:800;color:var(--pink); }
 .footer-bottom { margin-top:45px;padding-top:20px;border-top:1px solid var(--line);color:#615b65;font-size:12px; }
@@ -117,6 +136,10 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .menu-button { display:block; }
   .nav { position:absolute;left:20px;right:20px;top:68px;display:none;flex-direction:column;align-items:stretch;padding:18px;background:#1d1825;border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.45); }
   .nav.open { display:flex; }
+  .nav .telegram-nav { justify-content:center;margin-top:4px; }
+  .telegram-cta { grid-template-columns:74px 1fr; }
+  .telegram-orbit { width:66px;height:66px;border-radius:21px; }
+  .telegram-action { grid-column:1 / -1; }
   .direction-grid { grid-template-columns:1fr; }
   .brand-grid { grid-template-columns:1fr; }
   .content-grid { grid-template-columns:1fr; }
@@ -140,6 +163,10 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .filters { overflow:auto;flex-wrap:nowrap;padding-bottom:4px; }
   .filters button { white-space:nowrap; }
   .page-hero { padding-top:30px; }
+  .telegram-section { padding:56px 0; }
+  .telegram-cta { grid-template-columns:1fr;padding:30px 22px;gap:22px; }
+  .telegram-orbit { width:60px;height:60px; }
+  .telegram-copy h2 { font-size:34px; }
   .breadcrumbs { margin-bottom:35px; }
   .age-card { padding:30px 22px; }
   .age-card h1 { font-size:32px; }
