@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteConfig } from "@/data/site";
+import { BrandEmblem } from "@/components/BrandEmblem";
 
 const links = [
   ["Бренды", "/brands/"], ["Аниме", "/anime-dolls/"], ["Фурри", "/furry-dolls/"],
@@ -15,7 +16,7 @@ export function Header() {
     <header className="header">
       <div className="container header-inner">
         <Link href="/" className="brand-mark" onClick={() => setOpen(false)}>
-          <span className="brand-gem">AD</span><span>Anime Dolls <b>World</b></span>
+          <BrandEmblem /><span>Anime Dolls <b>World</b></span>
         </Link>
         <button className="menu-button" aria-label={open ? "Закрыть меню" : "Открыть меню"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "×" : "☰"}</button>
         <nav className={open ? "nav open" : "nav"} aria-label="Главное меню">
