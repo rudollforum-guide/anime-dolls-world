@@ -23,7 +23,7 @@ const placeholder = {
 
 export const brands: Brand[] = [
   { slug: "aotume-doll", name: "Aotume Doll", categories: ["anime"], website: "https://www.aotumedoll.us/", summary: "Производитель кукол с отдельным направлением моделей в аниме-стилистике.", ...placeholder },
-  { slug: "bc-doll", name: "BC Doll", categories: ["anime"], website: "https://bcdolls.co", summary: "Бренд, в каталоге которого представлены модели с аниме-эстетикой.", ...placeholder },
+  { slug: "bc-doll", name: "BC Doll", categories: ["anime"], website: "https://bcdolls.com/", summary: "Бренд, в каталоге которого представлены модели с аниме-эстетикой.", ...placeholder },
   { slug: "butterfly-doll", name: "Butterfly Doll", categories: ["anime"], website: "https://butterflydoll.com.cn/", summary: "Производитель с коллекциями кукол в стилизованной аниме-эстетике.", ...placeholder },
   { slug: "croissant-doll", name: "Croissant Doll", categories: ["anime"], website: "https://croissantdoll.com", summary: "Бренд аниме-кукол; актуальный состав коллекций следует проверять на официальном сайте.", ...placeholder },
   { slug: "elsa-babe", name: "Elsa Babe", categories: ["anime", "furry"], website: "https://elsababedoll.com/", summary: "Бренд со стилизованными аниме-моделями и отдельными фантазийными линейками.", ...placeholder },
