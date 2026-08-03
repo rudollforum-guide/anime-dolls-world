@@ -156,6 +156,24 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-disclaimer ul { columns:2;gap:45px;padding-left:20px;color:var(--muted); }.aotume-disclaimer li { margin-bottom:9px;break-inside:avoid; }
 .aotume-feature-card:hover { transform:translateY(-3px);border-color:rgba(242,149,201,.3); }
 .aotume-official-link:focus-visible,.aotume-purchase-card a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+.moon-hero { position:relative;overflow:hidden;padding-bottom:82px;background:radial-gradient(circle at 84% 22%,rgba(185,150,255,.2),transparent 24%),radial-gradient(circle at 65% 78%,rgba(242,149,201,.14),transparent 30%),linear-gradient(135deg,#17111f,#21172c 58%,#111017); }
+.moon-hero:after { content:"";position:absolute;width:430px;height:430px;right:-180px;bottom:-250px;border:1px solid rgba(231,199,125,.16);border-radius:50%;box-shadow:0 0 100px rgba(185,150,255,.1);pointer-events:none; }
+.moon-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:54px;align-items:center; }.moon-hero .lede { max-width:780px; }.moon-hero-note { max-width:760px;color:var(--muted); }
+.moon-tags { display:flex;flex-wrap:wrap;gap:8px;margin:26px 0; }.moon-tags span { padding:7px 12px;border:1px solid rgba(185,150,255,.25);border-radius:99px;background:rgba(185,150,255,.08);color:#e4d9ed;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase; }
+.moon-site-button { margin-top:4px; }.moon-hero-mark { aspect-ratio:1;display:grid;place-items:center;align-content:center;border:1px solid rgba(231,199,125,.25);border-radius:32%;background:radial-gradient(circle at 30% 22%,rgba(185,150,255,.26),transparent 34%),linear-gradient(145deg,#342442,#17121f);box-shadow:0 30px 80px rgba(0,0,0,.35),inset 0 0 55px rgba(185,150,255,.07);transform:rotate(4deg); }.moon-hero-mark span { font-family:"Playfair Display",Georgia,serif;font-size:80px;line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(242,149,201,.82); }.moon-hero-mark small { margin-top:18px;color:var(--gold);font-size:9px;letter-spacing:.2em;text-transform:uppercase; }
+.moon-profile h2 { font-size:clamp(34px,4vw,52px); }.moon-intro-grid { display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:54px;align-items:start; }.moon-prose h2 { margin-top:0; }.moon-prose p { font-size:17px; }
+.moon-summary-card,.moon-content-card { padding:30px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,rgba(185,150,255,.09),rgba(255,255,255,.025)); }.moon-summary-card dl { display:grid;gap:18px;margin:0; }.moon-summary-card dl div { padding-bottom:15px;border-bottom:1px solid var(--line); }.moon-summary-card dl div:last-child { padding-bottom:0;border:0; }.moon-summary-card dt { color:#837b88;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase; }.moon-summary-card dd { margin:5px 0 0;color:#eee7f2; }
+.moon-order-steps { display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0;padding:0;list-style:none;counter-reset:order-step; }.moon-order-steps li { min-height:170px;padding:22px;border:1px solid var(--line);border-radius:21px;background:#1b1722;transition:.25s transform,.25s border-color; }.moon-order-steps li span { color:rgba(231,199,125,.62);font-family:"Playfair Display",Georgia,serif;font-size:34px;line-height:1; }.moon-order-steps li p { margin:34px 0 0;color:#d7cedb;font-weight:700;line-height:1.45; }.moon-order-steps li:hover { transform:translateY(-3px);border-color:rgba(242,149,201,.3); }
+.moon-check-panel { display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start;margin-top:22px;padding:30px;border:1px solid rgba(231,199,125,.22);border-radius:25px;background:linear-gradient(120deg,rgba(231,199,125,.08),rgba(255,255,255,.02)); }.moon-check-panel h3 { margin:0;font-size:26px; }.moon-check-panel ul { display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:0;padding:0;list-style:none; }.moon-check-panel li { padding:10px 13px;border:1px solid var(--line);border-radius:13px;background:rgba(11,9,15,.28);color:#d9d0dd;font-size:13px;font-weight:700; }
+.moon-two-column { display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start; }.moon-content-card h2 { font-size:36px; }.moon-content-card p { color:var(--muted); }
+.moon-payment-path { display:flex;align-items:center;gap:14px;margin:20px 0;padding:17px;border:1px solid rgba(185,150,255,.25);border-radius:16px;background:rgba(185,150,255,.08); }.moon-payment-path span { color:#aea4b4; }.moon-payment-path b { color:var(--gold); }.moon-payment-path strong { color:#f1e9f5; }.moon-warning { color:#d9cfb5!important; }
+.moon-timeline-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:18px; }.moon-timeline-grid>div { min-height:230px;padding:29px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#211a2b,#17141d); }.moon-timeline-grid span { color:rgba(231,199,125,.58);font-family:"Playfair Display",Georgia,serif;font-size:38px; }.moon-timeline-grid h3 { margin:38px 0 10px;font-size:24px; }.moon-timeline-grid p { color:var(--muted); }.moon-timeline-note { max-width:900px;margin:26px 0 0;color:#918997;font-size:13px; }
+.moon-photo-grid { display:grid;grid-template-columns:minmax(0,.8fr) minmax(360px,1.2fr);gap:50px;align-items:start; }.moon-photo-checks { padding:30px;border:1px solid rgba(185,150,255,.22);border-radius:26px;background:radial-gradient(circle at 90% 10%,rgba(185,150,255,.12),transparent 32%),var(--panel); }.moon-photo-checks strong { color:var(--gold);font-size:12px;letter-spacing:.08em;text-transform:uppercase; }.moon-photo-checks ul { display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0 0;padding:0;list-style:none; }.moon-photo-checks li { padding:11px 13px;border:1px solid var(--line);border-radius:13px;color:#d8cfdd;font-size:13px; }
+.moon-compact-list { display:flex;flex-wrap:wrap;gap:7px;margin:20px 0; }.moon-compact-list span { padding:7px 10px;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.035);color:#cfc5d5;font-size:11px;font-weight:700; }
+.moon-contact-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:15px; }.moon-contact-grid a { min-height:150px;display:grid;align-content:space-between;padding:24px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,rgba(185,150,255,.1),rgba(255,255,255,.02));transition:.25s transform,.25s border-color; }.moon-contact-grid a:hover { transform:translateY(-3px);border-color:rgba(242,149,201,.34); }.moon-contact-grid span { color:var(--gold);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase; }.moon-contact-grid strong { margin:16px 0;color:#f0e9f4;font-size:20px;overflow-wrap:anywhere; }.moon-contact-grid small { color:var(--pink);font-weight:700; }
+.moon-manager-checklist { display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:0;padding:0;list-style:none; }.moon-manager-checklist li { display:flex;align-items:center;gap:14px;min-height:66px;padding:13px 16px;border:1px solid var(--line);border-radius:17px;background:var(--panel);color:#d9d0dd;font-weight:700; }.moon-manager-checklist li span { color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:20px; }
+.moon-gallery-placeholder { min-height:320px;display:grid;place-items:center;align-content:center;padding:40px;text-align:center;border:1px dashed rgba(185,150,255,.34);border-radius:30px;background:radial-gradient(circle,rgba(185,150,255,.1),transparent 62%); }.moon-gallery-placeholder>span { width:64px;height:64px;display:grid;place-items:center;margin-bottom:18px;border-radius:50%;background:rgba(185,150,255,.12);color:var(--violet);font-size:28px; }.moon-gallery-placeholder h2 { margin-bottom:12px; }.moon-gallery-placeholder p:last-child { color:var(--muted); }
+.moon-disclaimer { padding:42px;border-left:3px solid var(--gold);border-radius:0 26px 26px 0;background:linear-gradient(90deg,rgba(231,199,125,.08),rgba(255,255,255,.018)); }.moon-disclaimer ul { columns:2;gap:45px;padding-left:20px;color:var(--muted); }.moon-disclaimer li { margin-bottom:9px;break-inside:avoid; }.moon-site-button:focus-visible,.moon-contact-grid a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 .page-hero { padding:56px 0 72px;background:radial-gradient(circle at 80% 20%,rgba(185,150,255,.13),transparent 27%),#15121c;border-bottom:1px solid var(--line); }
 .page-hero h1 { font-size:clamp(46px,7vw,78px);max-width:900px;margin-bottom:20px; }
 .lede { color:#cfc7d4;font-size:18px;max-width:780px; }
@@ -220,6 +238,12 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .aotume-feature-grid,.aotume-catalog-grid { grid-template-columns:repeat(2,1fr); }
   .aotume-material-grid { grid-template-columns:1fr; }
   .aotume-checklist { grid-template-columns:repeat(2,1fr); }
+  .moon-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
+  .moon-hero-mark span { font-size:62px; }
+  .moon-intro-grid { grid-template-columns:1fr; }
+  .moon-order-steps { grid-template-columns:repeat(2,1fr); }
+  .moon-check-panel { grid-template-columns:1fr; }
+  .moon-photo-grid { grid-template-columns:1fr; }
   .hero:before { background:linear-gradient(90deg,rgba(14,12,19,.98) 0%,rgba(15,12,21,.91) 52%,rgba(18,13,25,.48) 78%,rgba(11,9,15,.2) 100%); }
   .direction-grid { grid-template-columns:1fr; }
   .brand-grid { grid-template-columns:1fr; }
@@ -243,6 +267,17 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .aotume-option-list { grid-template-columns:1fr; }
   .aotume-disclaimer ul { columns:1; }
   .aotume-gallery-placeholder { min-height:280px;padding:30px 20px; }
+  .moon-hero { padding-bottom:62px; }
+  .moon-hero-grid,.moon-two-column { grid-template-columns:1fr; }
+  .moon-hero-mark { display:none; }
+  .moon-order-steps,.moon-timeline-grid,.moon-contact-grid,.moon-manager-checklist { grid-template-columns:1fr; }
+  .moon-order-steps li { min-height:145px; }
+  .moon-check-panel,.moon-content-card,.moon-disclaimer { padding:28px 22px; }
+  .moon-check-panel ul,.moon-photo-checks ul { grid-template-columns:1fr; }
+  .moon-payment-path { align-items:flex-start;flex-direction:column;gap:6px; }
+  .moon-payment-path b { transform:rotate(90deg); }
+  .moon-disclaimer ul { columns:1; }
+  .moon-gallery-placeholder { min-height:270px;padding:30px 20px; }
   .hero-scene-image { inset:-1.5%; }
   .hero-scene-image img { object-position:68% center; }
   .hero-scene-glow span:nth-child(2),.hero-scene-particles i:nth-child(n+6) { display:none; }
