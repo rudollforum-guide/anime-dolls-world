@@ -41,7 +41,7 @@ export function MoonDollProfile() {
               <p className="lede">Moon-Doll — международный магазин TPE- и силиконовых кукол, торсов, голов, аксессуаров и товаров для ухода.</p>
               <p className="moon-hero-note">На сайте представлены товары разных брендов, включая модели в аниме-стиле. Магазин работает с международными заказами и может организовывать доставку в разные страны, включая Россию.</p>
               <div className="moon-tags" aria-label="Основные направления магазина">{["TPE", "Силикон", "Аниме-модели", "Международная доставка", "Аксессуары", "Уход"].map((tag) => <span key={tag}>{tag}</span>)}</div>
-              <a className="button primary moon-site-button" href={storeUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Moon-Doll в новой вкладке">Перейти на сайт Moon-Doll ↗</a>
+              <a className="button primary moon-site-button" href={storeUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Moon-Doll в новой вкладке">Перейти на сайт Moon-Doll</a>
             </div>
             <div className="moon-hero-mark" aria-hidden="true"><span>MD</span><small>International store</small></div>
           </div>
@@ -97,10 +97,10 @@ export function MoonDollProfile() {
           <div className="container">
             <div className="section-head"><div><p className="eyebrow">Каналы связи</p><h2>Контакты</h2></div><p>Перед оплатой сохраните переписку и подтверждённые условия заказа.</p></div>
             <div className="moon-contact-grid">
-              <a href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть Telegram менеджера Moon-Doll в новой вкладке"><span>Telegram</span><strong>@jackymoondoll</strong><small>Открыть ↗</small></a>
-              <a href="mailto:sales@moon-doll.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Moon-Doll по электронной почте"><span>E-mail</span><strong>sales@moon-doll.com</strong><small>Написать ↗</small></a>
-              <a href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть WhatsApp Moon-Doll в новой вкладке"><span>WhatsApp</span><strong>+60 11-2668 5168</strong><small>Открыть ↗</small></a>
-              <a href={storeUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Moon-Doll в новой вкладке"><span>Официальный сайт</span><strong>moon-doll.com</strong><small>Перейти ↗</small></a>
+              <a href="https://t.me/jackymoondoll" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть Telegram менеджера Moon-Doll в новой вкладке"><span>Telegram</span><strong>@jackymoondoll</strong><small>Открыть</small></a>
+              <a href="mailto:sales@moon-doll.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Moon-Doll по электронной почте"><span>E-mail</span><strong>sales@moon-doll.com</strong><small>Написать</small></a>
+              <a href="https://wa.me/601126685168" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть WhatsApp Moon-Doll в новой вкладке"><span>WhatsApp</span><strong>+60 11-2668 5168</strong><small>Открыть</small></a>
+              <a href={storeUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Moon-Doll в новой вкладке"><span>Официальный сайт</span><strong>moon-doll.com</strong><small>Перейти</small></a>
             </div>
           </div>
         </section>

@@ -31,7 +31,7 @@ export function AotumeDollProfile() {
               <div className="aotume-tags" aria-label="Основные направления бренда">
                 {['Аниме', 'TPE', 'Силикон', 'Кастомизация', 'Косплей'].map((tag) => <span key={tag}>{tag}</span>)}
               </div>
-              <a className="button primary aotume-official-link" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Aotume Doll в новой вкладке">Официальный сайт ↗</a>
+              <a className="button primary aotume-official-link" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Aotume Doll в новой вкладке">Официальный сайт</a>
             </div>
             <div className="aotume-monogram" aria-hidden="true"><span>AO</span><small>Anime character studio</small></div>
           </div>
@@ -116,7 +116,7 @@ export function AotumeDollProfile() {
                     <p className="eyebrow">Вариант покупки для России</p><h3>Moon-Doll</h3>
                     <p>Для покупателей из России одним из вариантов заказа является международный магазин Moon-Doll.</p>
                     <p>В магазине представлены куклы разных брендов, включая модели в аниме-стиле. Если нужной модели Aotume Doll нет в каталоге, возможность её заказа можно уточнить у менеджера Moon-Doll по ссылке, фотографии или названию модели.</p>
-                    <a className="button primary aotume-store-button" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll ↗</a>
+                    <a className="button primary aotume-store-button" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll</a>
                   </div>
                   <div className="aotume-store-checks"><strong>Перед заказом уточните</strong><ul><li>Наличие нужной модели</li><li>Материал и комплектацию</li><li>Итоговую цену</li><li>Вес</li><li>Сроки изготовления</li><li>Условия доставки в Россию</li><li>Доступные способы оплаты</li></ul></div>
                 </div>
@@ -124,7 +124,7 @@ export function AotumeDollProfile() {
               <section className="aotume-purchase-card aotume-official-card">
                 <p className="eyebrow">Официальный источник</p><h3>Официальный сайт Aotume Doll</h3>
                 <p>Официальный сайт бренда можно использовать для просмотра каталога, характеристик и доступных вариантов кастомизации.</p>
-                <dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Aotume Doll в новой вкладке">www.aotumedoll.us ↗</a></dd></div><div><dt>Контакт бренда</dt><dd><a href="mailto:aotume.us@gmail.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Aotume Doll по электронной почте">aotume.us@gmail.com ↗</a></dd></div></dl>
+                <dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Aotume Doll в новой вкладке">www.aotumedoll.us</a></dd></div><div><dt>Контакт бренда</dt><dd><a href="mailto:aotume.us@gmail.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Aotume Doll по электронной почте">aotume.us@gmail.com</a></dd></div></dl>
                 <p className="aotume-source-note">Условия прямой доставки в Россию необходимо уточнять у Aotume Doll заранее.</p>
               </section>
             </div>
