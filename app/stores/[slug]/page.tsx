@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { PageHero } from "@/components/PageHero";
+import { getStore, stores } from "@/data/stores";
+import { siteConfig } from "@/data/site";
+
+export const dynamicParams=false;
+export function generateStaticParams(){return stores.map(store=>({slug:store.slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const store=getStore(slug);if(!store)return{};return{title:store.name,description:store.summary,alternates:{canonical:`/stores/${slug}/`}}}
+export default async function StorePage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const store=getStore(slug);if(!store)notFound();const article={"@context":"https://schema.org","@type":"Article",headline:store.name,description:store.summary,author:{"@type":"Organization",name:siteConfig.name}};return <><PageHero eyebrow={store.eyebrow} title={store.name} description={store.summary} crumbs={[{label:"Магазины",href:"/stores/"},{label:store.name}]} /><section className="section"><div className="container content-grid"><article className="prose">{store.sections.map(section=><section key={section.title}><h2>{section.title}</h2><p>{section.text}</p></section>)}<div className="notice">Не переводите оплату вне защищённого сценария площадки без понимания рисков. Условия продавцов и платформ меняются — сверяйте их перед заказом.</div></article><aside className="info-card"><h2>Короткий чек-лист</h2><ol><li>Сверить модель и комплектацию</li><li>Проверить продавца</li><li>Уточнить итоговые условия</li><li>Сохранить переписку</li></ol></aside></div></section><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(article)}} /></>}

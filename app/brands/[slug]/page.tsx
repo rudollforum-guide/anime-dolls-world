@@ -1,0 +1,13 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { brands, categoryLabels, getBrand } from "@/data/brands";
+
+export const dynamicParams = false;
+export function generateStaticParams() { return brands.map(brand => ({ slug: brand.slug })); }
+export async function generateMetadata({ params }: { params: Promise<{slug:string}> }): Promise<Metadata> { const {slug}=await params; const brand=getBrand(slug); if(!brand) return {}; return { title: brand.name, description: `${brand.name}: краткий профиль бренда, категории, материалы, модели и официальный источник.`, alternates:{canonical:`/brands/${slug}/`}, openGraph:{title:`${brand.name} — профиль бренда`,description:brand.summary,url:`/brands/${slug}/`} }; }
+
+export default async function BrandPage({ params }: { params: Promise<{slug:string}> }) {
+  const {slug}=await params; const brand=getBrand(slug); if(!brand) notFound();
+  return <><section className="page-hero"><div className="container"><Breadcrumbs items={[{label:"Бренды",href:"/brands/"},{label:brand.name}]} /><p className="eyebrow">Профиль бренда</p><h1>{brand.name}</h1><p className="lede">{brand.summary}</p></div></section><section className="section"><div className="container content-grid"><article className="prose"><div className="tags">{brand.categories.map(c=><span key={c}>{categoryLabels[c]}</span>)}</div><h2>О бренде</h2><p>{brand.summary} Эта страница служит структурированной точкой входа; подробности будут дополняться только после проверки официальных материалов.</p><h2>Галерея моделей</h2><div className="gallery-placeholder"><div><span>◇</span><strong>Галерея будет добавлена позже</strong><p>Без временных или заимствованных фотографий</p></div></div><h2>Где купить</h2><p>Сначала сравните официальный каталог с предложением продавца. Уточняйте наличие, комплектацию, итоговую стоимость, доставку и гарантию напрямую перед оплатой.</p><div className="notice">Условия и ассортимент могут меняться. Всегда проверяйте актуальную информацию у производителя или продавца.</div></article><aside className="info-card"><h2>Краткая информация</h2><dl className="detail-list"><div><dt>Категория</dt><dd>{brand.categories.map(c=>categoryLabels[c]).join(" · ")}</dd></div><div><dt>Материалы</dt><dd>{brand.materials.join(", ")}</dd></div><div><dt>Типы моделей</dt><dd>{brand.modelTypes.join(", ")}</dd></div><div><dt>Официальный источник</dt><dd>{brand.website ? <a className="text-link" href={brand.website} target="_blank" rel="noopener noreferrer nofollow">Перейти на сайт ↗</a> : "Доступен через дилеров"}</dd></div></dl></aside></div></section></>;
+}
