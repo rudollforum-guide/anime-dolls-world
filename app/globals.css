@@ -72,8 +72,9 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .brand-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 .brand-card { background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:25px; display:grid; grid-template-columns:64px 1fr; gap:20px; transition:.25s; }
 .card-monogram { width:64px;height:64px;border-radius:19px;display:grid;place-items:center;background:linear-gradient(145deg,#392c4d,#231c2c);color:var(--violet);font-weight:800;letter-spacing:.06em;border:1px solid var(--line); }
-.card-monogram.has-image { overflow:hidden;background:none;border:0; }
-.card-monogram-image { width:100%;height:100%;object-fit:contain; }
+.card-monogram.has-image { position:relative;overflow:hidden;background:none;border:0; }
+.card-monogram-fallback { position:absolute;inset:0;display:grid;place-items:center; }
+.card-monogram-image { position:relative;z-index:1;width:100%;height:100%;object-fit:contain;color:transparent;font-size:0; }
 .brand-card h3 { font-size:22px; margin:8px 0; }
 .brand-card p { color:var(--muted); font-size:14px; margin-bottom:14px; }
 .tags { display:flex; flex-wrap:wrap; gap:5px; }
@@ -497,8 +498,8 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .section-head p { margin-top:15px; }
   .store-grid,.footer-grid { grid-template-columns:1fr; }
   .brand-card { grid-template-columns:1fr; }
-  .brand-card.has-brand-icon { grid-template-columns:56px minmax(0,1fr);gap:16px; }
-  .has-brand-icon .card-monogram { width:56px;height:56px;border-radius:17px; }
+  .brand-directory-grid .brand-card.has-brand-icon { grid-template-columns:56px minmax(0,1fr);gap:16px; }
+  .brand-directory-grid .has-brand-icon .card-monogram { width:56px;height:56px;border-radius:17px; }
   .directory-tools { align-items:stretch;flex-direction:column; }
   .search { min-width:0;width:100%; }
   .filters { overflow:auto;flex-wrap:nowrap;padding-bottom:4px; }
