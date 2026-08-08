@@ -86,9 +86,13 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .text-link span { display:inline-block; transition:.2s; }
 .text-link:hover span { transform:translateX(4px); }
 .store-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:18px; }
-.store-card { min-height:260px;padding:32px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(120deg,#251d32,#17151e);transition:.25s; }
-.store-card h3 { font-size:27px;margin:16px 0 10px; }
-.store-card p { color:var(--muted); }
+.store-card { position:relative;isolation:isolate;min-height:260px;padding:32px;overflow:hidden;border:1px solid var(--line);border-radius:28px;background-color:#19151f;background-repeat:no-repeat;background-size:cover;transition:.25s; }
+.store-card:before { content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(17,12,23,.97) 0%,rgba(19,12,25,.88) 54%,rgba(16,10,21,.52) 100%),linear-gradient(180deg,rgba(15,10,20,.13),rgba(13,9,18,.72));pointer-events:none; }
+.store-card--moon-doll { background-position:center 42%; }
+.store-card--elsa-babe-aliexpress { background-position:center 62%; }
+.store-card h3 { max-width:76%;font-size:27px;margin:16px 0 10px; }
+.store-card p { max-width:76%;color:#cbc2d0; }
+.store-card .tag,.store-card h3,.store-card p,.store-card .text-link { position:relative;z-index:1; }
 .placeholder-band { text-align:center; padding:64px 30px; border:1px dashed rgba(185,150,255,.32);border-radius:28px;background:radial-gradient(circle at center,rgba(185,150,255,.1),transparent 65%); }
 .placeholder-icon { display:grid;place-items:center;width:58px;height:58px;margin:0 auto 18px;border-radius:50%;background:rgba(185,150,255,.14);font-size:24px;color:var(--violet); }
 .disclaimer-strip { padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#17131d; }
@@ -500,6 +504,10 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .section-head { display:block; }
   .section-head p { margin-top:15px; }
   .store-grid,.footer-grid { grid-template-columns:1fr; }
+  .store-card--moon-doll { background-position:82% 48%; }
+  .store-card--elsa-babe-aliexpress { background-position:80% 58%; }
+  .store-card h3,.store-card p { max-width:none; }
+  .store-card:before { background:linear-gradient(90deg,rgba(17,12,23,.97),rgba(18,11,24,.79)),linear-gradient(180deg,rgba(15,10,20,.18),rgba(13,9,18,.78)); }
   .brand-card { grid-template-columns:1fr; }
   .brand-directory-grid .brand-card.has-brand-icon { grid-template-columns:56px minmax(0,1fr);gap:16px; }
   .brand-directory-grid .has-brand-icon .card-monogram { width:56px;height:56px;border-radius:17px; }
