@@ -62,13 +62,16 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .section-head h2 { font-size:clamp(36px,5vw,58px); margin-bottom:0; max-width:760px; }
 .section-head p { max-width:460px; color:var(--muted); margin-bottom:4px; }
 .direction-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-.direction-card { min-height:300px; border-radius:28px; padding:32px; border:1px solid var(--line); background:linear-gradient(145deg,rgba(185,150,255,.13),rgba(255,255,255,.025)); display:flex; flex-direction:column; justify-content:space-between; transition:.25s; overflow:hidden; position:relative; }
-.direction-card:nth-child(2) { background:linear-gradient(145deg,rgba(242,149,201,.14),rgba(255,255,255,.025)); }
-.direction-card:nth-child(3) { background:linear-gradient(145deg,rgba(231,199,125,.13),rgba(255,255,255,.025)); }
-.direction-card:hover,.brand-card:hover,.store-card:hover { transform:translateY(-5px); border-color:rgba(242,149,201,.35); }
-.direction-card .number { font-family:"Playfair Display"; font-size:70px; line-height:1; color:rgba(255,255,255,.08); }
-.direction-card h3 { font-size:25px; margin:0 0 8px; }
-.direction-card p { color:var(--muted); margin:0; }
+.category-hero-card { position:relative;isolation:isolate;min-width:0;min-height:250px;display:flex;align-items:flex-end;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:#21172a;box-shadow:0 18px 50px rgba(0,0,0,.24);transition:transform .25s,border-color .25s,box-shadow .25s; }
+.category-hero-image { z-index:-2;object-fit:cover;object-position:center;transition:transform .55s ease,filter .35s ease; }
+.category-hero-shade { position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(12,9,17,.08) 16%,rgba(15,10,21,.28) 48%,rgba(13,9,18,.94) 100%),linear-gradient(110deg,rgba(83,44,110,.22),transparent 62%); }
+.category-hero-copy { width:100%;display:grid;gap:7px;padding:28px;text-shadow:0 2px 18px rgba(0,0,0,.72); }
+.category-hero-copy strong { font-family:"Playfair Display",Georgia,serif;font-size:27px;line-height:1.12;letter-spacing:-.025em; }
+.category-hero-copy span { color:#d7cfdd;font-size:14px;line-height:1.55; }
+.category-hero-card:hover { transform:translateY(-5px);border-color:rgba(242,149,201,.38);box-shadow:0 24px 62px rgba(0,0,0,.32),0 0 34px rgba(185,150,255,.1); }
+.category-hero-card:hover .category-hero-image { transform:scale(1.045);filter:saturate(1.05); }
+.category-hero-card:focus-visible { outline:3px solid var(--gold);outline-offset:4px; }
+.brand-card:hover,.store-card:hover { transform:translateY(-5px); border-color:rgba(242,149,201,.35); }
 .brand-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 .brand-card { background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:25px; display:grid; grid-template-columns:64px 1fr; gap:20px; transition:.25s; }
 .card-monogram { width:64px;height:64px;border-radius:19px;display:grid;place-items:center;background:linear-gradient(145deg,#392c4d,#231c2c);color:var(--violet);font-weight:800;letter-spacing:.06em;border:1px solid var(--line); }
