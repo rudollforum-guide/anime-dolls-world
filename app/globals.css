@@ -497,6 +497,7 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .moonvale-buy-panel aside { min-width:0;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:21px;background:rgba(10,10,15,.25); }
 .moonvale-buy-notice { grid-column:1 / -1;margin:0; }
 .moonvale-brand-profile h2 { overflow-wrap:anywhere; }
+.dolls-castle-profile .moonvale-character-grid h3 { overflow-wrap:anywhere; }
 .moonvale-brand-profile a:focus-visible,.moonvale-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
 /* MozuDoll brand profile */
