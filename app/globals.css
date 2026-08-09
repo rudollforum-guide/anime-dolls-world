@@ -454,7 +454,56 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .furry-next>div:last-child { display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;max-width:690px; }
 .furry-guide a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
+/* Moonvale / SY Dolls brand profile */
+.moonvale-brand-hero { position:relative;overflow:hidden;padding-bottom:84px;background:radial-gradient(circle at 80% 22%,rgba(99,224,216,.16),transparent 25%),radial-gradient(circle at 72% 82%,rgba(185,150,255,.22),transparent 33%),linear-gradient(135deg,#12101a,#21182d 58%,#101820); }
+.moonvale-brand-hero:after { content:"";position:absolute;right:-90px;bottom:-250px;width:470px;height:470px;border:1px solid rgba(99,224,216,.2);border-radius:50%;box-shadow:0 0 120px rgba(185,150,255,.11);pointer-events:none; }
+.moonvale-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:52px;align-items:center; }
+.moonvale-brand-hero .lede,.moonvale-hero-note { max-width:850px; }
+.moonvale-hero-note { color:var(--muted);line-height:1.7; }
+.moonvale-tags { display:flex;flex-wrap:wrap;gap:9px;margin:25px 0; }
+.moonvale-tags span { padding:7px 12px;border:1px solid rgba(99,224,216,.24);border-radius:999px;background:rgba(99,224,216,.065);color:#dcecea;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase; }
+.moonvale-emblem { aspect-ratio:1;display:grid;place-items:center;align-content:center;border:1px solid rgba(99,224,216,.28);border-radius:50%;background:radial-gradient(circle at 30% 24%,rgba(242,149,201,.24),transparent 31%),linear-gradient(145deg,#312442,#121920);box-shadow:0 30px 90px rgba(0,0,0,.42),inset 0 0 70px rgba(99,224,216,.08); }
+.moonvale-emblem span { color:transparent;font-family:"Playfair Display",Georgia,serif;font-size:72px;letter-spacing:-.08em;-webkit-text-stroke:1px rgba(99,224,216,.83); }
+.moonvale-emblem small { margin-top:16px;color:var(--gold);font-size:10px;letter-spacing:.17em;text-transform:uppercase; }
+.moonvale-intro { display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);gap:48px;align-items:start; }
+.moonvale-summary { min-width:0;padding:28px;border:1px solid rgba(99,224,216,.2);border-radius:25px;background:linear-gradient(145deg,#19242b,#1c1725); }
+.moonvale-summary dl { display:grid;gap:0;margin:0; }
+.moonvale-summary dl div { min-width:0;padding:16px 0;border-bottom:1px solid var(--line); }
+.moonvale-summary dl div:last-child { border-bottom:0; }
+.moonvale-summary dt { margin-bottom:6px;color:#837b88;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+.moonvale-summary dd { margin:0;color:#ece5ef;line-height:1.5;overflow-wrap:anywhere; }
+.moonvale-feature-grid { display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px; }
+.moonvale-feature-grid article { min-width:0;min-height:220px;padding:25px;border:1px solid rgba(99,224,216,.16);border-radius:23px;background:linear-gradient(145deg,#19232a,#19151f); }
+.moonvale-feature-grid span { color:#78dcd6;font-family:"Playfair Display",Georgia,serif;font-size:16px; }
+.moonvale-feature-grid h3 { margin:28px 0 10px;font-size:21px;overflow-wrap:anywhere; }
+.moonvale-feature-grid p,.moonvale-character-grid p,.moonvale-why-grid p { margin:0;color:var(--muted);line-height:1.65; }
+.moonvale-character-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:20px; }
+.moonvale-character-grid article { min-width:0;min-height:245px;padding:30px;border:1px solid rgba(185,150,255,.2);border-radius:27px;background:radial-gradient(circle at 90% 10%,rgba(99,224,216,.09),transparent 34%),linear-gradient(145deg,#221a2d,#17151e); }
+.moonvale-character-grid article>div { width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:rgba(99,224,216,.1);color:#78dcd6; }
+.moonvale-character-grid h3 { margin:32px 0 10px;font-size:28px; }
+.moonvale-material-panel { display:grid;grid-template-columns:minmax(0,.85fr) minmax(360px,1.15fr);gap:48px;align-items:start; }
+.moonvale-material-panel>div>p:last-child { color:var(--muted);font-size:17px;line-height:1.8; }
+.moonvale-material-panel aside { min-width:0;padding:30px;border:1px solid rgba(231,199,125,.2);border-radius:25px;background:linear-gradient(145deg,#211d22,#18161e); }
+.moonvale-material-panel h3,.moonvale-buy-panel h3 { margin-top:0; }
+.moonvale-material-panel ul,.moonvale-buy-panel ul { display:grid;gap:10px;margin:16px 0 20px;padding-left:20px;color:#d6ceda; }
+.moonvale-why-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px; }
+.moonvale-why-grid article { min-width:0;padding:31px;border:1px solid var(--line);border-radius:25px;background:var(--panel); }
+.moonvale-why-grid h3 { margin:0 0 12px;font-size:25px; }
+.moonvale-buy-panel { display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.75fr);gap:34px;align-items:start;padding:40px;border:1px solid rgba(99,224,216,.2);border-radius:31px;background:radial-gradient(circle at 92% 12%,rgba(99,224,216,.11),transparent 31%),linear-gradient(135deg,#19242b,#20182c); }
+.moonvale-buy-panel>div>p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.moonvale-buy-panel .button { margin-top:10px; }
+.moonvale-buy-panel aside { min-width:0;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:21px;background:rgba(10,10,15,.25); }
+.moonvale-buy-notice { grid-column:1 / -1;margin:0; }
+.moonvale-brand-profile h2 { overflow-wrap:anywhere; }
+.moonvale-brand-profile a:focus-visible,.moonvale-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+
 @media (max-width:900px) {
+  .moonvale-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
+  .moonvale-intro,.moonvale-material-panel,.moonvale-buy-panel { grid-template-columns:minmax(0,1fr); }
+  .moonvale-feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .moonvale-character-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .moonvale-why-grid { grid-template-columns:minmax(0,1fr); }
+  .moonvale-buy-notice { grid-column:auto; }
   .furry-intro,.furry-moonvale-hero,.furry-brand-pair,.furry-care { grid-template-columns:1fr; }
   .furry-difference-grid,.furry-tech-grid,.furry-checklist { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .furry-character-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -537,6 +586,13 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .footer-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:650px) {
+  .moonvale-brand-hero { padding-bottom:62px; }
+  .moonvale-brand-hero:after,.moonvale-emblem { display:none; }
+  .moonvale-hero-grid,.moonvale-feature-grid,.moonvale-character-grid { grid-template-columns:minmax(0,1fr); }
+  .moonvale-feature-grid article,.moonvale-character-grid article { min-height:0;padding:24px 21px; }
+  .moonvale-feature-grid h3,.moonvale-character-grid h3 { margin-top:18px; }
+  .moonvale-summary,.moonvale-material-panel aside { padding:24px 20px; }
+  .moonvale-buy-panel { padding:28px 20px; }
   .page-hero h1 { overflow-wrap:anywhere; }
   .furry-intro>div,.furry-difference-grid section,.furry-tech-grid section,.furry-character-grid section,.furry-brand-pair article,.furry-compare-grid section { padding:27px 22px; }
   .furry-intro ul,.furry-difference-grid,.furry-tech-grid,.furry-character-grid,.furry-compare-grid,.furry-checklist,.furry-care ul { grid-template-columns:1fr; }
