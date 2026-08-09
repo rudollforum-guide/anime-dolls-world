@@ -553,7 +553,63 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .mozu-brand-profile h2 { overflow-wrap:anywhere; }
 .mozu-brand-profile a:focus-visible,.mozu-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
+/* Climax Doll brand profile */
+.climax-brand-hero { position:relative;overflow:hidden;padding-bottom:84px;background:radial-gradient(circle at 80% 18%,rgba(231,199,125,.16),transparent 24%),radial-gradient(circle at 72% 82%,rgba(185,150,255,.23),transparent 34%),linear-gradient(135deg,#12101a,#261b32 58%,#171323); }
+.climax-brand-hero:after { content:"";position:absolute;right:-75px;bottom:-240px;width:460px;height:460px;border:1px solid rgba(231,199,125,.2);border-radius:50%;box-shadow:0 0 110px rgba(185,150,255,.13);pointer-events:none; }
+.climax-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:52px;align-items:center; }
+.climax-brand-hero .lede,.climax-hero-note { max-width:850px; }
+.climax-hero-note { color:var(--muted);line-height:1.7; }
+.climax-tags { display:flex;flex-wrap:wrap;gap:9px;margin:25px 0; }
+.climax-tags span,.climax-series-chips span,.climax-variant-list span { padding:7px 12px;border:1px solid rgba(231,199,125,.23);border-radius:999px;background:rgba(231,199,125,.065);color:#eadfbf;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase; }
+.climax-emblem { aspect-ratio:1;display:grid;place-items:center;align-content:center;border:1px solid rgba(231,199,125,.28);border-radius:50%;background:radial-gradient(circle at 30% 24%,rgba(242,149,201,.18),transparent 30%),linear-gradient(145deg,#362440,#15121e);box-shadow:0 30px 90px rgba(0,0,0,.42),inset 0 0 70px rgba(231,199,125,.07); }
+.climax-emblem span { color:transparent;font-family:"Playfair Display",Georgia,serif;font-size:60px;letter-spacing:-.05em;-webkit-text-stroke:1px rgba(231,199,125,.9); }
+.climax-emblem small { margin-top:15px;color:var(--pink);font-size:10px;letter-spacing:.15em;text-transform:uppercase; }
+.climax-intro { display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);gap:48px;align-items:start; }
+.climax-summary { min-width:0;padding:28px;border:1px solid rgba(231,199,125,.2);border-radius:25px;background:linear-gradient(145deg,#28232a,#1c1725); }
+.climax-summary dl { display:grid;margin:0; }
+.climax-summary dl div { min-width:0;padding:16px 0;border-bottom:1px solid var(--line); }
+.climax-summary dl div:last-child { border-bottom:0; }
+.climax-summary dt { margin-bottom:6px;color:#90877d;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+.climax-summary dd { margin:0;color:#eee8de;line-height:1.5;overflow-wrap:anywhere; }
+.climax-direction-panel,.climax-j-panel,.climax-material-panel { display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:44px;align-items:start; }
+.climax-direction-panel>div>p:not(.eyebrow),.climax-j-panel>div>p:not(.eyebrow),.climax-material-panel>div>p:not(.eyebrow) { color:var(--muted);font-size:17px;line-height:1.78; }
+.climax-direction-panel aside,.climax-j-panel aside,.climax-material-panel aside { min-width:0;padding:30px;border:1px solid rgba(185,150,255,.21);border-radius:26px;background:radial-gradient(circle at 90% 10%,rgba(231,199,125,.08),transparent 34%),var(--panel); }
+.climax-direction-panel aside strong { display:block;margin-bottom:20px;color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:27px; }
+.climax-series-chips,.climax-variant-list { display:flex;flex-wrap:wrap;gap:9px; }
+.climax-j-panel h3,.climax-material-panel h3 { margin-top:0; }
+.climax-j-panel .notice,.climax-series-grid .notice,.climax-material-panel .notice { margin-top:22px; }
+.climax-series-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px; }
+.climax-series-grid article { min-width:0;padding:36px;border:1px solid rgba(185,150,255,.2);border-radius:28px;background:radial-gradient(circle at 90% 10%,rgba(231,199,125,.08),transparent 30%),linear-gradient(145deg,#241c2e,#18151f); }
+.climax-series-grid article>p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.climax-visual-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px; }
+.climax-visual-grid article { min-width:0;min-height:250px;padding:28px;border:1px solid rgba(231,199,125,.16);border-radius:24px;background:linear-gradient(145deg,#29212e,#19151f); }
+.climax-visual-grid span { color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:16px; }
+.climax-visual-grid h3 { margin:28px 0 11px;font-size:23px;overflow-wrap:anywhere; }
+.climax-visual-grid p,.climax-why-grid p { margin:0;color:var(--muted);line-height:1.65; }
+.climax-material-panel aside>p { color:var(--muted);line-height:1.72; }
+.climax-why-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px; }
+.climax-why-grid article { min-width:0;padding:29px;border:1px solid var(--line);border-radius:25px;background:var(--panel); }
+.climax-why-grid h3 { margin:0 0 12px;font-size:23px;overflow-wrap:anywhere; }
+.climax-buy-panel { display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.8fr);gap:34px;align-items:start;padding:40px;border:1px solid rgba(231,199,125,.2);border-radius:31px;background:radial-gradient(circle at 92% 12%,rgba(231,199,125,.09),transparent 31%),linear-gradient(135deg,#292331,#1d1829); }
+.climax-buy-panel article { min-width:0;padding:27px;border:1px solid rgba(255,255,255,.08);border-radius:21px;background:rgba(10,10,15,.22); }
+.climax-buy-panel article.official { border-color:rgba(231,199,125,.24);background:radial-gradient(circle at 90% 10%,rgba(231,199,125,.08),transparent 32%),rgba(10,10,15,.25); }
+.climax-buy-panel article p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.climax-buy-panel .button { margin-top:10px; }
+.climax-buy-notice { grid-column:1/-1;margin:0; }
+.climax-next { display:flex;align-items:center;justify-content:space-between;gap:40px;padding:38px 42px;border:1px solid var(--line);border-radius:29px;background:var(--panel); }
+.climax-next>div { max-width:650px; }
+.climax-next>div>p:last-child { color:var(--muted);line-height:1.7; }
+.climax-next nav { display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px; }
+.climax-brand-profile h2 { overflow-wrap:anywhere; }
+.climax-brand-profile a:focus-visible,.climax-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+
 @media (max-width:900px) {
+  .climax-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
+  .climax-intro,.climax-direction-panel,.climax-j-panel,.climax-material-panel,.climax-buy-panel { grid-template-columns:minmax(0,1fr); }
+  .climax-visual-grid,.climax-why-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .climax-buy-notice { grid-column:auto; }
+  .climax-next { align-items:flex-start;flex-direction:column; }
+  .climax-next nav { justify-content:flex-start; }
   .mozu-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
   .mozu-intro,.mozu-acg-panel,.mozu-material-panel,.mozu-buy-panel { grid-template-columns:minmax(0,1fr); }
   .mozu-feature-grid,.mozu-size-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -647,6 +703,15 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .footer-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:650px) {
+  .climax-brand-hero { padding-bottom:62px; }
+  .climax-brand-hero:after,.climax-emblem { display:none; }
+  .climax-hero-grid,.climax-series-grid,.climax-visual-grid,.climax-why-grid { grid-template-columns:minmax(0,1fr); }
+  .climax-summary,.climax-direction-panel aside,.climax-j-panel aside,.climax-material-panel aside,.climax-series-grid article { padding:24px 20px; }
+  .climax-visual-grid article,.climax-why-grid article { min-height:0;padding:24px 21px; }
+  .climax-visual-grid h3 { margin-top:18px; }
+  .climax-buy-panel { padding:28px 20px; }
+  .climax-next { padding:28px 22px; }
+  .climax-next nav,.climax-next .button { width:100%; }
   .mozu-brand-hero { padding-bottom:62px; }
   .mozu-brand-hero:after,.mozu-emblem { display:none; }
   .mozu-hero-grid,.mozu-feature-grid,.mozu-size-grid,.mozu-heads-grid { grid-template-columns:minmax(0,1fr); }
