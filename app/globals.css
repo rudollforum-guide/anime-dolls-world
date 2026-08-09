@@ -733,7 +733,51 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .wm-brand-profile h2 { overflow-wrap:anywhere; }
 .wm-brand-profile a:focus-visible,.wm-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
+/* Yearndoll brand profile */
+.yearndoll-brand-hero { position:relative;overflow:hidden;padding-bottom:84px;background:radial-gradient(circle at 82% 20%,rgba(185,150,255,.18),transparent 25%),radial-gradient(circle at 67% 82%,rgba(242,149,201,.12),transparent 31%),linear-gradient(135deg,#121019,#251b30 58%,#14121b); }
+.yearndoll-brand-hero:after { content:"";position:absolute;right:-85px;bottom:-250px;width:465px;height:465px;border:1px solid rgba(185,150,255,.18);border-radius:50%;box-shadow:0 0 105px rgba(185,150,255,.09);pointer-events:none; }
+.yearndoll-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 275px;gap:52px;align-items:center; }
+.yearndoll-brand-hero .lede,.yearndoll-hero-note { max-width:850px; }
+.yearndoll-hero-note { color:var(--muted);line-height:1.7; }
+.yearndoll-tags { display:flex;flex-wrap:wrap;gap:9px;margin:25px 0; }
+.yearndoll-tags span { padding:7px 12px;border:1px solid rgba(185,150,255,.23);border-radius:999px;background:rgba(185,150,255,.065);color:#e9ddf2;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase; }
+.yearndoll-emblem { aspect-ratio:1;display:grid;place-items:center;align-content:center;border:1px solid rgba(185,150,255,.24);border-radius:50%;background:radial-gradient(circle at 30% 24%,rgba(242,149,201,.17),transparent 31%),linear-gradient(145deg,#332541,#17131f);box-shadow:0 30px 90px rgba(0,0,0,.42),inset 0 0 70px rgba(185,150,255,.08); }
+.yearndoll-emblem span { color:transparent;font-family:"Playfair Display",Georgia,serif;font-size:92px;-webkit-text-stroke:1px rgba(185,150,255,.88); }
+.yearndoll-emblem small { margin-top:10px;color:var(--gold);font-size:9px;letter-spacing:.14em;text-transform:uppercase; }
+.yearndoll-intro { display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);gap:48px;align-items:start; }
+.yearndoll-status { min-width:0;padding:28px;border:1px solid rgba(185,150,255,.2);border-radius:25px;background:linear-gradient(145deg,#271d31,#1c1725); }
+.yearndoll-status dl { display:grid;margin:0; }
+.yearndoll-status dl div { min-width:0;padding:14px 0;border-bottom:1px solid var(--line); }
+.yearndoll-status dl div:last-child { border-bottom:0; }
+.yearndoll-status dt { margin-bottom:6px;color:#8c818f;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+.yearndoll-status dd { margin:0;color:#eee6f1;line-height:1.5;overflow-wrap:anywhere; }
+.yearndoll-two-column { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px; }
+.yearndoll-two-column article { min-width:0;padding:32px;border:1px solid rgba(185,150,255,.18);border-radius:26px;background:linear-gradient(145deg,#251d2e,#18151f); }
+.yearndoll-two-column article p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.yearndoll-material-panel,.yearndoll-reason-panel,.yearndoll-buy-panel { display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:42px;align-items:start; }
+.yearndoll-material-panel>div>p:not(.eyebrow),.yearndoll-reason-panel>div>p:not(.eyebrow) { color:var(--muted);font-size:17px;line-height:1.78; }
+.yearndoll-material-panel aside,.yearndoll-reason-panel aside,.yearndoll-buy-panel>* { min-width:0;padding:29px;border:1px solid rgba(185,150,255,.18);border-radius:24px;background:var(--panel); }
+.yearndoll-material-panel aside h3,.yearndoll-buy-panel h3 { margin-top:0; }
+.yearndoll-material-panel ul { margin:17px 0 0;padding-left:20px;color:var(--muted); }
+.yearndoll-material-panel li { margin-bottom:8px; }
+.yearndoll-reason-panel aside strong { color:var(--gold); }
+.yearndoll-reason-panel aside p,.yearndoll-buy-panel p { margin:12px 0 0;color:var(--muted);line-height:1.7; }
+.yearndoll-buy-panel { padding:40px;border:1px solid rgba(185,150,255,.2);border-radius:31px;background:radial-gradient(circle at 92% 12%,rgba(185,150,255,.1),transparent 31%),linear-gradient(135deg,#281d31,#1c1829); }
+.yearndoll-buy-panel article { border-color:rgba(185,150,255,.26); }
+.yearndoll-buy-panel .button { margin-top:20px; }
+.yearndoll-buy-panel .notice { margin-top:20px; }
+.yearndoll-source-note { display:flex;align-items:center;justify-content:space-between;gap:40px;padding:37px 42px;border:1px solid var(--line);border-radius:29px;background:var(--panel); }
+.yearndoll-source-note>div { max-width:660px; }
+.yearndoll-source-note>div p:last-child { margin-bottom:0;color:var(--muted); }
+.yearndoll-source-note nav { display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px; }
+.yearndoll-brand-profile h2 { overflow-wrap:anywhere; }
+.yearndoll-brand-profile a:focus-visible,.yearndoll-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+
 @media (max-width:900px) {
+  .yearndoll-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
+  .yearndoll-intro,.yearndoll-two-column,.yearndoll-material-panel,.yearndoll-reason-panel,.yearndoll-buy-panel { grid-template-columns:minmax(0,1fr); }
+  .yearndoll-source-note { align-items:flex-start;flex-direction:column; }
+  .yearndoll-source-note nav { justify-content:flex-start; }
   .wm-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
   .wm-intro,.wm-two-column,.wm-material-grid,.wm-reason-panel,.wm-buy-panel { grid-template-columns:minmax(0,1fr); }
   .wm-catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -851,6 +895,13 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .footer-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:650px) {
+  .yearndoll-brand-hero { padding-bottom:62px; }
+  .yearndoll-brand-hero:after,.yearndoll-emblem { display:none; }
+  .yearndoll-hero-grid { grid-template-columns:minmax(0,1fr); }
+  .yearndoll-status,.yearndoll-two-column article,.yearndoll-material-panel aside,.yearndoll-reason-panel aside { padding:24px 20px; }
+  .yearndoll-buy-panel { padding:28px 20px; }
+  .yearndoll-source-note { padding:28px 22px; }
+  .yearndoll-source-note nav,.yearndoll-source-note .button { width:100%; }
   .wm-brand-hero { padding-bottom:62px; }
   .wm-brand-hero:after,.wm-emblem { display:none; }
   .wm-hero-grid,.wm-catalog-grid { grid-template-columns:minmax(0,1fr); }
