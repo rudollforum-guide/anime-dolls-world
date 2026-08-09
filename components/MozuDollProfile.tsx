@@ -2,6 +2,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://mozudoll.com/";
+const moonDoll = "https://www.moon-doll.com/";
 
 const features = [
   ["Персонажная стилизация", "Каталог строится вокруг законченных образов с заданными лицом, макияжем, причёской и одеждой."],
@@ -124,10 +125,14 @@ export function MozuDollProfile() {
       </section>
 
       <section className="section">
-        <div className="container mozu-buy-panel">
-          <div><p className="eyebrow">Официальный источник</p><h2>Где купить</h2><p>Модели, сменные головы, одежду, парики и текущие опции можно посмотреть на официальном сайте MozuDoll. Условия конкретного заказа подтвердите непосредственно у продавца.</p><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный магазин MozuDoll в новой вкладке">Открыть официальный магазин</a></div>
-          <aside><h3>Перед оплатой уточните</h3><ul>{purchaseChecks.map(item => <li key={item}>{item}</li>)}</ul></aside>
-          <div className="notice mozu-buy-notice"><strong>Важно:</strong> Anime Dolls World не является продавцом MozuDoll, не принимает оплату и не участвует в оформлении заказа.</div>
+        <div className="container">
+          <div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Наличие, комплектацию и условия заказа необходимо подтверждать у выбранного продавца.</p></div>
+          <div className="mozu-buy-panel">
+            <article className="moon-doll-inquiry"><p className="eyebrow">Дополнительный вариант запроса</p><h3>Moon-Doll</h3><p>В текущем каталоге Moon-Doll отдельная коллекция MozuDoll не заявлена. Возможность индивидуального заказа можно уточнить у менеджера магазина по ссылке, фотографии или точному названию модели.</p><p>Если нужной модели нет в каталоге Moon-Doll, можно уточнить возможность заказа через менеджера магазина.</p><a className="button secondary" href={moonDoll} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll для уточнения заказа MozuDoll в новой вкладке">Уточнить в Moon-Doll</a></article>
+            <article className="official"><p className="eyebrow">Официальный источник</p><h3>Официальный сайт MozuDoll</h3><p>Официальный сайт можно использовать для просмотра моделей, характеристик, размерных серий и вариантов комплектации.</p><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный магазин MozuDoll в новой вкладке">Открыть официальный магазин</a></article>
+            <aside><h3>Перед оплатой уточните</h3><ul>{purchaseChecks.map(item => <li key={item}>{item}</li>)}</ul></aside>
+            <div className="notice mozu-buy-notice"><strong>Важно:</strong> Anime Dolls World не является продавцом и не участвует в оформлении заказа. Наличие, итоговую стоимость, комплектацию, оплату и доставку необходимо подтвердить непосредственно у Moon-Doll или MozuDoll.</div>
+          </div>
         </div>
       </section>
     </main>

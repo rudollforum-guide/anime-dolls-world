@@ -2,6 +2,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://sydolls.com/collections/moonvale-doll";
+const moonDollCollection = "https://www.moon-doll.com/collections/moonvale-collection";
 
 const features = [
   ["Furry-персонажи", "Антропоморфные образы, в которых человеческая пластика сочетается со звериными чертами."],
@@ -114,10 +115,14 @@ export function MoonvaleSYDollsProfile() {
       </section>
 
       <section className="section alt">
-        <div className="container moonvale-buy-panel">
-          <div><p className="eyebrow">Официальный источник</p><h2>Где купить</h2><p>Актуальную коллекцию Moonvale можно посмотреть в официальном магазине SY Dolls. Перед заказом подтвердите параметры и условия конкретной позиции непосредственно у продавца.</p><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный магазин Moonvale Doll на сайте SY Dolls в новой вкладке">Открыть официальный магазин</a></div>
-          <aside><h3>До оплаты уточните</h3><ul>{purchaseChecks.map(item => <li key={item}>{item}</li>)}</ul></aside>
-          <div className="notice moonvale-buy-notice"><strong>Важно:</strong> Anime Dolls World не является продавцом, не принимает оплату и не участвует в оформлении заказа. Все характеристики и условия сделки необходимо подтвердить у SY Dolls.</div>
+        <div className="container">
+          <div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Наличие, комплектацию и условия заказа необходимо подтверждать у выбранного продавца.</p></div>
+          <div className="moonvale-buy-panel">
+            <article className="featured"><p className="eyebrow">Основной вариант покупки</p><h3>Moon-Doll</h3><p>В магазине Moon-Doll представлена отдельная коллекция Moonvale Doll. Каталог можно использовать для просмотра доступных на момент проверки моделей и параметров их карточек.</p><p>Если нужной модели нет в каталоге Moon-Doll, можно уточнить возможность заказа через менеджера магазина.</p><a className="button primary" href={moonDollCollection} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть коллекцию Moonvale Doll в магазине Moon-Doll в новой вкладке">Открыть коллекцию Moon-Doll</a></article>
+            <article><p className="eyebrow">Официальный источник</p><h3>SY Dolls / Moonvale Doll</h3><p>Официальный сайт бренда можно использовать для просмотра моделей, характеристик и вариантов комплектации.</p><a className="button secondary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальную коллекцию Moonvale Doll на сайте SY Dolls в новой вкладке">Официальная коллекция</a></article>
+            <aside><h3>До оплаты уточните</h3><ul>{purchaseChecks.map(item => <li key={item}>{item}</li>)}</ul></aside>
+            <div className="notice moonvale-buy-notice"><strong>Важно:</strong> Anime Dolls World не является продавцом и не участвует в оформлении заказа. Наличие, итоговую стоимость, комплектацию, оплату и доставку необходимо подтвердить непосредственно у Moon-Doll или SY Dolls.</div>
+          </div>
         </div>
       </section>
     </main>
