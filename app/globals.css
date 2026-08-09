@@ -979,7 +979,7 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .brand-directory-grid .has-brand-icon .card-monogram { width:56px;height:56px;border-radius:17px; }
   .directory-tools { align-items:stretch;flex-direction:column; }
   .search { min-width:0;width:100%; }
-  .filters { overflow:auto;flex-wrap:nowrap;padding-bottom:4px; }
+  .filters { max-width:100%;overflow:visible;flex-wrap:wrap;padding-bottom:0; }
   .filters button { white-space:nowrap; }
   .page-hero { padding-top:30px; }
   .brands-page-hero,.stores-page-hero,.about-page-hero { background-position:62% center; }
