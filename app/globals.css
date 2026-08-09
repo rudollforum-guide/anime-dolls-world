@@ -391,7 +391,72 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .anime-next>div:last-child { display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px; }
 .anime-guide a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
+/* Furry dolls overview */
+.furry-guide { overflow:clip; }
+.furry-guide h2 { font-size:clamp(35px,5vw,55px); }
+.furry-intro { display:grid;grid-template-columns:minmax(0,1.05fr) minmax(350px,.95fr);gap:22px; }
+.furry-intro>div { min-width:0;padding:38px;border:1px solid rgba(99,224,216,.18);border-radius:30px;background:radial-gradient(circle at 90% 10%,rgba(99,224,216,.1),transparent 32%),linear-gradient(145deg,#19232c,#17151f); }
+.furry-intro>div:first-child>p:last-of-type { color:#d0cbd7;font-size:17px;line-height:1.85; }
+.furry-intro aside { margin-top:28px;padding:22px;border-left:3px solid #78dcd6;border-radius:0 18px 18px 0;background:rgba(99,224,216,.05);color:var(--muted);line-height:1.7; }
+.furry-intro h3 { margin-top:0;font-size:25px; }
+.furry-intro ul { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none; }
+.furry-intro li { min-width:0;padding:12px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);color:#d5ced9; }
+.furry-difference-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px; }
+.furry-difference-grid section { position:relative;min-width:0;padding:30px;border:1px solid var(--line);border-radius:25px;background:var(--panel);overflow:hidden; }
+.furry-difference-grid section>span { position:absolute;right:-25px;top:-25px;width:100px;height:100px;border:1px solid rgba(99,224,216,.17);border-radius:44% 56% 65% 35%;transform:rotate(25deg); }
+.furry-difference-grid h3 { position:relative;margin-top:0;font-size:23px; }
+.furry-difference-grid p { position:relative;margin:0;color:var(--muted);line-height:1.7; }
+.furry-moonvale-section { background:radial-gradient(circle at 70% 15%,rgba(99,224,216,.11),transparent 34%),radial-gradient(circle at 20% 80%,rgba(185,150,255,.09),transparent 30%); }
+.furry-moonvale-hero { display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:44px;align-items:center;padding:48px;border:1px solid rgba(99,224,216,.27);border-radius:34px;background:linear-gradient(135deg,rgba(24,37,47,.97),rgba(31,21,43,.96));box-shadow:0 28px 80px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.04); }
+.furry-moonvale-hero p:not(.eyebrow) { max-width:720px;color:#d0cbd8;font-size:17px;line-height:1.8; }
+.furry-moonvale-hero .button { margin-top:26px; }
+.furry-moonvale-hero aside { display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:25px;border:1px solid rgba(99,224,216,.19);border-radius:27px;background:rgba(9,14,20,.27); }
+.furry-moonvale-hero aside span { display:grid;place-items:center;min-height:80px;border:1px solid rgba(99,224,216,.17);border-radius:18px;background:rgba(99,224,216,.055);color:#78dcd6;font-family:"Playfair Display",Georgia,serif;font-size:30px; }
+.furry-moonvale-hero aside p { grid-column:1/-1;margin:8px 0 0;font-size:12px;line-height:1.6; }
+.furry-tags { display:flex;flex-wrap:wrap;gap:8px; }
+.furry-tags span { max-width:100%;padding:7px 10px;border:1px solid rgba(99,224,216,.2);border-radius:999px;background:rgba(99,224,216,.06);color:#bce9e5;font-size:11px;font-weight:750;overflow-wrap:anywhere; }
+.furry-tech-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px; }
+.furry-tech-grid section { min-width:0;padding:29px;border:1px solid rgba(99,224,216,.17);border-radius:24px;background:linear-gradient(145deg,#19242b,#18151f); }
+.furry-tech-grid span { display:inline-flex;margin-bottom:22px;padding:8px 11px;border:1px solid rgba(99,224,216,.22);border-radius:999px;color:#78dcd6;font-size:12px;font-weight:800; }
+.furry-tech-grid p { margin:0;color:var(--muted);line-height:1.7; }
+.furry-caution { margin-top:18px;padding:24px 28px;border:1px solid rgba(231,199,125,.2);border-left:3px solid var(--gold);border-radius:0 20px 20px 0;background:rgba(231,199,125,.045);color:#d5cdd8; }
+.furry-character-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px; }
+.furry-character-grid section { min-width:0;min-height:225px;padding:30px;border:1px solid rgba(185,150,255,.2);border-radius:27px;background:radial-gradient(circle at 90% 10%,rgba(99,224,216,.09),transparent 32%),linear-gradient(145deg,#211a2d,#17151e); }
+.furry-character-grid span { color:#78dcd6;font-family:"Playfair Display",Georgia,serif;font-size:14px;letter-spacing:.15em; }
+.furry-character-grid h3 { margin:32px 0 10px;font-size:28px; }
+.furry-character-grid p { margin:0;color:var(--muted); }
+.furry-brand-pair { display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:20px;align-items:stretch; }
+.furry-brand-pair article { min-width:0;padding:38px;border:1px solid var(--line);border-radius:30px; }
+.furry-brand-pair h2 { margin-bottom:18px; }
+.furry-brand-pair article>p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.furry-elsa-card { background:radial-gradient(circle at 90% 10%,rgba(242,149,201,.12),transparent 30%),linear-gradient(145deg,#291c31,#18151f); }
+.furry-castle-card { background:radial-gradient(circle at 90% 10%,rgba(99,224,216,.08),transparent 30%),linear-gradient(145deg,#19232b,#18151f); }
+.furry-brand-note,.furry-castle-card aside { margin:24px 0;padding:20px;border:1px solid rgba(185,150,255,.16);border-radius:17px;background:rgba(11,11,16,.25);color:#cfc7d4;line-height:1.65; }
+.furry-compare-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px; }
+.furry-compare-grid section { min-width:0;padding:31px;border:1px solid var(--line);border-radius:25px;background:var(--panel); }
+.furry-compare-grid h3 { margin-top:0;font-size:24px; }
+.furry-compare-grid ul { display:grid;gap:10px;margin:0;padding-left:19px;color:var(--muted); }
+.furry-checklist { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none; }
+.furry-checklist li { min-width:0;display:flex;align-items:center;gap:12px;min-height:62px;padding:13px 15px;border:1px solid var(--line);border-radius:15px;background:var(--panel);color:#d9d0dd;font-weight:700; }
+.furry-checklist span { flex:0 0 auto;color:#78dcd6;font-family:"Playfair Display",Georgia,serif;font-size:17px; }
+.furry-care { display:grid;grid-template-columns:minmax(0,.8fr) minmax(400px,1.2fr);gap:42px;align-items:center; }
+.furry-care>div>p:not(.eyebrow) { color:var(--muted);font-size:17px;line-height:1.75; }
+.furry-care ul { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:0;padding:25px;border:1px solid rgba(99,224,216,.18);border-radius:27px;background:#191820;list-style:none; }
+.furry-care li { min-width:0;padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);color:#d6ced9; }
+.furry-market { display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:45px;align-items:center;padding:44px;border:1px solid rgba(99,224,216,.2);border-radius:31px;background:linear-gradient(135deg,#19242c,#21192d); }
+.furry-market p:not(.eyebrow) { max-width:850px;color:var(--muted);line-height:1.8; }
+.furry-market>span { width:170px;height:170px;display:grid;place-items:center;border:1px solid rgba(99,224,216,.24);border-radius:42% 58% 64% 36%;color:transparent;font-family:"Playfair Display",Georgia,serif;font-size:62px;-webkit-text-stroke:1px rgba(99,224,216,.75);transform:rotate(8deg);box-shadow:0 0 60px rgba(99,224,216,.06); }
+.furry-next { display:flex;justify-content:space-between;gap:30px;align-items:center;padding:38px;border:1px solid rgba(185,150,255,.23);border-radius:30px;background:radial-gradient(circle at 90% 10%,rgba(99,224,216,.1),transparent 30%),linear-gradient(135deg,#241c30,#18151f); }
+.furry-next h2 { margin:0;font-size:35px; }
+.furry-next>div:last-child { display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;max-width:690px; }
+.furry-guide a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+
 @media (max-width:900px) {
+  .furry-intro,.furry-moonvale-hero,.furry-brand-pair,.furry-care { grid-template-columns:1fr; }
+  .furry-difference-grid,.furry-tech-grid,.furry-checklist { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .furry-character-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .furry-market { grid-template-columns:minmax(0,1fr) 150px; }
+  .furry-market>span { width:140px;height:140px; }
   .anime-intro,.anime-construction { grid-template-columns:1fr; }
   .anime-feature-grid,.anime-tech-grid,.anime-checklist { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .anime-secondary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -469,6 +534,15 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .footer-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:650px) {
+  .furry-intro>div,.furry-difference-grid section,.furry-tech-grid section,.furry-character-grid section,.furry-brand-pair article,.furry-compare-grid section { padding:27px 22px; }
+  .furry-intro ul,.furry-difference-grid,.furry-tech-grid,.furry-character-grid,.furry-compare-grid,.furry-checklist,.furry-care ul { grid-template-columns:1fr; }
+  .furry-moonvale-hero { padding:30px 22px; }
+  .furry-moonvale-hero aside { padding:18px; }
+  .furry-market { grid-template-columns:1fr;padding:30px 22px; }
+  .furry-market>span { display:none; }
+  .furry-next { align-items:flex-start;flex-direction:column;padding:28px 22px; }
+  .furry-next>div:last-child { width:100%;justify-content:stretch; }
+  .furry-next .button { width:100%; }
   .anime-intro>div,.anime-feature-grid section,.anime-tech-grid section,.anime-brand-grid article,.anime-secondary-grid article { padding:27px 22px; }
   .anime-material-grid,.anime-feature-grid,.anime-tech-grid,.anime-brand-grid,.anime-secondary-grid,.anime-checklist { grid-template-columns:1fr; }
   .anime-material-grid section,.anime-material-grid section:nth-child(1),.anime-material-grid section:nth-child(2),.anime-material-grid section:nth-child(n+3) { grid-column:auto;min-height:0; }

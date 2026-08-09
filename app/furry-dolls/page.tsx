@@ -1,4 +1,17 @@
 import type { Metadata } from "next";
-import { ArticlePage } from "@/components/ArticlePage";
-export const metadata:Metadata={title:"Фурри-куклы и антропоморфные линейки",description:"Справочный раздел о фурри-куклах, фантазийных линейках, материалах и проверке предложений.",alternates:{canonical:"/furry-dolls/"}};
-export default function Page(){return <ArticlePage path="/furry-dolls/" eyebrow="Категория" title="Фурри-куклы" description="Антропоморфные и фантазийные модели требуют особенно внимательной сверки комплектации и особенностей конструкции." sections={[{title:"Отдельная категория",paragraphs:["Фурри-линейки могут включать нестандартные формы головы, ушей, конечностей или декоративных элементов. Термины и состав коллекций различаются у производителей."]},{title:"Что уточнить",bullets:["Какие элементы съёмные и из какого материала они выполнены.","Как упакованы выступающие и декоративные детали.","Какие ограничения по хранению и очистке указывает производитель."]},{title:"Проверка источника",paragraphs:["Сопоставляйте предложение продавца с официальной страницей линейки. Если данных недостаточно, запросите письменное подтверждение характеристик до оплаты."]}]} />}
+import { FurryDollsGuide } from "@/components/FurryDollsGuide";
+
+export const metadata: Metadata = {
+  title: { absolute: "Фурри-куклы: бренды, материалы и особенности | Anime Dolls World" },
+  description: "Обзор фурри- и антропоморфных кукол: Moonvale Doll, Elsa Babe, Dolls Castle, силиконовые модели, звериные головы, уши, хвосты, каркасы и особенности выбора.",
+  alternates: { canonical: "/furry-dolls/" },
+  openGraph: {
+    title: "Фурри-куклы: бренды, материалы и особенности",
+    description: "Moonvale Doll, Elsa Babe и Dolls Castle: антропоморфные образы, конструкция, совместимость и выбор.",
+    url: "/furry-dolls/",
+  },
+};
+
+export default function FurryDollsPage() {
+  return <FurryDollsGuide />;
+}
