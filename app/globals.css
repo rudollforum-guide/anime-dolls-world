@@ -497,7 +497,63 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .moonvale-brand-profile h2 { overflow-wrap:anywhere; }
 .moonvale-brand-profile a:focus-visible,.moonvale-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
+/* MozuDoll brand profile */
+.mozu-brand-hero { position:relative;overflow:hidden;padding-bottom:84px;background:radial-gradient(circle at 80% 18%,rgba(242,149,201,.18),transparent 25%),radial-gradient(circle at 70% 82%,rgba(185,150,255,.24),transparent 33%),linear-gradient(135deg,#15101c,#29192f 57%,#171326); }
+.mozu-brand-hero:after { content:"";position:absolute;right:-70px;bottom:-235px;width:450px;height:450px;border:1px solid rgba(242,149,201,.2);border-radius:42% 58% 50% 50%;box-shadow:0 0 110px rgba(185,150,255,.13);transform:rotate(9deg);pointer-events:none; }
+.mozu-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:52px;align-items:center; }
+.mozu-brand-hero .lede,.mozu-hero-note { max-width:850px; }
+.mozu-hero-note { color:var(--muted);line-height:1.7; }
+.mozu-tags { display:flex;flex-wrap:wrap;gap:9px;margin:25px 0; }
+.mozu-tags span { padding:7px 12px;border:1px solid rgba(242,149,201,.24);border-radius:999px;background:rgba(242,149,201,.065);color:#f0dce8;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase; }
+.mozu-emblem { aspect-ratio:1;display:grid;place-items:center;align-content:center;border:1px solid rgba(242,149,201,.28);border-radius:36% 64% 58% 42%;background:radial-gradient(circle at 29% 23%,rgba(231,199,125,.2),transparent 30%),linear-gradient(145deg,#3a2342,#171326);box-shadow:0 30px 90px rgba(0,0,0,.42),inset 0 0 70px rgba(242,149,201,.08);transform:rotate(-3deg); }
+.mozu-emblem span { color:transparent;font-family:"Playfair Display",Georgia,serif;font-size:72px;letter-spacing:-.08em;-webkit-text-stroke:1px rgba(242,149,201,.85); }
+.mozu-emblem small { margin-top:16px;color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase; }
+.mozu-intro { display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);gap:48px;align-items:start; }
+.mozu-summary { min-width:0;padding:28px;border:1px solid rgba(242,149,201,.2);border-radius:25px;background:linear-gradient(145deg,#291b2d,#1c1725); }
+.mozu-summary dl { display:grid;margin:0; }
+.mozu-summary dl div { min-width:0;padding:16px 0;border-bottom:1px solid var(--line); }
+.mozu-summary dl div:last-child { border-bottom:0; }
+.mozu-summary dt { margin-bottom:6px;color:#8f808e;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+.mozu-summary dd { margin:0;color:#eee5ef;line-height:1.5;overflow-wrap:anywhere; }
+.mozu-acg-panel { display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:42px;align-items:center; }
+.mozu-acg-panel>div>p:not(.eyebrow) { color:var(--muted);font-size:17px;line-height:1.75; }
+.mozu-acg-panel aside { min-width:0;padding:31px;border:1px solid rgba(185,150,255,.22);border-radius:26px;background:radial-gradient(circle at 90% 10%,rgba(242,149,201,.1),transparent 32%),var(--panel); }
+.mozu-acg-panel aside strong { display:block;margin-bottom:13px;color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:27px; }
+.mozu-acg-panel aside p { margin:0;color:var(--muted);line-height:1.7; }
+.mozu-feature-grid { display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px; }
+.mozu-feature-grid article { min-width:0;min-height:235px;padding:25px;border:1px solid rgba(242,149,201,.17);border-radius:23px;background:linear-gradient(145deg,#281b2d,#19151f); }
+.mozu-feature-grid span { color:var(--pink);font-family:"Playfair Display",Georgia,serif;font-size:16px; }
+.mozu-feature-grid h3 { margin:28px 0 10px;font-size:21px;overflow-wrap:anywhere; }
+.mozu-feature-grid p,.mozu-size-grid p,.mozu-accessory-grid p,.mozu-why-grid p { margin:0;color:var(--muted);line-height:1.65; }
+.mozu-size-grid { display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;margin-bottom:20px; }
+.mozu-size-grid article { min-width:0;min-height:250px;padding:27px;border:1px solid rgba(185,150,255,.2);border-radius:25px;background:radial-gradient(circle at 90% 10%,rgba(242,149,201,.09),transparent 32%),linear-gradient(145deg,#211a2d,#17151e); }
+.mozu-size-grid strong { display:block;margin-bottom:27px;color:#f2c3dc;font-family:"Playfair Display",Georgia,serif;font-size:36px; }
+.mozu-heads-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px; }
+.mozu-heads-grid article { min-width:0;padding:34px;border:1px solid var(--line);border-radius:27px;background:var(--panel); }
+.mozu-heads-grid article:last-child { border-color:rgba(242,149,201,.22);background:linear-gradient(145deg,#291c30,#19151f); }
+.mozu-heads-grid article>p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.mozu-heads-grid ul,.mozu-material-panel ul,.mozu-buy-panel ul { display:grid;gap:10px;margin:18px 0;padding-left:20px;color:#d6ceda; }
+.mozu-accessory-grid,.mozu-why-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:20px; }
+.mozu-accessory-grid article,.mozu-why-grid article { min-width:0;padding:31px;border:1px solid var(--line);border-radius:25px;background:var(--panel); }
+.mozu-accessory-grid h3,.mozu-why-grid h3 { margin:0 0 12px;font-size:25px; }
+.mozu-material-panel { display:grid;grid-template-columns:minmax(0,.85fr) minmax(360px,1.15fr);gap:48px;align-items:start; }
+.mozu-material-panel>div>p:last-child { color:var(--muted);font-size:17px;line-height:1.8; }
+.mozu-material-panel aside { min-width:0;padding:30px;border:1px solid rgba(231,199,125,.2);border-radius:25px;background:linear-gradient(145deg,#211d22,#18161e); }
+.mozu-material-panel h3,.mozu-buy-panel h3 { margin-top:0; }
+.mozu-buy-panel { display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.8fr);gap:34px;align-items:start;padding:40px;border:1px solid rgba(242,149,201,.2);border-radius:31px;background:radial-gradient(circle at 92% 12%,rgba(242,149,201,.11),transparent 31%),linear-gradient(135deg,#291c31,#1c1829); }
+.mozu-buy-panel>div>p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.mozu-buy-panel .button { margin-top:10px; }
+.mozu-buy-panel aside { min-width:0;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:21px;background:rgba(10,10,15,.25); }
+.mozu-buy-notice { grid-column:1 / -1;margin:0; }
+.mozu-brand-profile h2 { overflow-wrap:anywhere; }
+.mozu-brand-profile a:focus-visible,.mozu-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+
 @media (max-width:900px) {
+  .mozu-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
+  .mozu-intro,.mozu-acg-panel,.mozu-material-panel,.mozu-buy-panel { grid-template-columns:minmax(0,1fr); }
+  .mozu-feature-grid,.mozu-size-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .mozu-accessory-grid,.mozu-why-grid { grid-template-columns:minmax(0,1fr); }
+  .mozu-buy-notice { grid-column:auto; }
   .moonvale-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
   .moonvale-intro,.moonvale-material-panel,.moonvale-buy-panel { grid-template-columns:minmax(0,1fr); }
   .moonvale-feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -586,6 +642,14 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .footer-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:650px) {
+  .mozu-brand-hero { padding-bottom:62px; }
+  .mozu-brand-hero:after,.mozu-emblem { display:none; }
+  .mozu-hero-grid,.mozu-feature-grid,.mozu-size-grid,.mozu-heads-grid { grid-template-columns:minmax(0,1fr); }
+  .mozu-feature-grid article,.mozu-size-grid article { min-height:0;padding:24px 21px; }
+  .mozu-feature-grid h3 { margin-top:18px; }
+  .mozu-size-grid strong { margin-bottom:16px; }
+  .mozu-summary,.mozu-acg-panel aside,.mozu-heads-grid article,.mozu-material-panel aside { padding:24px 20px; }
+  .mozu-buy-panel { padding:28px 20px; }
   .moonvale-brand-hero { padding-bottom:62px; }
   .moonvale-brand-hero:after,.moonvale-emblem { display:none; }
   .moonvale-hero-grid,.moonvale-feature-grid,.moonvale-character-grid { grid-template-columns:minmax(0,1fr); }
