@@ -121,7 +121,7 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .telegram-button:hover { transform:translateY(-3px);filter:saturate(1.08);box-shadow:0 17px 46px rgba(185,150,255,.32); }
 .telegram-warning { margin:13px 3px 0;color:#958c9b;font-size:11px;line-height:1.55; }
 .telegram-warning strong { color:var(--pink); }
-.telegram-button:focus-visible,.telegram-nav:focus-visible,.footer-telegram:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+.telegram-button:focus-visible,.telegram-nav:focus-visible,.footer-social:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 .aotume-hero { position:relative;overflow:hidden;padding-bottom:82px;background:radial-gradient(circle at 84% 22%,rgba(242,149,201,.2),transparent 23%),radial-gradient(circle at 66% 75%,rgba(185,150,255,.15),transparent 30%),linear-gradient(135deg,#18121f,#25162e 58%,#121017); }
 .aotume-hero:after { content:"";position:absolute;width:440px;height:440px;right:-170px;bottom:-260px;border:1px solid rgba(231,199,125,.17);border-radius:50%;box-shadow:0 0 100px rgba(185,150,255,.1);pointer-events:none; }
 .aotume-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:54px;align-items:center; }
@@ -308,8 +308,9 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .footer-grid { display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:45px; }
 .footer-grid h2 { font-family:inherit;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold); }
 .footer-grid a { display:block;color:#a8a0ad;font-size:13px;margin:8px 0; }
-.footer-grid .footer-telegram { display:flex;align-items:flex-start;gap:7px;margin-top:15px;color:#cbb8e1; }
-.footer-grid .footer-telegram:hover { color:var(--pink); }
+.footer-grid .footer-social { display:flex;align-items:flex-start;gap:7px;margin-top:15px;color:#cbb8e1; }
+.footer-grid .footer-social:hover { color:var(--pink); }
+.tiktok-icon { display:inline-flex;align-items:center;justify-content:center;font-size:1em;line-height:1; }
 .footer-grid p { color:#837b88;font-size:13px;max-width:280px;margin-top:16px; }
 .footer-18 { display:inline-flex;border:1px solid var(--line);border-radius:8px;padding:2px 8px;font-weight:800;color:var(--pink); }
 .footer-bottom { margin-top:45px;padding-top:20px;border-top:1px solid var(--line);color:#615b65;font-size:12px; }
