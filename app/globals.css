@@ -646,7 +646,57 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
 .fu-brand-profile h2 { overflow-wrap:anywhere; }
 .fu-brand-profile a:focus-visible,.fu-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 
+/* Rosretty Doll brand profile */
+.rosretty-brand-hero { position:relative;overflow:hidden;padding-bottom:84px;background:radial-gradient(circle at 80% 18%,rgba(185,150,255,.2),transparent 25%),radial-gradient(circle at 72% 83%,rgba(242,149,201,.19),transparent 34%),linear-gradient(135deg,#12101a,#271b33 58%,#151321); }
+.rosretty-brand-hero:after { content:"";position:absolute;right:-75px;bottom:-240px;width:455px;height:455px;border:1px solid rgba(185,150,255,.2);border-radius:50% 42% 56% 46%;box-shadow:0 0 110px rgba(242,149,201,.11);transform:rotate(-6deg);pointer-events:none; }
+.rosretty-hero-grid { display:grid;grid-template-columns:minmax(0,1fr) 275px;gap:52px;align-items:center; }
+.rosretty-brand-hero .lede,.rosretty-hero-note { max-width:850px; }
+.rosretty-hero-note { color:var(--muted);line-height:1.7; }
+.rosretty-tags { display:flex;flex-wrap:wrap;gap:9px;margin:25px 0; }
+.rosretty-tags span { padding:7px 12px;border:1px solid rgba(185,150,255,.23);border-radius:999px;background:rgba(185,150,255,.065);color:#e9ddf2;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase; }
+.rosretty-emblem { aspect-ratio:1;display:grid;place-items:center;align-content:center;border:1px solid rgba(185,150,255,.28);border-radius:50% 42% 55% 45%;background:radial-gradient(circle at 30% 24%,rgba(231,199,125,.18),transparent 30%),linear-gradient(145deg,#342442,#171321);box-shadow:0 30px 90px rgba(0,0,0,.42),inset 0 0 70px rgba(185,150,255,.08); }
+.rosretty-emblem span { color:transparent;font-family:"Playfair Display",Georgia,serif;font-size:68px;letter-spacing:-.07em;-webkit-text-stroke:1px rgba(185,150,255,.9); }
+.rosretty-emblem small { margin-top:14px;color:var(--gold);font-size:10px;letter-spacing:.15em;text-transform:uppercase; }
+.rosretty-intro { display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);gap:48px;align-items:start; }
+.rosretty-summary { min-width:0;padding:28px;border:1px solid rgba(185,150,255,.2);border-radius:25px;background:linear-gradient(145deg,#271d31,#1c1725); }
+.rosretty-summary dl,.rosretty-elena-panel dl { display:grid;margin:0; }
+.rosretty-summary dl div,.rosretty-elena-panel dl div { min-width:0;padding:14px 0;border-bottom:1px solid var(--line); }
+.rosretty-summary dl div:last-child,.rosretty-elena-panel dl div:last-child { border-bottom:0; }
+.rosretty-summary dt,.rosretty-elena-panel dt { margin-bottom:6px;color:#8c818f;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+.rosretty-summary dd,.rosretty-elena-panel dd { margin:0;color:#eee6f1;line-height:1.5;overflow-wrap:anywhere; }
+.rosretty-elena-panel,.rosretty-material-panel,.rosretty-reason-panel { display:grid;grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);gap:44px;align-items:start; }
+.rosretty-elena-panel>div>p:not(.eyebrow),.rosretty-material-panel>div>p:not(.eyebrow),.rosretty-reason-panel>div>p:not(.eyebrow) { color:var(--muted);font-size:17px;line-height:1.78; }
+.rosretty-elena-panel aside,.rosretty-material-panel aside,.rosretty-reason-panel aside { min-width:0;padding:30px;border:1px solid rgba(242,149,201,.19);border-radius:26px;background:radial-gradient(circle at 90% 10%,rgba(185,150,255,.09),transparent 33%),var(--panel); }
+.rosretty-elena-panel aside>strong { display:block;margin-bottom:16px;color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:30px; }
+.rosretty-elena-panel .notice { margin-top:20px; }
+.rosretty-character-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px; }
+.rosretty-character-grid article { min-width:0;padding:28px;border:1px solid rgba(185,150,255,.18);border-radius:24px;background:linear-gradient(145deg,#251d2e,#18151f); }
+.rosretty-character-grid h3 { margin:0 0 11px;font-size:23px;overflow-wrap:anywhere; }
+.rosretty-character-grid p { margin:0;color:var(--muted);line-height:1.65; }
+.rosretty-character-note { margin-top:20px; }
+.rosretty-catalog-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px; }
+.rosretty-catalog-grid article { min-width:0;display:grid;place-items:center;min-height:96px;padding:20px;text-align:center;border:1px solid var(--line);border-radius:21px;background:var(--panel); }
+.rosretty-catalog-grid span { color:#eee6f1;font-weight:750;overflow-wrap:anywhere; }
+.rosretty-material-panel aside h3,.rosretty-reason-panel aside h3 { margin-top:0; }
+.rosretty-material-panel aside p,.rosretty-reason-panel aside p { margin-bottom:0;color:var(--muted);line-height:1.75; }
+.rosretty-buy-panel { display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.8fr);gap:34px;align-items:start;padding:40px;border:1px solid rgba(185,150,255,.2);border-radius:31px;background:radial-gradient(circle at 92% 12%,rgba(185,150,255,.1),transparent 31%),linear-gradient(135deg,#281d31,#1c1829); }
+.rosretty-buy-panel article { min-width:0;padding:27px;border:1px solid rgba(255,255,255,.08);border-radius:21px;background:rgba(10,10,15,.22); }
+.rosretty-buy-panel article.official { border-color:rgba(185,150,255,.25);background:radial-gradient(circle at 90% 10%,rgba(185,150,255,.09),transparent 32%),rgba(10,10,15,.25); }
+.rosretty-buy-panel article p:not(.eyebrow) { color:var(--muted);line-height:1.75; }
+.rosretty-buy-panel .button { margin-top:10px; }
+.rosretty-buy-notice { grid-column:1/-1;margin:0; }
+.rosretty-next { display:flex;align-items:center;justify-content:space-between;gap:40px;padding:37px 42px;border:1px solid var(--line);border-radius:29px;background:var(--panel); }
+.rosretty-next nav { display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px; }
+.rosretty-brand-profile h2 { overflow-wrap:anywhere; }
+.rosretty-brand-profile a:focus-visible,.rosretty-brand-hero a:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+
 @media (max-width:900px) {
+  .rosretty-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
+  .rosretty-intro,.rosretty-elena-panel,.rosretty-material-panel,.rosretty-reason-panel,.rosretty-buy-panel { grid-template-columns:minmax(0,1fr); }
+  .rosretty-character-grid,.rosretty-catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .rosretty-buy-notice { grid-column:auto; }
+  .rosretty-next { align-items:flex-start;flex-direction:column; }
+  .rosretty-next nav { justify-content:flex-start; }
   .fu-hero-grid { grid-template-columns:minmax(0,1fr) 210px;gap:30px; }
   .fu-intro,.fu-reason-panel,.fu-buy-panel { grid-template-columns:minmax(0,1fr); }
   .fu-catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -752,6 +802,14 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .footer-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:650px) {
+  .rosretty-brand-hero { padding-bottom:62px; }
+  .rosretty-brand-hero:after,.rosretty-emblem { display:none; }
+  .rosretty-hero-grid,.rosretty-character-grid,.rosretty-catalog-grid { grid-template-columns:minmax(0,1fr); }
+  .rosretty-summary,.rosretty-elena-panel aside,.rosretty-material-panel aside,.rosretty-reason-panel aside { padding:24px 20px; }
+  .rosretty-character-grid article { padding:24px 21px; }
+  .rosretty-buy-panel { padding:28px 20px; }
+  .rosretty-next { padding:28px 22px; }
+  .rosretty-next nav,.rosretty-next .button { width:100%; }
   .fu-brand-hero { padding-bottom:62px; }
   .fu-brand-hero:after,.fu-emblem { display:none; }
   .fu-hero-grid,.fu-direction-grid,.fu-material-grid,.fu-catalog-grid { grid-template-columns:minmax(0,1fr); }
