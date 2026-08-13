@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.climax-doll.com/";
@@ -62,7 +63,7 @@ export function ClimaxDollProfile() {
             </div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Climax Doll в новой вкладке">Официальный сайт</a>
           </div>
-          <div className="climax-emblem" aria-hidden="true"><span>CLM</span><small>Climax Doll</small></div>
+          <BrandProfileIcon slug="climaxdoll" name="Climax Doll" />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://sydolls.com/collections/moonvale-doll";
@@ -59,7 +60,7 @@ export function MoonvaleSYDollsProfile() {
             </div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальную коллекцию Moonvale Doll на сайте SY Dolls в новой вкладке">Официальная коллекция</a>
           </div>
-          <div className="moonvale-emblem" aria-hidden="true"><span>MV</span><small>Moonvale</small></div>
+          <BrandProfileIcon slug="moonvale-sy-dolls" name="Moonvale Doll / SY Dolls" />
         </div>
       </div>
     </section>

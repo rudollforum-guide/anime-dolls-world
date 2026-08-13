@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://mozudoll.com/";
@@ -65,7 +66,7 @@ export function MozuDollProfile() {
             <div className="mozu-tags" aria-label="Направления MozuDoll">{["Anime", "ACG", "65–160 cm", "Customization"].map(tag => <span key={tag}>{tag}</span>)}</div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт MozuDoll в новой вкладке">Официальный сайт</a>
           </div>
-          <div className="mozu-emblem" aria-hidden="true"><span>MZ</span><small>MozuDoll</small></div>
+          <BrandProfileIcon slug="mozudoll" name="MozuDoll" />
         </div>
       </div>
     </section>

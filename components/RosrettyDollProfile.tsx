@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.rosretty.com/";
@@ -60,7 +61,7 @@ export function RosrettyDollProfile() {
             <div className="rosretty-tags" aria-label="Направления Rosretty Doll"><span>Realistic catalog</span><span>Anime</span><span>Furry</span><span>Cosplay</span><span>Fantasy</span></div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Rosretty Doll в новой вкладке">Официальный сайт</a>
           </div>
-          <div className="rosretty-emblem" aria-hidden="true"><span>RR</span><small>Rosretty</small></div>
+          <BrandProfileIcon slug="rosretty-doll" name="Rosretty Doll" />
         </div>
       </div>
     </section>

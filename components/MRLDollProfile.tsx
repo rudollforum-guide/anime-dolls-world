@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.mrlsexdoll.com/";
@@ -44,7 +45,7 @@ export function MRLDollProfile() {
   };
 
   return <>
-    <section className="page-hero mrl-hero"><div className="container"><Breadcrumbs items={[{ label: "Бренды", href: "/brands/" }, { label: "MRL Doll" }]} /><div className="mrl-hero-grid"><div><p className="eyebrow">Аниме- и фурри-бренд</p><h1>MRL Doll</h1><p className="lede">MRL Doll — бренд компактных аниме-фигур, торсов, фэнтези- и фурри-моделей из TPE и силикона, развивающий собственных персонажей и совместные проекты с художниками.</p><p className="mrl-hero-note">Каталог MRL сочетает небольшие коллекционные форматы, более крупные аниме-фигуры, торсы, оригинальные фэнтези-образы, фурри-персонажей, аксессуары и отдельные варианты кастомизации.</p><div className="mrl-tags">{["Аниме", "Фурри", "Фэнтези", "TPE", "Силикон", "Компактные фигуры", "Торсы", "Авторские персонажи", "Коллаборации", "Кастомизация"].map((tag) => <span key={tag}>{tag}</span>)}</div><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт MRLSEXDOLL в новой вкладке">Официальный сайт</a></div><div className="mrl-emblem" aria-hidden="true"><span>MRL</span><small>anime · fantasy · furry</small></div></div></div></section>
+    <section className="page-hero mrl-hero"><div className="container"><Breadcrumbs items={[{ label: "Бренды", href: "/brands/" }, { label: "MRL Doll" }]} /><div className="mrl-hero-grid"><div><p className="eyebrow">Аниме- и фурри-бренд</p><h1>MRL Doll</h1><p className="lede">MRL Doll — бренд компактных аниме-фигур, торсов, фэнтези- и фурри-моделей из TPE и силикона, развивающий собственных персонажей и совместные проекты с художниками.</p><p className="mrl-hero-note">Каталог MRL сочетает небольшие коллекционные форматы, более крупные аниме-фигуры, торсы, оригинальные фэнтези-образы, фурри-персонажей, аксессуары и отдельные варианты кастомизации.</p><div className="mrl-tags">{["Аниме", "Фурри", "Фэнтези", "TPE", "Силикон", "Компактные фигуры", "Торсы", "Авторские персонажи", "Коллаборации", "Кастомизация"].map((tag) => <span key={tag}>{tag}</span>)}</div><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт MRLSEXDOLL в новой вкладке">Официальный сайт</a></div><BrandProfileIcon slug="mrl-doll" name="MRL Doll" /></div></div></section>
 
     <nav className="mrl-anchor-nav" aria-label="Разделы страницы MRL Doll"><div className="container"><a href="#series">Серии</a><a href="#characters">Персонажи</a><a href="#collaborations">Коллаборации</a><a href="#customization">Кастомизация</a><a href="#purchase">Покупка</a><a href="#contacts">Контакты</a></div></nav>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.wmdolls.com/";
@@ -52,7 +53,7 @@ export function WMDollProfile() {
             <div className="wm-tags" aria-label="Направления WM Doll"><span>Аниме-линейки</span><span>TPE</span><span>Silicone</span><span>Hybrid</span><span>Realistic catalog</span></div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт WM Doll в новой вкладке">Официальный сайт</a>
           </div>
-          <div className="wm-emblem" aria-hidden="true"><span>WM</span><small>Doll</small></div>
+          <BrandProfileIcon slug="wm-doll" name="WM Doll" />
         </div>
       </div>
     </section>

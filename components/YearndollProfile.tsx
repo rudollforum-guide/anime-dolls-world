@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const verificationChecks = [
@@ -48,7 +49,7 @@ export function YearndollProfile() {
             <div className="yearndoll-tags" aria-label="Категория Yearndoll"><span>Аниме-линейки</span><span>Ограниченные данные</span><span>Проверка модели</span></div>
             <Link className="button primary" href="/buying/">Как проверить предложение</Link>
           </div>
-          <div className="yearndoll-emblem" aria-hidden="true"><span>Y</span><small>Yearndoll</small></div>
+          <BrandProfileIcon slug="yearndoll" name="Yearndoll" />
         </div>
       </div>
     </section>

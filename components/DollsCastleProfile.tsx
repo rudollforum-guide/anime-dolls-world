@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.dolls-castle.com/";
@@ -42,7 +43,7 @@ export function DollsCastleProfile() {
             </div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Dolls Castle в новой вкладке">Официальный сайт</a>
           </div>
-          <div className="moonvale-emblem" aria-hidden="true"><span>DC</span><small>Dolls Castle</small></div>
+          <BrandProfileIcon slug="dolls-castle" name="Dolls Castle" />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://butterflydoll.com.cn/";
@@ -47,7 +48,7 @@ export function ButterflyDollProfile() {
               <div className="butterfly-tags" aria-label="Основные направления бренда">{["Аниме", "TPE", "Силикон", "Полноразмерные модели", "Торсы", "OEM / ODM"].map((tag) => <span key={tag}>{tag}</span>)}</div>
               <a className="button primary butterfly-site-button" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Butterfly Doll в новой вкладке">Официальный сайт</a>
             </div>
-            <div className="butterfly-hero-mark" aria-hidden="true"><span>BD</span><small>Design · Form · Material</small></div>
+            <BrandProfileIcon slug="butterfly-doll" name="Butterfly Doll" />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialCatalog = "https://fu-doll.com/product/";
@@ -57,7 +58,7 @@ export function FuDollProfile() {
             <div className="fu-tags" aria-label="Направления FU Doll"><span>Realistic catalog</span><span>Stylized</span><span>Fantasy</span><span>Cosplay</span></div>
             <a className="button primary" href={officialCatalog} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный каталог FU Doll в новой вкладке">Официальный каталог</a>
           </div>
-          <div className="fu-emblem" aria-hidden="true"><span>FU</span><small>Doll</small></div>
+          <BrandProfileIcon slug="fu-doll" name="FU Doll" />
         </div>
       </div>
     </section>

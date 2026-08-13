@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://bcdolls.com/";
@@ -33,7 +34,7 @@ export function BCDollProfile() {
               <div className="bc-tags" aria-label="Основные направления бренда">{["Аниме", "Силикон", "Мини-модели", "Полноразмерные модели", "PU-головы", "Аксессуары"].map((tag) => <span key={tag}>{tag}</span>)}</div>
               <a className="button primary bc-site-button" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт BC Doll в новой вкладке">Официальный сайт</a>
             </div>
-            <div className="bc-hero-mark" aria-hidden="true"><span>BC</span><small>Anime doll studio</small></div>
+            <BrandProfileIcon slug="bc-doll" name="BC Doll" />
           </div>
         </div>
       </section>

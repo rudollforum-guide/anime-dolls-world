@@ -1,0 +1,17 @@
+export const brandIconFiles: Record<string, string> = {
+  "aotume-doll": "aotume-doll.png",
+  "bc-doll": "bc-doll.png",
+  "butterfly-doll": "butterfly-doll.png",
+  "croissant-doll": "croissant-doll.png",
+  "elsa-babe": "elsa-babe.png",
+  irokebijin: "irokebijin.png",
+  "mrl-doll": "mrl-doll.png",
+  mozudoll: "mozu-doll.png",
+  "moonvale-sy-dolls": "moonvale-sy-dolls.png",
+  "dolls-castle": "dolls-castle.png",
+  climaxdoll: "climaxdoll.png",
+  "fu-doll": "fu-doll.png",
+  "rosretty-doll": "rosretty-doll.png",
+  "wm-doll": "wm-doll.png",
+  yearndoll: "yearndoll.png",
+};

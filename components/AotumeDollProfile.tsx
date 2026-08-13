@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 
 const officialWebsite = "https://www.aotumedoll.us/";
 
@@ -33,7 +34,7 @@ export function AotumeDollProfile() {
               </div>
               <a className="button primary aotume-official-link" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Aotume Doll в новой вкладке">Официальный сайт</a>
             </div>
-            <div className="aotume-monogram" aria-hidden="true"><span>AO</span><small>Anime character studio</small></div>
+            <BrandProfileIcon slug="aotume-doll" name="Aotume Doll" />
           </div>
         </div>
       </section>
