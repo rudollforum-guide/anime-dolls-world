@@ -26,7 +26,7 @@ npm run build
 
 ## GitHub Pages и собственный домен
 
-Workflow публикует каталог из `out/` по адресу `https://rudollforum-guide.github.io/anime-dolls-world/`. Для страницы репозитория используется `NEXT_PUBLIC_BASE_PATH`. При подключении собственного домена задайте `NEXT_PUBLIC_BASE_PATH` пустым и замените `NEXT_PUBLIC_SITE_URL` на адрес домена.
+Workflow публикует каталог из `out/` на собственном домене `https://animedollsworld.com/`. Сайт собирается для корня домена без `basePath`; `NEXT_PUBLIC_SITE_URL` задаёт production origin для canonical, sitemap, robots, Open Graph и JSON-LD.
 
 ## Правило оформления внешних ссылок
 

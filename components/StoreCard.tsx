@@ -6,8 +6,6 @@ const storeBackgrounds: Record<string, string> = {
   "elsa-babe-aliexpress": "aliexpress-store.webp",
 };
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 export function StoreCard({ store, cta }: { store: Store; cta: string }) {
   const background = storeBackgrounds[store.slug];
 
@@ -15,7 +13,7 @@ export function StoreCard({ store, cta }: { store: Store; cta: string }) {
     <Link
       href={`/stores/${store.slug}/`}
       className={`store-card store-card--${store.slug}`}
-      style={{ backgroundImage: `url("${basePath}/images/stores/${background}")` }}
+      style={{ backgroundImage: `url("/images/stores/${background}")` }}
     >
       <span className="tag">{store.eyebrow}</span>
       <h3>{store.name}</h3>

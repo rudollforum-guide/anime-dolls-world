@@ -8,14 +8,12 @@ type CategoryHeroCardProps = {
   image: string;
 };
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 export function CategoryHeroCard({ title, description, href, image }: CategoryHeroCardProps) {
   return (
     <Link className="category-hero-card" href={href}>
       <Image
         className="category-hero-image"
-        src={`${basePath}${image}`}
+        src={image}
         alt=""
         fill
         sizes="(max-width: 900px) calc(100vw - 28px), 381px"
