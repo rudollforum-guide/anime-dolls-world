@@ -9,7 +9,30 @@ import { CategoryHeroCard } from "@/components/CategoryHeroCard";
 import { StoreCard } from "@/components/StoreCard";
 import { ImageGallery } from "@/components/ImageGallery";
 
-export const metadata: Metadata = { title: "Anime Dolls World — каталог аниме- и фурри-кукол", description: "Независимый справочник брендов, магазинов, аниме- и фурри-кукол, выбора и ухода.", alternates: { canonical: "/" } };
+const homePreviewUrl = "https://animedollsworld.com/images/og/home-preview.png";
+const homeTitle = "Anime Dolls World — каталог аниме- и фурри-кукол";
+const homeDescription = "Независимый справочник брендов, магазинов, аниме- и фурри-кукол, выбора и ухода.";
+
+export const metadata: Metadata = {
+  title: homeTitle,
+  description: homeDescription,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    siteName: siteConfig.name,
+    title: homeTitle,
+    description: homeDescription,
+    url: "https://animedollsworld.com/",
+    images: [homePreviewUrl],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: homeDescription,
+    images: [homePreviewUrl],
+  },
+};
 
 export default function Home() {
   return <>
