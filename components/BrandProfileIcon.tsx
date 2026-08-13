@@ -11,9 +11,9 @@ export function BrandProfileIcon({ slug, name }: { slug: string; name: string })
       <Image
         src={src}
         alt={`Эмблема бренда ${name}`}
-        width={160}
-        height={160}
-        sizes="(max-width: 650px) 108px, 160px"
+        width={320}
+        height={320}
+        sizes="(max-width: 900px) 208px, 320px"
       />
     </div>
   );
