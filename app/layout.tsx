@@ -19,5 +19,5 @@ const orgJsonLd = { "@context": "https://schema.org", "@type": "Organization", n
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const ageStateScript = `try{if(localStorage.getItem("adw-age-confirmed")==="yes")document.documentElement.setAttribute("data-age-confirmed","")}catch{}`;
-  return <html lang="ru" data-scroll-behavior="smooth" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: ageStateScript }} /></head><body><AgeGate><Header /><main>{children}</main><Footer /></AgeGate><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} /></body></html>;
+  return <html lang="ru" data-scroll-behavior="smooth" suppressHydrationWarning><head><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/favicon.png" type="image/png" sizes="120x120" /><script dangerouslySetInnerHTML={{ __html: ageStateScript }} /></head><body><AgeGate><Header /><main>{children}</main><Footer /></AgeGate><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} /></body></html>;
 }
