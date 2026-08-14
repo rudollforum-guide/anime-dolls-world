@@ -1,7 +1,17 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
+
+const galleryModels: GalleryModel[] = [
+  {
+    name: "155cm/5ft1 I-cup Silicone Sex Doll – LZ01",
+    details: "155cm · Head #LZ01",
+    folder: "155cm-lz01",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+];
 
 const verificationChecks = [
   "точное название и обозначение модели",
@@ -79,6 +89,21 @@ export function YearndollProfile() {
       <section className="section alt">
         <div className="container yearndoll-reason-panel"><div><p className="eyebrow">Роль в справочнике</p><h2>Почему Yearndoll есть в Anime Dolls World</h2><p>Yearndoll включён в каталог как дополнительный производитель или бренд, у которого встречаются отдельные anime и stylized модели.</p><p>По имеющимся подтверждённым данным это не специализированный anime-бренд.</p></div><aside><strong>Ограниченный профиль</strong><p>Небольшой объём страницы — осознанное решение: отсутствие первичного источника нельзя компенсировать предположениями или рекламными описаниями дилеров.</p></aside></div>
       </section>
+
+      <BrandModelGallery
+        id="yearndoll"
+        eyebrow="Найденная стилизованная модель"
+        description="Демонстрационный фотосет конкретной модели из стороннего каталога."
+        notice="Ниже представлена одна найденная стилизованная модель Yearndoll для знакомства с направлением бренда. Это не полный каталог. Официальный сайт производителя нами не подтверждён; ссылка ниже ведёт на сторонний магазин, где опубликована страница этой модели. Её можно использовать как ориентир при уточнении заказа у выбранного продавца."
+        galleryRoot="/images/brands/yearndoll/gallery"
+        models={galleryModels}
+        layout="triptych"
+        externalLink={{
+          href: "https://www.rosemarydoll.com/es/product/155cm-5ft1-i-cup-silicone-sex-doll-lz01-2/",
+          label: "Посмотреть эту модель у RosemaryDoll",
+          ariaLabel: "Открыть страницу модели Yearndoll LZ01 в стороннем магазине RosemaryDoll в новой вкладке",
+        }}
+      />
 
       <section className="section">
         <div className="container"><div className="section-head"><div><p className="eyebrow">Вариант запроса</p><h2>Где купить</h2></div><p>Anime Dolls World не подтверждает постоянное наличие Yearndoll у какого-либо продавца.</p></div><div className="yearndoll-buy-panel">

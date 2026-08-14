@@ -21,6 +21,11 @@ type BrandModelGalleryProps = {
   models: GalleryModel[];
   layout?: "cover" | "triptych";
   tone?: "default" | "contrast";
+  externalLink?: {
+    href: string;
+    label: string;
+    ariaLabel: string;
+  };
 };
 
 const aotumeModels: GalleryModel[] = [
@@ -70,6 +75,7 @@ export function BrandModelGallery({
   models,
   layout = "cover",
   tone = "default",
+  externalLink,
 }: BrandModelGalleryProps) {
   const [activeModelIndex, setActiveModelIndex] = useState<number | null>(null);
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
@@ -192,6 +198,18 @@ export function BrandModelGallery({
               </article>
             ))}
           </div>
+
+          {externalLink && (
+            <a
+              className="aotume-model-gallery-external"
+              href={externalLink.href}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label={externalLink.ariaLabel}
+            >
+              {externalLink.label}
+            </a>
+          )}
         </div>
       </section>
 

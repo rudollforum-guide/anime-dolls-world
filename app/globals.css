@@ -174,7 +174,7 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-model-gallery-card:hover .aotume-model-gallery-preview img { transform:scale(1.035);filter:saturate(1.05); }
 .aotume-model-gallery-count { position:absolute;z-index:1;right:15px;bottom:14px;padding:6px 10px;border:1px solid rgba(255,255,255,.18);border-radius:99px;background:rgba(15,9,20,.68);backdrop-filter:blur(10px);color:#f0e8f3;font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase; }
 .aotume-model-gallery-copy { display:grid;gap:8px;padding:24px; }
-.aotume-model-gallery-copy strong { font-family:"Playfair Display",Georgia,serif;font-size:27px;line-height:1.12; }
+.aotume-model-gallery-copy strong { overflow-wrap:anywhere;font-family:"Playfair Display",Georgia,serif;font-size:27px;line-height:1.12; }
 .aotume-model-gallery-copy>span { color:var(--muted);font-size:13px; }
 .aotume-model-gallery-copy .aotume-model-gallery-open { margin-top:7px;color:var(--pink);font-weight:800;letter-spacing:.03em; }
 .aotume-model-gallery-card.is-triptych .aotume-model-gallery-copy { padding-bottom:18px; }
@@ -183,6 +183,9 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-model-gallery-triptych button:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 .aotume-model-gallery-triptych img { object-fit:cover;object-position:center top;transition:transform .35s ease,filter .35s ease; }
 .aotume-model-gallery-triptych button:hover img { transform:scale(1.04);filter:brightness(.82) saturate(1.06); }
+.aotume-model-gallery-external { width:fit-content;display:inline-flex;margin-top:24px;padding:12px 16px;border:1px dashed rgba(185,150,255,.32);border-radius:14px;background:rgba(185,150,255,.055);color:#cfc3d8;font-size:13px;font-weight:700;transition:border-color .2s,background .2s,color .2s; }
+.aotume-model-gallery-external:hover { border-color:rgba(242,149,201,.48);background:rgba(242,149,201,.08);color:#f0dce9; }
+.aotume-model-gallery-external:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
 html.lightbox-open,html.lightbox-open body { overflow:hidden;overscroll-behavior:none; }
 .aotume-lightbox { position:fixed;z-index:10000;inset:0;width:100vw;height:100vh;height:100dvh;display:grid;place-items:center;box-sizing:border-box;overflow:hidden;padding:16px;overscroll-behavior:contain;background:#07050a; }
 .aotume-lightbox-panel { width:min(1100px,calc(100vw - 32px));height:calc(100vh - 32px);height:calc(100dvh - 32px);max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:16px;overflow:hidden;padding:22px;border:1px solid rgba(185,150,255,.3);border-radius:28px;background:linear-gradient(145deg,#201626,#110f15);box-shadow:0 40px 120px rgba(0,0,0,.65),0 0 70px rgba(185,150,255,.1); }
