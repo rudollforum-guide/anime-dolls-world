@@ -1,3 +1,4 @@
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -6,6 +7,39 @@ const officialWebsite = "https://www.irokebijinshop.com/";
 const moonDoll = "https://www.moon-doll.com/";
 const salesEmail = "sales@irokebijinshop.com";
 const contactEmail = "contact@irokebijin.com";
+
+const galleryModels: GalleryModel[] = [
+  {
+    name: "Abby-Y",
+    details: "148cm",
+    folder: "148cm-abby-y",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Abby-Y.B",
+    details: "148cm",
+    folder: "148cm-abby-yb",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Kana",
+    details: "148cm",
+    folder: "148cm-kana",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Akane",
+    details: "150cm",
+    folder: "150cm-akane",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Anna",
+    details: "152cm",
+    folder: "152cm-anna",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+];
 
 const catalog = [
   ["S-TPE Dolls", "Основная линейка моделей из материала, обозначенного брендом как Super Soft Platinum TPE."],
@@ -69,7 +103,15 @@ export function IrokebijinProfile() {
 
       <section className="section alt"><div className="container iro-two"><article className="iro-card"><p className="eyebrow">Дополнительные позиции</p><h2>Аксессуары и одежда</h2><p>На сайте предусмотрены отдельные категории брендовых аксессуаров и одежды.</p><List items={accessoryChecks} /><p className="iro-note">Не все аксессуары подходят ко всем моделям.</p></article><article className="iro-card"><p className="eyebrow">Региональные склады</p><h2>Модели в наличии</h2><p>Официальный сайт выделяет разделы US in Stock и EURO in Stock. Такие предложения могут означать, что отдельные готовые изделия находятся на региональном складе.</p><List items={["наличие меняется", "региональный склад не означает возможность доставки в Россию", "комплектацию готовой модели нужно проверять отдельно", "изменения головы, тела или опций могут быть недоступны", "сроки и стоимость доставки нужно подтверждать до оплаты"]} /></article></div></section>
 
-      <section className="section"><div className="container"><div className="iro-gallery" data-gallery-state="planned"><span aria-hidden="true">✦</span><p className="eyebrow">Будущее обновление</p><h2>Галерея моделей</h2><p>Галерея моделей Irokebijin будет добавлена позже.</p></div></div></section>
+      <BrandModelGallery
+        id="irokebijin"
+        eyebrow="Демонстрационная подборка"
+        description="Пять примеров моделей из разных ростовых категорий бренда."
+        notice="Ниже представлены некоторые модели Irokebijin для знакомства со стилем и направлением бренда. Это не полный каталог. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
+        galleryRoot="/images/brands/irokebijin/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Каталог и условия необходимо проверять непосредственно перед заказом.</p></div><div className="iro-purchase"><article className="featured"><p className="eyebrow">Официальный источник</p><h3>Официальный магазин Irokebijin</h3><p>Официальный сайт можно использовать для просмотра S-TPE- и силиконовых моделей, роста, совместимых голов, глаз, париков, упаковки и других опций.</p><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный магазин Irokebijin в новой вкладке">Открыть официальный магазин</a><div className="notice">Сайт используется для демонстрации каталога, а перед покупкой необходимо связаться с продавцом по электронной почте.</div><a className="iro-email" href={`mailto:${salesEmail}`} target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать в отдел продаж Irokebijin">{salesEmail}</a></article><article><p className="eyebrow">Альтернативный вариант покупки для России</p><h3>Moon-Doll</h3><p>Возможность заказа Irokebijin для России можно отдельно уточнить у международного магазина Moon-Doll.</p><p>Менеджеру можно отправить:</p><List items={["ссылку на модель", "название тела", "название головы", "фотографию", "выбранный материал", "список необходимых опций"]} /><a className="button secondary" href={moonDoll} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll</a></article></div></div></section>
 
