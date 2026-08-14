@@ -6,7 +6,7 @@ import { createPortal } from "react-dom";
 
 export type GalleryModel = {
   name: string;
-  details: string;
+  details?: string;
   folder: string;
   photos: string[];
 };
@@ -165,7 +165,7 @@ export function BrandModelGallery({
                     </span>
                     <span className="aotume-model-gallery-copy">
                       <strong>{model.name}</strong>
-                      <span>{model.details}</span>
+                      {model.details && <span>{model.details}</span>}
                       <span className="aotume-model-gallery-open">Открыть фотосет</span>
                     </span>
                   </button>
@@ -173,7 +173,7 @@ export function BrandModelGallery({
                   <>
                     <div className="aotume-model-gallery-copy">
                       <strong>{model.name}</strong>
-                      <span>{model.details}</span>
+                      {model.details && <span>{model.details}</span>}
                     </div>
                     <div className="aotume-model-gallery-triptych">
                       {model.photos.map((photo, photoIndex) => (
@@ -228,7 +228,7 @@ export function BrandModelGallery({
               <div>
                 <p className="eyebrow">Фотосет · {activePhotoIndex + 1} из {activeModel.photos.length}</p>
                 <h2 id={`${id}-lightbox-title-${activeModel.folder}`}>{activeModel.name}</h2>
-                <p>{activeModel.details}</p>
+                {activeModel.details && <p>{activeModel.details}</p>}
               </div>
               <button className="aotume-lightbox-close" type="button" onClick={closeGallery} aria-label="Закрыть фотосет" autoFocus>×</button>
             </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -7,6 +8,47 @@ const officialWebsite = "https://elsababedoll.com/";
 const aliexpressStore = "https://aliexpress.ru/store/1103338672?g=true&page=1&spm=a2g2w.detail.0.0.489052afRfYreY3";
 const moonDoll = "https://www.moon-doll.com/";
 const email = "service@elsababe.com";
+
+const animeGalleryModels: GalleryModel[] = [
+  {
+    name: "Suwabe Haruka",
+    details: "140cm · M · Pink · AHR023",
+    folder: "140cm-suwabe-haruka",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Miyashiro Chiharu",
+    details: "148cm · L · Pink · AHR024",
+    folder: "148cm-miyashiro-chiharu",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Seino",
+    details: "151cm · L · Pink · RAD040",
+    folder: "151cm-seino",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Ogata Maika",
+    details: "163cm · L · Pink · AHRC032",
+    folder: "163cm-ogata-maika",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Shirai Mino",
+    details: "176cm · M · Pink Skin · AHRC033",
+    folder: "176cm-shirai-mino",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+];
+
+const furryGalleryModels: GalleryModel[] = [
+  { name: "Aida Rina", folder: "aida-rina", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Inujima Haruko", folder: "inujima-haruko", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Kako Motoko", folder: "kako-motoko", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Morikawa Yuki", folder: "morikawa-yuki", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Nekoha Aya", folder: "nekoha-aya", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 const expertise = ["3D-анимация", "игровая графика", "кинопроизводство", "концепт-дизайн", "скульптура", "3D-моделирование", "разработка каркасов", "BJD-стилистика", "аниме-макияж"];
 const catalog = [
@@ -63,7 +105,27 @@ export function ElsaBabeProfile() {
 
       <section className="section"><div className="container elsa-brand-custom"><div><p className="eyebrow">Настройка образа</p><h2>Кастомизация</h2><p>В зависимости от модели Elsa Babe может предлагать выбор головы, тела, цвета кожи, глаз, парика, макияжа и дополнительных опций.</p></div><List items={customChecks} className="elsa-brand-chip-list" /><div className="notice">Возможность кастомизации зависит от конкретной модели и должна подтверждаться продавцом письменно. Точное повторение изображения или персонажа не гарантируется.</div></div></section>
 
-      <section className="section alt"><div className="container"><div className="elsa-brand-gallery" data-gallery-state="planned"><span aria-hidden="true">✦</span><p className="eyebrow">Будущее обновление</p><h2>Галерея моделей</h2><p>Галерея моделей Elsa Babe будет добавлена позже.</p></div></div></section>
+      <BrandModelGallery
+        id="elsa-babe-anime"
+        eyebrow="Аниме-направление"
+        title="Аниме-модели"
+        description="Подборка моделей Elsa Babe в аниме-стилистике."
+        notice="Ниже представлены некоторые модели Elsa Babe для знакомства с аниме- и фурри-направлениями бренда. Это не полный каталог продукции. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
+        galleryRoot="/images/brands/elsa-babe/gallery/anime"
+        models={animeGalleryModels}
+        layout="triptych"
+      />
+
+      <BrandModelGallery
+        id="elsa-babe-furry"
+        eyebrow="Фурри-направление"
+        title="Фурри-модели"
+        description="Подборка антропоморфных и фурри-моделей Elsa Babe."
+        galleryRoot="/images/brands/elsa-babe/gallery/furry"
+        models={furryGalleryModels}
+        layout="triptych"
+        tone="contrast"
+      />
 
       <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Четыре источника для просмотра, проверки и выбора способа покупки.</p></div><div className="elsa-brand-purchase-grid"><article className="featured"><p className="eyebrow">Магазин бренда на торговой площадке</p><h3>Elsa Babe на AliExpress</h3><p>На AliExpress доступен магазин Elsa Babe, где можно посмотреть предложения и связаться с продавцом по поводу нужной модели.</p><a className="button primary" href={aliexpressStore} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть магазин Elsa Babe на AliExpress в новой вкладке">Открыть магазин на AliExpress</a><p className="elsa-brand-note">Перед оплатой необходимо проверить название магазина, данные продавца, карточку товара, комплектацию и итоговую сумму.</p></article><article><p className="eyebrow">Внутренняя инструкция</p><h3>Как купить Elsa Babe через AliExpress</h3><p>На Anime Dolls World опубликована отдельная пошаговая инструкция по выбору модели, согласованию комплектации, изменению цены, оплате, доставке и получению заказа.</p><Link className="button secondary" href="/stores/elsa-babe-aliexpress/">Открыть инструкцию</Link></article><article><p className="eyebrow">Альтернативный вариант покупки для России</p><h3>Moon-Doll</h3><p>Возможность заказа Elsa Babe также можно уточнить у международного магазина Moon-Doll.</p><p>Если нужной модели нет в каталоге, менеджеру можно отправить:</p><List items={["ссылку на модель", "название тела", "название головы", "фотографию", "список нужных опций"]} /><a className="button secondary" href={moonDoll} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll</a></article><article><p className="eyebrow">Официальный источник</p><h3>Официальный сайт Elsa Babe</h3><p>Официальный сайт можно использовать для просмотра каталога, голов, тел, материалов, совместимости и вариантов комплектации.</p><dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Elsa Babe в новой вкладке">elsababedoll.com</a></dd></div><div><dt>Контакт</dt><dd><a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Elsa Babe по электронной почте">{email}</a></dd></div></dl><p className="elsa-brand-note">Условия прямой оплаты и доставки в Россию необходимо уточнять у Elsa Babe до заказа.</p></article></div></div></section>
 
