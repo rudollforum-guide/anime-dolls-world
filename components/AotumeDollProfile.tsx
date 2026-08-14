@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
+import { AotumeModelGallery } from "@/components/AotumeModelGallery";
 
 const officialWebsite = "https://www.aotumedoll.us/";
 
@@ -100,11 +101,7 @@ export function AotumeDollProfile() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
-            <div className="aotume-gallery-placeholder"><span aria-hidden="true">✦</span><p className="eyebrow">Будущее обновление</p><h2>Галерея моделей</h2><p>Галерея моделей Aotume Doll будет добавлена позже</p></div>
-          </div>
-        </section>
+        <AotumeModelGallery />
 
         <section className="section alt">
           <div className="container">
