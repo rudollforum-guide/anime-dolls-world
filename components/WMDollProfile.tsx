@@ -1,10 +1,32 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.wmdolls.com/";
 const officialStore = "https://wmdollshop.com/";
+
+const galleryModels: GalleryModel[] = [
+  {
+    name: "WM Doll Y020",
+    details: "157cm · PVC Head #Y020",
+    folder: "157cm-y020",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "WM Doll Y019",
+    details: "157cm · PVC Head #Y019",
+    folder: "157cm-y019",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "WM Doll Y013",
+    details: "160cm · PVC Head #Y013",
+    folder: "160cm-y013",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+];
 
 const catalogDirections = [
   ["TPE Dolls", "Исторически важное для WM Doll направление; материал конкретной модели всегда проверяется отдельно."],
@@ -87,6 +109,16 @@ export function WMDollProfile() {
       <section className="section">
         <div className="container wm-reason-panel"><div><p className="eyebrow">Роль в справочнике</p><h2>Почему WM Doll есть в Anime Dolls World</h2><p>WM Doll включён в каталог Anime Dolls World не как специализированный anime-бренд, а как крупный производитель, в ассортименте которого встречаются отдельные стилизованные и anime-like модели.</p></div><aside><strong>Оценивайте конкретную позицию</strong><p>Дизайн головы, макияж, материал, конструкцию и комплект следует проверять для выбранной модели отдельно.</p></aside></div>
       </section>
+
+      <BrandModelGallery
+        id="wm-doll"
+        eyebrow="Отдельные аниме-модели"
+        description="Три подтверждённых примера стилизованных конфигураций WM Doll."
+        notice="Ниже представлены отдельные аниме-модели WM Doll для знакомства с этим направлением бренда. Это не полный каталог. Актуальный ассортимент и доступность конкретных конфигураций следует уточнять у продавца или производителя. Новые подтверждённые модели будут добавляться в галерею по мере появления информации."
+        galleryRoot="/images/brands/wm-doll/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section alt">
         <div className="container"><div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Наличие, комплектацию, итоговую стоимость, способы оплаты и доставку необходимо подтверждать непосредственно у продавца.</p></div><div className="wm-buy-panel">
