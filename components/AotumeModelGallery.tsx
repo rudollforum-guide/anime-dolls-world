@@ -15,10 +15,11 @@ type BrandModelGalleryProps = {
   eyebrow: string;
   title?: string;
   description: string;
-  notice: string;
+  notice?: string;
   galleryRoot: string;
   models: GalleryModel[];
   layout?: "cover" | "triptych";
+  tone?: "default" | "contrast";
 };
 
 const aotumeModels: GalleryModel[] = [
@@ -67,6 +68,7 @@ export function BrandModelGallery({
   galleryRoot,
   models,
   layout = "cover",
+  tone = "default",
 }: BrandModelGalleryProps) {
   const [activeModelIndex, setActiveModelIndex] = useState<number | null>(null);
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
@@ -118,9 +120,9 @@ export function BrandModelGallery({
   }, [activeModelIndex, models]);
 
   return (
-    <section className="section aotume-model-gallery-section" aria-labelledby={`${id}-gallery-title`}>
+    <section className={`section aotume-model-gallery-section${tone === "contrast" ? " is-contrast" : ""}`} aria-labelledby={`${id}-gallery-title`}>
       <div className="container">
-        <div className="notice aotume-model-gallery-notice">{notice}</div>
+        {notice && <div className="notice aotume-model-gallery-notice">{notice}</div>}
 
         <div className="section-head">
           <div>

@@ -1,9 +1,18 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.rosretty.com/";
+
+const animeGalleryModels: GalleryModel[] = [
+  { name: "Sakura", details: "161cm", folder: "161cm-sakura", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
+
+const furryGalleryModels: GalleryModel[] = [
+  { name: "Elena", details: "164cm", folder: "164cm-elena", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 const catalogSections = [
   "All Products",
@@ -109,6 +118,28 @@ export function RosrettyDollProfile() {
           <aside><h3>Что важно учитывать</h3><p>Наличие подтверждённых anime/furry-моделей делает бренд релевантным каталогу, но их долю в общем ассортименте не следует преувеличивать. Оценивайте конкретную карточку, а не бренд целиком.</p></aside>
         </div>
       </section>
+
+      <BrandModelGallery
+        id="rosretty-anime"
+        eyebrow="Anime-направление Rosretty Doll"
+        title="Аниме-модели"
+        description="Пример модели Rosretty Doll в аниме-стилистике."
+        notice="Ниже представлены отдельные стилизованные модели Rosretty Doll для знакомства с аниме- и фурри-направлениями бренда. Это не полный каталог продукции. Если появятся новые подтверждённые модели этих направлений, галереи будут дополнены. Актуальный ассортимент следует проверять на официальном сайте производителя."
+        galleryRoot="/images/brands/rosretty-doll/gallery/anime"
+        models={animeGalleryModels}
+        layout="triptych"
+      />
+
+      <BrandModelGallery
+        id="rosretty-furry"
+        eyebrow="Furry-направление Rosretty Doll"
+        title="Фурри-модели"
+        description="Пример антропоморфной модели из фурри-направления Rosretty Doll."
+        galleryRoot="/images/brands/rosretty-doll/gallery/furry"
+        models={furryGalleryModels}
+        layout="triptych"
+        tone="contrast"
+      />
 
       <section className="section">
         <div className="container">
