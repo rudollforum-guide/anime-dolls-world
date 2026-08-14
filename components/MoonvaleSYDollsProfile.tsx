@@ -1,9 +1,17 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://sydolls.com/collections/moonvale-doll";
 const moonDollCollection = "https://www.moon-doll.com/collections/moonvale-collection";
+
+const galleryModels: GalleryModel[] = [
+  { name: "Lyora", details: "155cm", folder: "155cm-Lyora", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Sorelle", details: "160cm", folder: "160cm-Sorelle", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Velara", details: "165cm", folder: "165cm-Velara", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Cerina", details: "170cm", folder: "170cm-Cerina", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 const features = [
   ["Furry-персонажи", "Антропоморфные образы, в которых человеческая пластика сочетается со звериными чертами."],
@@ -114,6 +122,16 @@ export function MoonvaleSYDollsProfile() {
           <div className="moonvale-why-grid">{reasons.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
         </div>
       </section>
+
+      <BrandModelGallery
+        id="moonvale"
+        eyebrow="Образы Moonvale Doll"
+        description="Четыре демонстрационных фотосета с тремя фотографиями каждой модели."
+        notice="Ниже представлены некоторые модели бренда для ознакомления. Это не полный каталог продукции. Полный список моделей и актуальные новинки доступны на официальном сайте производителя."
+        galleryRoot="/images/brands/moonvale-sy-dolls/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section alt">
         <div className="container">

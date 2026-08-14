@@ -160,7 +160,9 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-catalog-grid div { min-height:145px;display:flex;flex-direction:column;justify-content:space-between;padding:22px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,rgba(242,149,201,.08),rgba(255,255,255,.02)); }
 .aotume-catalog-grid span { color:var(--gold);font-size:24px; }.aotume-catalog-grid p { margin:18px 0 0;font-weight:700; }
 .aotume-model-gallery-section { position:relative;isolation:isolate;background:radial-gradient(circle at 12% 12%,rgba(185,150,255,.1),transparent 32%),linear-gradient(180deg,#121017,#17121d);border-top:1px solid rgba(185,150,255,.08);border-bottom:1px solid rgba(185,150,255,.08); }
+.aotume-model-gallery-notice { margin:0 0 36px;padding:20px 24px;border-color:rgba(231,199,125,.22);background:linear-gradient(135deg,rgba(231,199,125,.08),rgba(185,150,255,.06));color:#ddd4e3; }
 .aotume-model-gallery-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px; }
+.aotume-model-gallery-grid.is-triptych { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .aotume-model-gallery-card { min-width:0;overflow:hidden;border:1px solid rgba(185,150,255,.22);border-radius:27px;background:linear-gradient(145deg,#251a2f,#17131d);box-shadow:0 20px 52px rgba(0,0,0,.25);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease; }
 .aotume-model-gallery-card:hover { transform:translateY(-4px);border-color:rgba(242,149,201,.38);box-shadow:0 28px 68px rgba(0,0,0,.32),0 0 32px rgba(185,150,255,.08); }
 .aotume-model-gallery-trigger { width:100%;display:block;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer; }
@@ -174,6 +176,12 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .aotume-model-gallery-copy strong { font-family:"Playfair Display",Georgia,serif;font-size:27px;line-height:1.12; }
 .aotume-model-gallery-copy>span { color:var(--muted);font-size:13px; }
 .aotume-model-gallery-copy .aotume-model-gallery-open { margin-top:7px;color:var(--pink);font-weight:800;letter-spacing:.03em; }
+.aotume-model-gallery-card.is-triptych .aotume-model-gallery-copy { padding-bottom:18px; }
+.aotume-model-gallery-triptych { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:0 18px 18px; }
+.aotume-model-gallery-triptych button { position:relative;aspect-ratio:2/3;overflow:hidden;padding:0;border:1px solid rgba(185,150,255,.2);border-radius:15px;background:#17131d;cursor:pointer; }
+.aotume-model-gallery-triptych button:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+.aotume-model-gallery-triptych img { object-fit:cover;object-position:center top;transition:transform .35s ease,filter .35s ease; }
+.aotume-model-gallery-triptych button:hover img { transform:scale(1.04);filter:brightness(.82) saturate(1.06); }
 .aotume-lightbox { position:fixed;z-index:2000;inset:0;display:grid;place-items:center;padding:24px;overscroll-behavior:contain;background:rgba(7,5,10,.9);backdrop-filter:blur(16px); }
 .aotume-lightbox-panel { width:min(1100px,100%);max-height:calc(100vh - 48px);display:grid;grid-template-rows:auto minmax(300px,1fr) auto;gap:16px;overflow:hidden;padding:22px;border:1px solid rgba(185,150,255,.3);border-radius:28px;background:linear-gradient(145deg,#201626,#110f15);box-shadow:0 40px 120px rgba(0,0,0,.65),0 0 70px rgba(185,150,255,.1); }
 .aotume-lightbox-heading { display:flex;align-items:start;justify-content:space-between;gap:24px; }
@@ -1025,7 +1033,8 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .aotume-custom-card,.aotume-disclaimer { padding:28px 22px; }
   .aotume-option-list { grid-template-columns:1fr; }
   .aotume-disclaimer ul { columns:1; }
-  .aotume-model-gallery-grid { grid-template-columns:minmax(0,1fr);gap:16px; }
+  .aotume-model-gallery-grid,.aotume-model-gallery-grid.is-triptych { grid-template-columns:minmax(0,1fr);gap:16px; }
+  .aotume-model-gallery-notice { margin-bottom:28px;padding:18px 19px; }
   .aotume-model-gallery-card { border-radius:22px; }
   .aotume-model-gallery-preview { aspect-ratio:4/5; }
   .aotume-model-gallery-copy { padding:22px 20px; }

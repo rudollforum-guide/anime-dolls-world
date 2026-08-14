@@ -3,16 +3,25 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-type AotumeGalleryModel = {
+export type GalleryModel = {
   name: string;
   details: string;
   folder: string;
   photos: string[];
 };
 
-const galleryRoot = "/images/brands/aotume-doll/gallery";
+type BrandModelGalleryProps = {
+  id: string;
+  eyebrow: string;
+  title?: string;
+  description: string;
+  notice: string;
+  galleryRoot: string;
+  models: GalleryModel[];
+  layout?: "cover" | "triptych";
+};
 
-const models: AotumeGalleryModel[] = [
+const aotumeModels: GalleryModel[] = [
   {
     name: "Kamado Nezuko",
     details: "145cm · Head #47",
@@ -45,19 +54,28 @@ const models: AotumeGalleryModel[] = [
   },
 ];
 
-function photoPath(model: AotumeGalleryModel, photo: string) {
+function photoPath(galleryRoot: string, model: GalleryModel, photo: string) {
   return `${galleryRoot}/${model.folder}/${photo}`;
 }
 
-export function AotumeModelGallery() {
+export function BrandModelGallery({
+  id,
+  eyebrow,
+  title = "Галерея моделей",
+  description,
+  notice,
+  galleryRoot,
+  models,
+  layout = "cover",
+}: BrandModelGalleryProps) {
   const [activeModelIndex, setActiveModelIndex] = useState<number | null>(null);
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
   const activeModel = activeModelIndex === null ? null : models[activeModelIndex];
 
-  function openGallery(modelIndex: number, trigger: HTMLButtonElement) {
+  function openGallery(modelIndex: number, photoIndex: number, trigger: HTMLButtonElement) {
     triggerRef.current = trigger;
-    setActivePhotoIndex(0);
+    setActivePhotoIndex(photoIndex);
     setActiveModelIndex(modelIndex);
   }
 
@@ -67,64 +85,103 @@ export function AotumeModelGallery() {
   }
 
   function showPreviousPhoto() {
-    setActivePhotoIndex((current) => (current - 1 + 3) % 3);
+    if (!activeModel) return;
+    setActivePhotoIndex((current) => (current - 1 + activeModel.photos.length) % activeModel.photos.length);
   }
 
   function showNextPhoto() {
-    setActivePhotoIndex((current) => (current + 1) % 3);
+    if (!activeModel) return;
+    setActivePhotoIndex((current) => (current + 1) % activeModel.photos.length);
   }
 
   useEffect(() => {
     if (activeModelIndex === null) return;
+    const photoCount = models[activeModelIndex].photos.length;
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") closeGallery();
-      if (event.key === "ArrowLeft") showPreviousPhoto();
-      if (event.key === "ArrowRight") showNextPhoto();
+      if (event.key === "Escape") {
+        setActiveModelIndex(null);
+        window.setTimeout(() => triggerRef.current?.focus(), 0);
+      }
+      if (event.key === "ArrowLeft") {
+        setActivePhotoIndex((current) => (current - 1 + photoCount) % photoCount);
+      }
+      if (event.key === "ArrowRight") {
+        setActivePhotoIndex((current) => (current + 1) % photoCount);
+      }
     }
 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeModelIndex]);
+  }, [activeModelIndex, models]);
 
   return (
-    <section className="section aotume-model-gallery-section" aria-labelledby="aotume-gallery-title">
+    <section className="section aotume-model-gallery-section" aria-labelledby={`${id}-gallery-title`}>
       <div className="container">
+        <div className="notice aotume-model-gallery-notice">{notice}</div>
+
         <div className="section-head">
           <div>
-            <p className="eyebrow">Образы Aotume Doll</p>
-            <h2 id="aotume-gallery-title">Галерея моделей</h2>
+            <p className="eyebrow">{eyebrow}</p>
+            <h2 id={`${id}-gallery-title`}>{title}</h2>
           </div>
-          <p>Пять персонажных образов с отдельными фотосетами. Откройте карточку, чтобы посмотреть все фотографии модели.</p>
+          <p>{description}</p>
         </div>
 
-        <div className="aotume-model-gallery-grid">
+        <div className={`aotume-model-gallery-grid${layout === "triptych" ? " is-triptych" : ""}`}>
           {models.map((model, modelIndex) => (
-            <article className="aotume-model-gallery-card" key={model.folder}>
-              <button
-                className="aotume-model-gallery-trigger"
-                type="button"
-                aria-haspopup="dialog"
-                aria-label={`Открыть фотосет модели ${model.name}`}
-                onClick={(event) => openGallery(modelIndex, event.currentTarget)}
-              >
-                <span className="aotume-model-gallery-preview">
-                  <Image
-                    src={photoPath(model, model.photos[0])}
-                    alt={`${model.name} — превью фотосета`}
-                    fill
-                    sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                  />
-                  <span className="aotume-model-gallery-count" aria-hidden="true">3 фото</span>
-                </span>
-                <span className="aotume-model-gallery-copy">
-                  <strong>{model.name}</strong>
-                  <span>{model.details}</span>
-                  <span className="aotume-model-gallery-open">Открыть фотосет</span>
-                </span>
-              </button>
+            <article className={`aotume-model-gallery-card${layout === "triptych" ? " is-triptych" : ""}`} key={model.folder}>
+              {layout === "cover" ? (
+                <button
+                  className="aotume-model-gallery-trigger"
+                  type="button"
+                  aria-haspopup="dialog"
+                  aria-label={`Открыть фотосет модели ${model.name}`}
+                  onClick={(event) => openGallery(modelIndex, 0, event.currentTarget)}
+                >
+                  <span className="aotume-model-gallery-preview">
+                    <Image
+                      src={photoPath(galleryRoot, model, model.photos[0])}
+                      alt={`${model.name} — превью фотосета`}
+                      fill
+                      sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    />
+                    <span className="aotume-model-gallery-count" aria-hidden="true">{model.photos.length} фото</span>
+                  </span>
+                  <span className="aotume-model-gallery-copy">
+                    <strong>{model.name}</strong>
+                    <span>{model.details}</span>
+                    <span className="aotume-model-gallery-open">Открыть фотосет</span>
+                  </span>
+                </button>
+              ) : (
+                <>
+                  <div className="aotume-model-gallery-copy">
+                    <strong>{model.name}</strong>
+                    <span>{model.details}</span>
+                  </div>
+                  <div className="aotume-model-gallery-triptych">
+                    {model.photos.map((photo, photoIndex) => (
+                      <button
+                        type="button"
+                        key={photo}
+                        aria-haspopup="dialog"
+                        aria-label={`Открыть фотографию ${photoIndex + 1} модели ${model.name}`}
+                        onClick={(event) => openGallery(modelIndex, photoIndex, event.currentTarget)}
+                      >
+                        <Image
+                          src={photoPath(galleryRoot, model, photo)}
+                          alt={`${model.name}, фотография ${photoIndex + 1}`}
+                          fill
+                          sizes="(max-width: 650px) 30vw, 18vw"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </article>
           ))}
         </div>
@@ -135,7 +192,7 @@ export function AotumeModelGallery() {
           className="aotume-lightbox"
           role="dialog"
           aria-modal="true"
-          aria-labelledby={`aotume-lightbox-title-${activeModel.folder}`}
+          aria-labelledby={`${id}-lightbox-title-${activeModel.folder}`}
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) closeGallery();
           }}
@@ -143,8 +200,8 @@ export function AotumeModelGallery() {
           <div className="aotume-lightbox-panel">
             <div className="aotume-lightbox-heading">
               <div>
-                <p className="eyebrow">Фотосет · {activePhotoIndex + 1} из 3</p>
-                <h2 id={`aotume-lightbox-title-${activeModel.folder}`}>{activeModel.name}</h2>
+                <p className="eyebrow">Фотосет · {activePhotoIndex + 1} из {activeModel.photos.length}</p>
+                <h2 id={`${id}-lightbox-title-${activeModel.folder}`}>{activeModel.name}</h2>
                 <p>{activeModel.details}</p>
               </div>
               <button className="aotume-lightbox-close" type="button" onClick={closeGallery} aria-label="Закрыть фотосет" autoFocus>×</button>
@@ -152,8 +209,8 @@ export function AotumeModelGallery() {
 
             <div className="aotume-lightbox-stage">
               <Image
-                src={photoPath(activeModel, activeModel.photos[activePhotoIndex])}
-                alt={`${activeModel.name}, фотография ${activePhotoIndex + 1} из 3`}
+                src={photoPath(galleryRoot, activeModel, activeModel.photos[activePhotoIndex])}
+                alt={`${activeModel.name}, фотография ${activePhotoIndex + 1} из ${activeModel.photos.length}`}
                 fill
                 sizes="100vw"
                 priority
@@ -172,7 +229,7 @@ export function AotumeModelGallery() {
                   aria-label={`Показать фотографию ${photoIndex + 1}`}
                   aria-current={photoIndex === activePhotoIndex ? "true" : undefined}
                 >
-                  <Image src={photoPath(activeModel, photo)} alt="" fill sizes="92px" />
+                  <Image src={photoPath(galleryRoot, activeModel, photo)} alt="" fill sizes="92px" />
                 </button>
               ))}
             </div>
@@ -180,5 +237,18 @@ export function AotumeModelGallery() {
         </div>
       )}
     </section>
+  );
+}
+
+export function AotumeModelGallery() {
+  return (
+    <BrandModelGallery
+      id="aotume"
+      eyebrow="Образы Aotume Doll"
+      description="Пять персонажных образов с отдельными фотосетами. Откройте карточку, чтобы посмотреть все фотографии модели."
+      notice="Ниже представлены некоторые модели бренда для ознакомления. Это не полный каталог продукции. Полный список моделей и актуальные новинки доступны на официальном сайте производителя."
+      galleryRoot="/images/brands/aotume-doll/gallery"
+      models={aotumeModels}
+    />
   );
 }
