@@ -1,3 +1,4 @@
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -5,6 +6,39 @@ import { siteConfig } from "@/data/site";
 const officialWebsite = "https://butterflydoll.com.cn/";
 const email = "info@butterflydoll.com.cn";
 const whatsappUrl = "https://wa.me/8613777070002";
+
+const galleryModels: GalleryModel[] = [
+  {
+    name: "Abby",
+    details: "BH-100 · BB140-01 · 140XL",
+    folder: "bh-100-abby-140xl",
+    photos: ["01.webp", "02.webp", "03.webp"],
+  },
+  {
+    name: "Mizuko Big",
+    details: "BH-116 · BB140-01 · 140XL",
+    folder: "bh-116-mizuko-big-140xl",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Rion",
+    details: "BH-122 · BB140-01 · 140XL",
+    folder: "bh-122-rion-140xl",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Kaguya",
+    details: "BH-133 · BB150-01 · 150L",
+    folder: "bh-133-kaguya-150l",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+  {
+    name: "Crimson Eyes",
+    details: "BH-134 · BB154 · XXL",
+    folder: "bh-134-crimson-eyes-154xxl",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+  },
+];
 
 const companyCapabilities = ["разработке дизайна кукол", "скульптуре и 3D-моделировании", "создании и производстве форм", "сварке и обработке металлических каркасов", "разработке составов материалов", "изготовлении изделий из TPE, силикона и пластика", "OEM- и ODM-производстве"];
 const productionDepartments = ["скульптуры и 3D-дизайна", "разработки и изготовления форм", "сварки и обработки металлических деталей", "исследования и разработки материалов", "производства и сборки"];
@@ -70,7 +104,15 @@ export function ButterflyDollProfile() {
 
         <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">Производственные услуги</p><h2>OEM и ODM</h2></div><p>Butterfly Doll сообщает, что принимает заказы на OEM- и ODM-разработку.</p></div><div className="butterfly-service-grid"><section><span>OEM</span><p>Производство изделия по техническому заданию или под брендом заказчика.</p></section><section><span>ODM</span><p>Разработка и производство модели с участием производителя.</p></section></div><div className="notice">Этот раздел описывает производственные услуги компании и не означает, что индивидуальная кастомизация доступна частному покупателю для любой модели. Возможность, стоимость и минимальные объёмы необходимо уточнять напрямую.</div></div></section>
 
-        <section className="section"><div className="container"><div className="butterfly-gallery-placeholder" data-gallery-state="planned"><span aria-hidden="true">✦</span><p className="eyebrow">Будущее обновление</p><h2>Галерея моделей</h2><p>Галерея моделей Butterfly Doll будет добавлена позже</p></div></div></section>
+        <BrandModelGallery
+          id="butterfly-doll"
+          eyebrow="Демонстрационная подборка"
+          description="Пять примеров моделей с опубликованными обозначениями головы и тела."
+          notice="Ниже представлены некоторые модели Butterfly Doll для знакомства со стилем и направлениями бренда. Это не полный каталог. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
+          galleryRoot="/images/brands/butterfly-doll/gallery"
+          models={galleryModels}
+          layout="triptych"
+        />
 
         <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Наличие, комплектацию и условия необходимо подтверждать у выбранного магазина или производителя.</p></div><div className="butterfly-purchase-stack"><section className="butterfly-purchase-card butterfly-moon-card"><div className="butterfly-recommendation-label">Для русскоязычной аудитории</div><div className="butterfly-moon-layout"><div><p className="eyebrow">Вариант покупки для России</p><h3>Moon-Doll</h3><p>Для покупателей из России одним из возможных вариантов заказа является международный магазин Moon-Doll.</p><p>Если нужной модели Butterfly Doll нет в каталоге, менеджеру можно отправить ссылку на официальный товар, фотографию или код модели и уточнить возможность заказа.</p><a className="button primary butterfly-store-button" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll</a></div><div className="butterfly-store-checks"><strong>Уточните перед заказом</strong><ul>{moonChecks.map((item) => <li key={item}>{item}</li>)}</ul></div></div></section><section className="butterfly-purchase-card butterfly-official-card"><div><p className="eyebrow">Официальный источник</p><h3>Официальный сайт Butterfly Doll</h3><p>Официальный сайт можно использовать для просмотра каталога, кодов моделей и опубликованных характеристик.</p><p className="butterfly-note">Условия прямой продажи и доставки в Россию необходимо уточнять у Butterfly Doll до оплаты.</p></div><dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Butterfly Doll в новой вкладке">butterflydoll.com.cn</a></dd></div><div><dt>Контакт</dt><dd><a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Butterfly Doll по электронной почте">{email}</a></dd></div><div><dt>WhatsApp / WeChat</dt><dd><a href={whatsappUrl} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть WhatsApp Butterfly Doll в новой вкладке">+86 137 7707 0002</a></dd></div><div><dt>X</dt><dd>@X_ButterflyDoll</dd></div></dl></section></div></div></section>
 
