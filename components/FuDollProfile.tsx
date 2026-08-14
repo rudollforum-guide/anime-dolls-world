@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
 const officialCatalog = "https://fu-doll.com/product/";
+
+const galleryModels: GalleryModel[] = [
+  { name: "Petite", details: "153cm", folder: "153cm-petite", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 const catalogDirections = [
   ["Silicone Dolls", "Раздел моделей из силикона; характеристики проверяются в карточке выбранной позиции."],
@@ -103,6 +108,16 @@ export function FuDollProfile() {
           <aside><h3>Как оценивать модель</h3><div className="fu-feature-list">{stylizedFeatures.map(([title, text]) => <article key={title}><strong>{title}</strong><p>{text}</p></article>)}</div></aside>
         </div>
       </section>
+
+      <BrandModelGallery
+        id="fu-doll"
+        eyebrow="Стилизованный образ FU Doll"
+        description="Один демонстрационный фотосет с тремя фотографиями модели."
+        notice="Ниже представлена одна из стилизованных моделей FU Doll для знакомства с направлением бренда. Это не полный каталог продукции: основная часть ассортимента FU Doll выполнена в реалистичной стилистике. Если в дальнейшем появятся новые подтверждённые аниме- или стилизованные модели, галерея будет дополнена. Актуальный ассортимент следует проверять на официальном сайте производителя."
+        galleryRoot="/images/brands/fu-doll/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section alt">
         <div className="container">
