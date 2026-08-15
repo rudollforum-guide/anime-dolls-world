@@ -1,3 +1,4 @@
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -42,6 +43,14 @@ const purchaseChecks = [
   "доступные варианты макияжа и дополнительные опции",
   "итоговую стоимость, оплату и условия доставки",
 ] as const;
+
+const galleryModels: GalleryModel[] = [
+  { name: "Mint", details: "141cm", folder: "141cm-mint", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Spark's", details: "148cm", folder: "148cm-sparks", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Erin", details: "150cm", folder: "150cm-erin", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Lilisi", details: "150cm", folder: "150cm-lilisi", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Yuichi Hiiragi", details: "150cm", folder: "150cm-yuichi-hiiragi", photos: ["01.png", "02.png", "03.png"] },
+];
 
 export function MozuDollProfile() {
   const jsonLd = {
@@ -124,6 +133,17 @@ export function MozuDollProfile() {
       <section className="section alt">
         <div className="container"><div className="section-head"><div><p className="eyebrow">Отдельная позиция</p><h2>Почему Mozu интересен</h2></div><p>Бренд сочетает масштабный каталог и последовательную работу с персонажными образами.</p></div><div className="mozu-why-grid">{reasons.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div>
       </section>
+
+      <BrandModelGallery
+        id="mozudoll-models"
+        eyebrow="Демонстрационная подборка"
+        title="Аниме-модели"
+        description="Примеры ростовых моделей MozuDoll в аниме-стилистике."
+        notice="Ниже представлены некоторые ростовые модели MozuDoll для знакомства с аниме-направлением бренда. Это не полный каталог производителя. В Anime Dolls World основной акцент сделан на полноразмерных моделях; компактные серии MozuDoll сохраняются в профиле для полноты информации о бренде."
+        galleryRoot="/images/brands/mozudoll/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section">
         <div className="container">
