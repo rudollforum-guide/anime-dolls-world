@@ -61,7 +61,7 @@ export function MoonvaleSYDollsProfile() {
           <div>
             <p className="eyebrow">Furry / fantasy-линейка SY Dolls</p>
             <h1>Moonvale Doll</h1>
-            <p className="lede">Антропоморфные, звериные и фантазийные персонажи на пересечении furry-, anime- и fantasy-эстетики.</p>
+            <p className="lede">Ростовые антропоморфные, звериные и фантазийные персонажи на пересечении furry-, anime- и fantasy-эстетики.</p>
             <p className="moonvale-hero-note">В центре линейки — самостоятельный дизайн персонажей, выразительные звериные головы и целостная визуальная проработка образов.</p>
             <div className="moonvale-tags" aria-label="Направления Moonvale Doll">
               {['Furry', 'Fantasy', 'Anthropomorphic', 'SY Dolls'].map(tag => <span key={tag}>{tag}</span>)}

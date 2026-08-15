@@ -24,7 +24,7 @@ const placeholder = {
 };
 
 export const brands: Brand[] = [
-  { slug: "aotume-doll", name: "Aotume Doll", categories: ["anime"], website: "https://www.aotumedoll.us/", summary: "Производитель кукол с отдельным направлением моделей в аниме-стилистике.", ...placeholder },
+  { slug: "aotume-doll", name: "Aotume Doll", categories: ["anime"], website: "https://www.aotumedoll.us/", summary: "Производитель полноразмерных аниме-моделей из TPE, силикона и комбинированных материалов с настройкой персонажного образа.", ...placeholder },
   { slug: "bc-doll", name: "BC Doll", categories: ["anime"], website: "https://bcdolls.com/", summary: "Бренд, в каталоге которого представлены модели с аниме-эстетикой.", ...placeholder },
   { slug: "butterfly-doll", name: "Butterfly Doll", categories: ["anime"], website: "https://butterflydoll.com.cn/", summary: "Производитель с коллекциями кукол в стилизованной аниме-эстетике.", ...placeholder },
   { slug: "croissant-doll", name: "Croissant Doll", categories: ["anime"], website: "https://croissantdoll.com", summary: "Бренд аниме-кукол; актуальный состав коллекций следует проверять на официальном сайте.", ...placeholder },
@@ -36,7 +36,7 @@ export const brands: Brand[] = [
   { slug: "dolls-castle", name: "Dolls Castle", categories: ["furry-line"], website: "https://www.dolls-castle.com/", summary: "Производитель стилизованных фантазийных и антропоморфных кукол.", ...placeholder },
   { slug: "climaxdoll", name: "ClimaxDoll", categories: ["anime-line"], website: "https://www.climax-doll.com/", summary: "Производитель, в широком каталоге которого встречаются отдельные аниме-модели.", ...placeholder },
   { slug: "fu-doll", name: "FU Doll / Fudoll", categories: ["anime-line"], website: "https://fu-doll.com/", summary: "Бренд с различными направлениями, включая отдельные стилизованные модели.", ...placeholder },
-  { slug: "rosretty-doll", name: "Rosretty Doll", categories: ["anime-line", "furry-line"], website: "https://rosretty.com/", summary: "Производитель с отдельными моделями в аниме-стилистике.", ...placeholder },
+  { slug: "rosretty-doll", name: "Rosretty Doll", categories: ["anime-line", "furry-line"], website: "https://rosretty.com/", summary: "Производитель с широким реалистичным каталогом и отдельными anime-, furry-, cosplay- и fantasy-моделями.", ...placeholder },
   { slug: "wm-doll", name: "WM Doll", categories: ["anime-line"], website: "https://www.wmdolls.com/", summary: "Крупный производитель с отдельными стилизованными моделями в ассортименте.", ...placeholder },
   { slug: "yearndoll", name: "Yearndoll", categories: ["anime-line"], summary: "Информация о моделях бренда доступна через дилеров; официальный адрес пока не указан.", ...placeholder },
 ];

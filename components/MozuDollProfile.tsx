@@ -62,7 +62,7 @@ export function MozuDollProfile() {
             <p className="eyebrow">Anime / ACG-направление</p>
             <h1>MozuDoll</h1>
             <p className="lede">Бренд персонажных кукол с аниме-эстетикой, несколькими размерными сериями и отдельным каталогом элементов образа.</p>
-            <p className="mozu-hero-note">Mozu объединяет компактные и полноразмерные форматы, сменные головы, макияж, парики, одежду и дополнительные опции — с характеристиками, зависящими от выбранной модели.</p>
+            <p className="mozu-hero-note">Mozu объединяет полноразмерные и компактные серии, сменные головы, макияж, парики, одежду и дополнительные опции. В Anime Dolls World основной интерес представляют ростовые серии 141–160 см; компактные форматы сохраняются в профиле для полноты каталога бренда.</p>
             <div className="mozu-tags" aria-label="Направления MozuDoll">{["Anime", "ACG", "65–160 cm", "Customization"].map(tag => <span key={tag}>{tag}</span>)}</div>
             <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт MozuDoll в новой вкладке">Официальный сайт</a>
           </div>

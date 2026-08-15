@@ -3,11 +3,11 @@ import { FurryDollsGuide } from "@/components/FurryDollsGuide";
 
 export const metadata: Metadata = {
   title: { absolute: "Фурри-куклы: бренды, материалы и особенности | Anime Dolls World" },
-  description: "Обзор фурри- и антропоморфных кукол: Moonvale Doll, Elsa Babe, Dolls Castle, силиконовые модели, звериные головы, уши, хвосты, каркасы и особенности выбора.",
+  description: "Полноразмерные фурри- и антропоморфные модели: Moonvale, Elsa Babe и Dolls Castle, нестандартные головы, декоративные элементы, материалы, конструкция и выбор.",
   alternates: { canonical: "/furry-dolls/" },
   openGraph: {
     title: "Фурри-куклы: бренды, материалы и особенности",
-    description: "Moonvale Doll, Elsa Babe и Dolls Castle: антропоморфные образы, конструкция, совместимость и выбор.",
+    description: "Полноразмерные фурри-модели Moonvale, Elsa Babe и Dolls Castle: образы, материалы, конструкция и выбор.",
     url: "/furry-dolls/",
   },
 };
