@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -8,6 +9,16 @@ const officialWebsite = "https://www.climax-doll.com/";
 const si60Variants = ["XS", "S", "M", "L", "X", "XL", "XXL", "H"] as const;
 const si70Variants = ["AT", "AR", "LB", "MK", "GB", "SP", "KA"] as const;
 const jVariants = ["J58", "J59", "J60", "J60 XS", "J60 P", "J85 B"] as const;
+
+const animeGalleryModels: GalleryModel[] = [
+  { name: "Barza", details: "120cm", folder: "120cm-barza", photos: ["01.webp", "02.webp", "03.webp"] },
+  { name: "Meru Halloween", details: "157cm", folder: "157cm-meru-halloween", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Meru", details: "160cm", folder: "160cm-meru", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
+
+const furryGalleryModels: GalleryModel[] = [
+  { name: "Monie", details: "141cm", folder: "141cm-monie", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 const visualDirections = [
   ["Anime-inspired персонажи", "Стилизованные лица и образная подача, ориентированная на визуальный язык аниме."],
@@ -129,6 +140,28 @@ export function ClimaxDollProfile() {
           <div className="climax-why-grid">{reasons.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
         </div>
       </section>
+
+      <BrandModelGallery
+        id="climaxdoll-anime"
+        eyebrow="Демонстрационная подборка"
+        title="Аниме-модели"
+        description="Отдельные ростовые и стилизованные модели ClimaxDoll в anime-направлении."
+        notice="Ниже представлены некоторые стилизованные модели ClimaxDoll, относящиеся к anime- и furry-направлениям. Это не полный каталог производителя. ClimaxDoll также выпускает компактные и малые модели, однако основной фокус Anime Dolls World сделан на ростовых форматах. Ориентир Anime Dolls World примерно 140–170+ см не является жёстким фильтром: отдельные интересные модели, такие как Barza 120cm, также могут включаться в демонстрационные подборки."
+        galleryRoot="/images/brands/climaxdoll/gallery/anime"
+        models={animeGalleryModels}
+        layout="triptych"
+      />
+
+      <BrandModelGallery
+        id="climaxdoll-furry"
+        eyebrow="Отдельное направление"
+        title="Фурри-модели"
+        description="Отдельные антропоморфные и furry-модели ClimaxDoll."
+        galleryRoot="/images/brands/climaxdoll/gallery/furry"
+        models={furryGalleryModels}
+        layout="triptych"
+        tone="contrast"
+      />
 
       <section className="section alt">
         <div className="container">
