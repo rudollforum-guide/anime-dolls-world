@@ -1,150 +1,89 @@
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
 
-const officialWebsite = "https://kiradols.com/";
+const officialWebsite = "https://www.kiradols.com/";
+const profileDescription = "Kiradols — производитель полноразмерных силиконовых аниме-моделей: 3D-скульпты, ростовые тела, конструкция, глаза, парики, одежда и производственный процесс.";
 
 const productionStages = [
-  ["3D-дизайн", "Форма персонажа начинается с цифровой проработки скульпта и визуального образа."],
-  ["Создание форм", "Подготовка форм связывает цифровой дизайн с дальнейшим производственным процессом."],
-  ["Производство", "Следующий этап охватывает изготовление полноразмерной модели."],
-  ["Оформление образа", "Финальная подача объединяет внешний вид модели и персонажную стилизацию."],
-  ["Глаза", "Подбор глаз участвует в формировании узнаваемого аниме-образа."],
-  ["Парики", "Причёска дополняет дизайн конкретного персонажа."],
-  ["Одежда", "Костюм завершает визуальную концепцию модели."],
+  ["3D-дизайн", "Цифровая проработка задаёт скульпт, пропорции и визуальный характер персонажа."],
+  ["Создание форм", "Подготовленные формы переводят цифровой дизайн в производственный процесс."],
+  ["Изготовление модели", "После формования выполняются сборка и подготовка полноразмерного тела."],
+  ["Окрашивание и детали", "Макияж и body painting формируют финальную подачу конкретного образа."],
+  ["Глаза, парик и одежда", "Эти элементы завершают персонажную стилизацию и зависят от комплектации."],
+] as const;
+
+const confirmedModels = [
+  ["Tsumugi", "150 cm · Head #KH003 · Original Anime"],
+  ["Umegawa Kurako", "155 и 160 cm · Head #KH001 · отдельные карточки каталога"],
+  ["Risa", "150, 155 и 160 cm · Head #KH004 · DLC / Magical Girl"],
+  ["Saori", "155 cm · Head #KH005 · DLC / Magical Girl"],
 ] as const;
 
 export function KiradolsProfile() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${siteConfig.url}/brands/kiradols/#webpage`,
-        url: `${siteConfig.url}/brands/kiradols/`,
-        name: "Kiradols — полноразмерные силиконовые аниме-модели",
-        description: "Kiradols — производитель полноразмерных силиконовых аниме-моделей с персонажными 3D-скульптами, ростовыми телами и собственным производственным процессом.",
-        isPartOf: { "@type": "WebSite", name: siteConfig.name, url: siteConfig.url },
-        breadcrumb: { "@id": `${siteConfig.url}/brands/kiradols/#breadcrumb` },
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${siteConfig.url}/brands/kiradols/#breadcrumb`,
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Главная", item: `${siteConfig.url}/` },
-          { "@type": "ListItem", position: 2, name: "Бренды", item: `${siteConfig.url}/brands/` },
-          { "@type": "ListItem", position: 3, name: "Kiradols", item: `${siteConfig.url}/brands/kiradols/` },
-        ],
-      },
+      { "@type": "WebPage", "@id": `${siteConfig.url}/brands/kiradols/#webpage`, url: `${siteConfig.url}/brands/kiradols/`, name: "Kiradols — полноразмерные силиконовые аниме-модели", description: profileDescription, isPartOf: { "@type": "WebSite", name: siteConfig.name, url: siteConfig.url }, breadcrumb: { "@id": `${siteConfig.url}/brands/kiradols/#breadcrumb` } },
+      { "@type": "BreadcrumbList", "@id": `${siteConfig.url}/brands/kiradols/#breadcrumb`, itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Главная", item: `${siteConfig.url}/` },
+        { "@type": "ListItem", position: 2, name: "Бренды", item: `${siteConfig.url}/brands/` },
+        { "@type": "ListItem", position: 3, name: "Kiradols", item: `${siteConfig.url}/brands/kiradols/` },
+      ] },
     ],
   };
 
-  return (
-    <>
-      <section className="page-hero aotume-hero">
-        <div className="container">
-          <Breadcrumbs items={[{ label: "Бренды", href: "/brands/" }, { label: "Kiradols" }]} />
-          <div className="aotume-hero-grid">
-            <div>
-              <p className="eyebrow">Аниме</p>
-              <h1>Kiradols</h1>
-              <p className="lede">Kiradols — производитель полноразмерных силиконовых аниме-моделей, ориентированный на персонажные 3D-скульпты, производственный процесс и ростовые форматы.</p>
-              <div className="aotume-tags" aria-label="Основные направления Kiradols">
-                {['Аниме', 'Silicone', '3D-дизайн', '150–160 cm'].map((tag) => <span key={tag}>{tag}</span>)}
-              </div>
-              <a className="button primary aotume-official-link" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Kiradols в новой вкладке">Официальный сайт Kiradols</a>
-            </div>
-            <BrandProfileIcon slug="kiradols" name="Kiradols" />
-          </div>
+  return <>
+    <section className="page-hero aotume-hero"><div className="container">
+      <Breadcrumbs items={[{ label: "Бренды", href: "/brands/" }, { label: "Kiradols" }]} />
+      <div className="aotume-hero-grid"><div>
+        <p className="eyebrow">Аниме</p><h1>Kiradols</h1>
+        <p className="lede">Производитель полноразмерных силиконовых аниме-моделей с персонажными 3D-скульптами, ростовыми телами и собственным производственным процессом.</p>
+        <div className="aotume-tags" aria-label="Основные направления Kiradols">{["Аниме", "Silicone", "3D-дизайн", "150–160 cm"].map(tag => <span key={tag}>{tag}</span>)}</div>
+        <a className="button primary aotume-official-link" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Kiradols в новой вкладке">Официальный сайт Kiradols</a>
+      </div><BrandProfileIcon slug="kiradols" name="Kiradols" /></div>
+    </div></section>
+
+    <main className="aotume-profile">
+      <section className="section"><div className="container aotume-intro-grid">
+        <article className="prose aotume-prose"><p className="eyebrow">Профиль производителя</p><h2>О бренде</h2>
+          <p>Kiradols специализируется на полноразмерных силиконовых моделях с выраженной аниме-эстетикой. Официальный каталог выделяет Original Anime и DLC Series, а также отдельные разделы с головами, париками и одеждой.</p>
+          <p>Бренд показывает путь от 3D-дизайна и форм до производства, окрашивания и оформления образа. Наличие конкретного парика, костюма или дополнительной опции всегда следует проверять в карточке выбранной модели.</p>
+        </article>
+        <aside className="aotume-summary-card"><p className="eyebrow">Кратко</p><dl>
+          <div><dt>Категория</dt><dd>Специализированный аниме-бренд</dd></div><div><dt>Материал</dt><dd>Silicone</dd></div><div><dt>Опубликованные форматы</dt><dd>150–160 cm</dd></div><div><dt>Разделы</dt><dd>Original Anime, DLC Series</dd></div>
+        </dl></aside>
+      </div></section>
+
+      <section className="section alt"><div className="container aotume-two-column">
+        <article className="aotume-content-card"><p className="eyebrow">Материал и тело</p><h2>Силиконовые модели</h2><p>Официальный сайт позиционирует Kiradols как бренд аниме-моделей из силикона. Для отдельных карточек подтверждено полностью силиконовое тело, однако состав, мягкость и конструкцию необходимо сверять по конкретной позиции.</p><div className="notice">Опция Jelly Breasts указана для отдельных моделей и не переносится автоматически на весь каталог.</div></article>
+        <article className="aotume-content-card"><p className="eyebrow">Конструкция и подвижность</p><h2>Каркас и опции</h2><p>В конфигураторе отдельных моделей доступны Standard и EVO Skeleton. Там же встречаются upgraded articulated hand skeleton, hard hands, hard feet и wired toes.</p><div className="notice">Это набор доступных опций в проверенных карточках, а не универсальная комплектация каждой модели Kiradols.</div></article>
+      </div></section>
+
+      <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">Оформление персонажа</p><h2>Глаза, парики и одежда</h2></div><p>Образ складывается из нескольких элементов; их наличие и варианты зависят от модели и комплектации.</p></div>
+        <div className="aotume-feature-grid">
+          <article className="aotume-feature-card"><span>01</span><h3>Глаза</h3><p>В проверенных конфигураторах представлены 13 вариантов цвета глаз. Для отдельных моделей также упоминаются movable eyes.</p></article>
+          <article className="aotume-feature-card"><span>02</span><h3>Парики</h3><p>Официальный каталог содержит раздел Wigs и варианты париков в карточках моделей.</p></article>
+          <article className="aotume-feature-card"><span>03</span><h3>Одежда</h3><p>Для DLC Series встречается заданная одежда серии, а в каталоге опубликованы отдельные костюмы и apparel.</p></article>
+          <article className="aotume-feature-card"><span>04</span><h3>Комплектация</h3><p>Фотография образа не подтверждает автоматически, что все показанные элементы входят в базовый комплект.</p></article>
         </div>
-      </section>
+      </div></section>
 
-      <main className="aotume-profile">
-        <section className="section">
-          <div className="container aotume-intro-grid">
-            <article className="prose aotume-prose">
-              <p className="eyebrow">Профиль производителя</p>
-              <h2>О бренде</h2>
-              <p>Kiradols специализируется на полноразмерных силиконовых моделях с выраженной аниме-эстетикой. Бренд создаёт персонажные образы начиная с 3D-дизайна и форм, после чего следует производство модели и оформление с подбором глаз, париков и одежды.</p>
-              <p>Перечень этапов описывает опубликованный производственный подход Kiradols. Он не означает без дополнительного подтверждения, что каждый элемент образа обязательно полностью изготавливается внутри одной фабрики.</p>
-            </article>
-            <aside className="aotume-summary-card">
-              <p className="eyebrow">Кратко</p>
-              <dl>
-                <div><dt>Категория</dt><dd>Специализированный аниме-бренд</dd></div>
-                <div><dt>Подтверждённый материал</dt><dd>Silicone</dd></div>
-                <div><dt>Опубликованные форматы</dt><dd>Примерно 150–160 cm</dd></div>
-              </dl>
-            </aside>
-          </div>
-        </section>
+      <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">От дизайна к образу</p><h2>3D и производственный процесс</h2></div><p>Этапы отражают опубликованную Kiradols структуру процесса и не обозначают универсальную технологию для каждой модели.</p></div><div className="aotume-feature-grid">{productionStages.map(([title,text],index)=><article className="aotume-feature-card" key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-        <section className="section alt">
-          <div className="container aotume-two-column">
-            <article className="aotume-content-card">
-              <p className="eyebrow">Основная специализация</p>
-              <h2>Аниме-направление</h2>
-              <p>В отличие от производителей, где аниме-модели составляют отдельную линейку внутри реалистичного каталога, Kiradols изначально ориентирован на персонажную anime-стилизацию.</p>
-              <p>Выразительность образа формируют 3D-скульпт, лицо, глаза, парик, одежда и общая визуальная концепция конкретной модели.</p>
-            </article>
-            <article className="aotume-content-card">
-              <p className="eyebrow">Подтверждённое направление</p>
-              <h2>Материалы</h2>
-              <p>В доступных материалах Kiradols и опубликованных предложениях подтверждаются полноразмерные силиконовые модели.</p>
-              <div className="notice">Точный состав силикона, мягкость, конструкцию и доступные опции необходимо проверять для каждой конкретной позиции.</div>
-            </article>
-          </div>
-        </section>
+      <section className="section"><div className="container aotume-two-column">
+        <article className="aotume-content-card"><p className="eyebrow">Финишная обработка</p><h2>Окрашивание и детализация</h2><p>Официальные материалы упоминают body paint как часть художественной детализации, а в конфигураторе отдельных моделей доступно upgraded body painting.</p><p>Макияж, окрашивание тела и другие детали необходимо оценивать по фотографиям и описанию конкретной позиции.</p></article>
+        <article className="aotume-content-card"><p className="eyebrow">Ростовые форматы</p><h2>150–160 cm</h2><p>В проверенном официальном каталоге представлены модели ростом 150, 155 и 160 см. Этот диапазон описывает опубликованные позиции на момент проверки, а не жёсткую границу будущего ассортимента.</p></article>
+      </div></section>
 
-        <section className="section">
-          <div className="container">
-            <div className="aotume-custom-card">
-              <div>
-                <p className="eyebrow">Полноразмерный фокус</p>
-                <h2>Рост и форматы</h2>
-                <p>В опубликованных моделях Kiradols встречаются ростовые тела примерно 150–160 см — диапазон хорошо соответствует основному полноразмерному фокусу Anime Dolls World.</p>
-                <p>Это не означает, что полный или будущий каталог бренда ограничен только этим диапазоном.</p>
-              </div>
-              <div className="aotume-option-list" aria-label="Опубликованный диапазон роста Kiradols">
-                <span>Полноразмерные модели</span>
-                <span>Примерно 150–160 cm</span>
-                <span>Персонажные форматы</span>
-              </div>
-            </div>
-          </div>
-        </section>
+      <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">Подтверждённые примеры</p><h2>Серии и модели</h2></div><p>Примеры приведены как ориентир по текущему официальному каталогу, а не как полный список Kiradols.</p></div><div className="aotume-feature-grid">{confirmedModels.map(([name,details],index)=><article className="aotume-feature-card" key={name}><span>{String(index+1).padStart(2,"0")}</span><h3>{name}</h3><p>{details}</p></article>)}</div><div className="notice">DLC Series на официальном сайте оформлена как направление Magical Girls. Названия и параметры выше относятся только к указанным карточкам моделей.</div></div></section>
 
-        <section className="section alt">
-          <div className="container">
-            <div className="section-head">
-              <div><p className="eyebrow">От дизайна к образу</p><h2>Производственный подход</h2></div>
-              <p>Этапы отражают опубликованную структуру процесса, но не обозначают уникальную или универсальную технологию для каждой модели.</p>
-            </div>
-            <div className="aotume-feature-grid">
-              {productionStages.map(([title, text], index) => <div className="aotume-feature-card" key={title}><span>{String(index + 1).padStart(2, '0')}</span><h3>{title}</h3><p>{text}</p></div>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container aotume-two-column">
-            <article className="aotume-content-card">
-              <p className="eyebrow">Подборка моделей</p>
-              <h2>Изображения и характеристики</h2>
-              <p>Подборка моделей Kiradols будет добавлена после проверки изображений и характеристик конкретных моделей.</p>
-            </article>
-            <article className="aotume-content-card">
-              <p className="eyebrow">Официальный источник</p>
-              <h2>Где смотреть</h2>
-              <p>Официальный сайт Kiradols служит отправной точкой для проверки актуального каталога, характеристик и доступности моделей.</p>
-              <a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Kiradols в новой вкладке">Официальный сайт Kiradols</a>
-              <div className="notice">Если сайт временно недоступен или отдельные страницы плохо индексируются, характеристики следует подтверждать перед заказом по конкретной позиции.</div>
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    </>
-  );
+      <section className="section"><div className="container aotume-custom-card">
+        <div><p className="eyebrow">Каталог и заказ</p><h2>Где смотреть и покупать</h2><p>Официальный сайт Kiradols — основной источник каталога, характеристик, конфигураций и условий заказа.</p><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный каталог Kiradols в новой вкладке">Открыть каталог Kiradols</a></div>
+        <div><p>Kiradols не найден в текущем публичном каталоге Moon-Doll. Если нужна конкретная модель, можно отправить менеджеру ссылку и уточнить возможность индивидуального заказа без гарантии наличия или поставки.</p><Link className="button secondary" href="/stores/moon-doll/">Как связаться с Moon-Doll</Link><div className="notice">Moon-Doll не обозначается здесь как официальный представитель Kiradols.</div></div>
+      </div></section>
+    </main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(jsonLd)}} />
+  </>;
 }

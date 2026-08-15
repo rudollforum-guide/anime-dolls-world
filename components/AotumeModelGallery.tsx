@@ -135,6 +135,11 @@ export function BrandModelGallery({
         <div className="container">
           {notice && <div className="notice aotume-model-gallery-notice">{notice}</div>}
 
+          <aside className="gallery-editorial-note" aria-label="Редакционная заметка об изображениях">
+            <p>Часть изображений может быть визуально адаптирована для нейтральной публикации. Одежда на изображении не означает её наличие в комплекте.</p>
+            <p>Оригинальные фабричные фотографии и материалы без такой адаптации также публикуются в <a href="https://t.me/AnimeDollsWorld" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram-канал Anime Dolls World в новой вкладке">Telegram-канале Anime Dolls World</a>.</p>
+          </aside>
+
           <div className="section-head">
             <div>
               <p className="eyebrow">{eyebrow}</p>
