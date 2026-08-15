@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://bcdolls.com/";
@@ -11,6 +12,14 @@ const moonChecks = ["Модель", "Рост и вес", "Материал го
 const deliveryChecks = ["Срок изготовления", "Способ доставки", "Стоимость", "Таможенные расходы", "Возможность отправки", "Ориентировочный срок получения", "Порядок действий при повреждении"];
 const supportOptions = ["Замена повреждённой части", "Ремонтный комплект", "Индивидуальное решение", "Рассмотрение производственного дефекта"];
 const orderChecks = ["Название и код модели", "Рост и вес", "Материал тела", "Материал головы", "Тип каркаса", "Конструкцию пальцев", "Наличие подставки", "Парик и одежду", "Комплектацию", "Заводские фотографии", "Стоимость доставки", "Сроки", "Условия гарантии", "Возможность доставки в Россию"];
+
+const galleryModels: GalleryModel[] = [
+  { name: "Frieren", details: "NS146C · N02A", folder: "ns146c-n02a-frieren", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Yamada Kanon", details: "OS155J · O02A", folder: "os155j-o02a-yamada-kanon", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Mitsuri Kanroji", details: "OS155J · O03B", folder: "os155j-o03b-mitsuri-kanroji", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Momo", details: "OS155J · O03C", folder: "os155j-o03c-momo", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Dorothy", details: "OS155J · O04A", folder: "os155j-o04a-dorothy", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 export function BCDollProfile() {
   const webPageJsonLd = {
@@ -50,7 +59,16 @@ export function BCDollProfile() {
 
         <section className="section"><div className="container"><div className="bc-character-card"><div><p className="eyebrow">Стилизованные коллекции</p><h2>Аниме- и игровые образы</h2><p>В каталоге встречаются модели, созданные по мотивам персонажей аниме и игр. Наличие конкретных образов и состав каталога могут меняться.</p></div><span aria-hidden="true">◇</span></div></div></section>
 
-        <section className="section alt"><div className="container"><div className="bc-gallery-placeholder"><span aria-hidden="true">✦</span><p className="eyebrow">Будущее обновление</p><h2>Галерея моделей</h2><p>Галерея моделей BC Doll будет добавлена позже</p></div></div></section>
+        <BrandModelGallery
+          id="bc-doll"
+          eyebrow="Демонстрационная подборка"
+          description="Пять примеров моделей с опубликованными обозначениями тела и головы."
+          notice="Ниже представлены некоторые модели BC Doll для знакомства с аниме-направлением бренда. Это не полный каталог. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
+          galleryRoot="/images/brands/bc-doll/gallery"
+          models={galleryModels}
+          layout="triptych"
+          tone="contrast"
+        />
 
         <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Наличие, комплектацию и условия необходимо подтверждать у выбранного магазина или производителя.</p></div><div className="bc-purchase-stack"><section className="bc-purchase-card bc-moon-card"><div className="bc-recommendation-label">Для русскоязычной аудитории</div><div className="bc-moon-layout"><div><p className="eyebrow">Вариант покупки для России</p><h3>Moon-Doll</h3><p>Для покупателей из России одним из возможных вариантов заказа является международный магазин Moon-Doll.</p><p>Если нужной модели BC Doll нет в каталоге, менеджеру можно отправить ссылку на модель с официального сайта и уточнить возможность заказа.</p><a className="button primary bc-store-button" href="https://www.moon-doll.com/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll в новой вкладке">Перейти в Moon-Doll</a></div><div className="bc-store-checks"><strong>Уточните перед заказом</strong><ul>{moonChecks.map((item) => <li key={item}>{item}</li>)}</ul></div></div></section><section className="bc-purchase-card bc-official-card"><div><p className="eyebrow">Официальный источник</p><h3>Официальный сайт BC Doll</h3><p>Используйте официальный каталог для проверки модели, характеристик и заявленной комплектации.</p><p className="bc-source-note">Возможность прямой доставки в Россию необходимо подтвердить у BC Doll до оплаты.</p></div><dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт BC Doll в новой вкладке">bcdolls.com</a></dd></div><div><dt>Контакт</dt><dd><a href="mailto:service@bcdolls.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать BC Doll по адресу service@bcdolls.com">service@bcdolls.com</a></dd></div><div><dt>Дополнительный контакт</dt><dd><a href="mailto:info.bcdolls@gmail.com" target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать BC Doll по адресу info.bcdolls@gmail.com">info.bcdolls@gmail.com</a></dd></div></dl></section></div></div></section>
 
