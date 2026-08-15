@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { siteConfig } from "@/data/site";
 
 const officialWebsite = "https://www.dolls-castle.com/";
@@ -17,6 +18,20 @@ const reasons = [
   ["Отдельная furry-ниша", "Антропоморфные образы и звериные детали дают альтернативу более привычным человеческим дизайнам."],
   ["Визуальная индивидуальность", "Интерес представляет не отдельная характеристика, а целостность лица, головы, наряда и общей концепции персонажа."],
 ] as const;
+
+const animeGalleryModels: GalleryModel[] = [
+  { name: "Midna", details: "130cm · E · #SZ6", folder: "130cm-midna", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Bonnie", details: "167cm · K · #SZ23", folder: "167cm-bonnie", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Kirishima Eira", details: "178cm · P · #S11", folder: "178cm-kirishima-eira", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
+
+const furryGalleryModels: GalleryModel[] = [
+  { name: "Renamon", details: "140cm · #SZ20", folder: "140cm-renamon", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Velkara", details: "140cm · G · #SZ18", folder: "140cm-velkara", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Krystal", details: "140cm · G · #SZ21", folder: "140cm-krystal", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Toriel", details: "155cm · M · #S78", folder: "155cm-toriel", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  { name: "Miriam", details: "162cm · E · #SC1", folder: "162cm-miriam", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+];
 
 export function DollsCastleProfile() {
   const jsonLd = {
@@ -109,6 +124,28 @@ export function DollsCastleProfile() {
           <div className="moonvale-why-grid">{reasons.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
         </div>
       </section>
+
+      <BrandModelGallery
+        id="dolls-castle-anime"
+        eyebrow="Демонстрационная подборка"
+        title="Аниме-модели"
+        description="Примеры ростовых моделей Dolls Castle в аниме-стилистике."
+        notice="Ниже представлены некоторые модели Dolls Castle для знакомства с аниме- и фурри-направлениями бренда. Это не полный каталог продукции. В этой подборке основной акцент сделан на ростовых моделях; компактные и малые форматы не включены. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
+        galleryRoot="/images/brands/dolls-castle/gallery/anime"
+        models={animeGalleryModels}
+        layout="triptych"
+        tone="contrast"
+      />
+
+      <BrandModelGallery
+        id="dolls-castle-furry"
+        eyebrow="Отдельное направление"
+        title="Фурри-модели"
+        description="Примеры ростовых антропоморфных и фурри-моделей Dolls Castle."
+        galleryRoot="/images/brands/dolls-castle/gallery/furry"
+        models={furryGalleryModels}
+        layout="triptych"
+      />
 
       <section className="section alt">
         <div className="container">
