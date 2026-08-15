@@ -8,6 +8,7 @@ export const brandHeroIconFiles: Record<string, string> = {
   "elsa-babe": "elsa-babe.png",
   "fu-doll": "fu-doll.png",
   irokebijin: "irokebijin.png",
+  kiradols: "kiradols.png",
   "moonvale-sy-dolls": "moonvale-sy-dolls.png",
   mozudoll: "mozudoll.png",
   "mrl-doll": "mrl-doll.png",

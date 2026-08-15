@@ -5,6 +5,7 @@ export const brandIconFiles: Record<string, string> = {
   "croissant-doll": "croissant-doll.png",
   "elsa-babe": "elsa-babe.png",
   irokebijin: "irokebijin.png",
+  kiradols: "kiradols.png",
   "mrl-doll": "mrl-doll.png",
   mozudoll: "mozu-doll.png",
   "moonvale-sy-dolls": "moonvale-sy-dolls.png",
