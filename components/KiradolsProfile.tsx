@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -20,6 +21,14 @@ const confirmedModels = [
   ["Risa", "150, 155 и 160 cm · Head #KH004 · DLC / Magical Girl"],
   ["Saori", "155 cm · Head #KH005 · DLC / Magical Girl"],
 ] as const;
+
+const galleryModels: GalleryModel[] = [
+  { name: "Tsumugi", details: "150cm", folder: "150cm-tsumugi", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Himari", details: "155cm", folder: "155cm-himari", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Risa", details: "155cm", folder: "155cm-risa", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Saori", details: "155cm", folder: "155cm-saori", photos: ["01.png", "02.png", "03.png"] },
+  { name: "Umegawa Kurako", details: "155cm", folder: "155cm-umegawa-kurako", photos: ["01.png", "02.png", "03.png"] },
+];
 
 export function KiradolsProfile() {
   const jsonLd = {
@@ -78,6 +87,17 @@ export function KiradolsProfile() {
       </div></section>
 
       <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">Подтверждённые примеры</p><h2>Серии и модели</h2></div><p>Примеры приведены как ориентир по текущему официальному каталогу, а не как полный список Kiradols.</p></div><div className="aotume-feature-grid">{confirmedModels.map(([name,details],index)=><article className="aotume-feature-card" key={name}><span>{String(index+1).padStart(2,"0")}</span><h3>{name}</h3><p>{details}</p></article>)}</div><div className="notice">DLC Series на официальном сайте оформлена как направление Magical Girls. Названия и параметры выше относятся только к указанным карточкам моделей.</div></div></section>
+
+      <BrandModelGallery
+        id="kiradols-models"
+        eyebrow="Демонстрационная подборка"
+        title="Аниме-модели"
+        description="Примеры полноразмерных моделей Kiradols из текущего каталога бренда."
+        notice="Ниже представлены некоторые ростовые модели Kiradols для знакомства с текущим аниме-направлением бренда. Это демонстрационная подборка, а не полный каталог производителя. В Anime Dolls World основной акцент сделан на полноразмерных моделях. Актуальные характеристики, комплектацию и доступность следует проверять на официальном сайте Kiradols или у продавца."
+        galleryRoot="/images/brands/kiradols/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section"><div className="container aotume-custom-card">
         <div><p className="eyebrow">Каталог и заказ</p><h2>Где смотреть и покупать</h2><p>Официальный сайт Kiradols — основной источник каталога, характеристик, конфигураций и условий заказа.</p><a className="button primary" href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный каталог Kiradols в новой вкладке">Открыть каталог Kiradols</a></div>
