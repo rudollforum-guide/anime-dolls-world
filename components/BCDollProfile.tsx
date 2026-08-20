@@ -13,12 +13,76 @@ const deliveryChecks = ["Срок изготовления", "Способ до�
 const supportOptions = ["Замена повреждённой части", "Ремонтный комплект", "Индивидуальное решение", "Рассмотрение производственного дефекта"];
 const orderChecks = ["Название и код модели", "Рост и вес", "Материал тела", "Материал головы", "Тип каркаса", "Конструкцию пальцев", "Наличие подставки", "Парик и одежду", "Комплектацию", "Заводские фотографии", "Стоимость доставки", "Сроки", "Условия гарантии", "Возможность доставки в Россию"];
 
+const frierenMeasurements = [
+  { label: "Рост тела без головы", value: "129 см" },
+  { label: "Вес тела без головы", value: "22 кг" },
+  { label: "Верх груди", value: "68 см" },
+  { label: "Под грудью", value: "52 см" },
+  { label: "Талия", value: "47 см" },
+  { label: "Бёдра", value: "84 см" },
+  { label: "Обхват бедра", value: "47 см" },
+  { label: "Обхват голени", value: "28 см" },
+  { label: "Плечи", value: "29 см" },
+  { label: "Длина ноги", value: "76 см" },
+  { label: "Длина руки", value: "55 см" },
+  { label: "Длина кисти", value: "12 см" },
+  { label: "Стопа", value: "16 см" },
+  { label: "Обхват шеи", value: "19 см" },
+];
+
+const os155jMeasurements = [
+  { label: "Рост тела без головы", value: "138 см" },
+  { label: "Вес тела без головы", value: "27,4 кг" },
+  { label: "Верх груди", value: "85 см" },
+  { label: "Под грудью", value: "55,5 см" },
+  { label: "Талия", value: "50,5 см" },
+  { label: "Бёдра", value: "95 см" },
+  { label: "Обхват бедра", value: "53 см" },
+  { label: "Обхват голени", value: "33 см" },
+  { label: "Плечи", value: "29 см" },
+  { label: "Длина ноги", value: "82 см" },
+  { label: "Длина руки", value: "58 см" },
+  { label: "Длина кисти", value: "14 см" },
+  { label: "Стопа", value: "20 см" },
+  { label: "Обхват шеи", value: "19 см" },
+];
+
 const galleryModels: GalleryModel[] = [
-  { name: "Frieren", details: "NS146C · N02A", folder: "ns146c-n02a-frieren", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Yamada Kanon", details: "OS155J · O02A", folder: "os155j-o02a-yamada-kanon", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Mitsuri Kanroji", details: "OS155J · O03B", folder: "os155j-o03b-mitsuri-kanroji", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Momo", details: "OS155J · O03C", folder: "os155j-o03c-momo", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Dorothy", details: "OS155J · O04A", folder: "os155j-o04a-dorothy", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Frieren",
+    details: "NS146C · N02A",
+    folder: "ns146c-n02a-frieren",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "146 см", material: "силикон", weight: "24,5 кг", specs: frierenMeasurements },
+  },
+  {
+    name: "Yamada Kanon",
+    details: "OS155J · O02A",
+    folder: "os155j-o02a-yamada-kanon",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "силикон", weight: "29,6 кг", specs: os155jMeasurements },
+  },
+  {
+    name: "Mitsuri Kanroji",
+    details: "OS155J · O03B",
+    folder: "os155j-o03b-mitsuri-kanroji",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "силикон", weight: "29,6 кг", specs: os155jMeasurements },
+  },
+  {
+    name: "Momo",
+    details: "OS155J · O03C",
+    folder: "os155j-o03c-momo",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "силикон", weight: "29,6 кг", specs: os155jMeasurements },
+  },
+  {
+    name: "Dorothy",
+    details: "OS155J · O04A",
+    folder: "os155j-o04a-dorothy",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "силикон", weight: "29,6 кг", specs: os155jMeasurements },
+  },
 ];
 
 export function BCDollProfile() {
