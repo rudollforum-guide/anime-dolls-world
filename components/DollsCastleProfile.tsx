@@ -19,18 +19,150 @@ const reasons = [
   ["Визуальная индивидуальность", "Интерес представляет не отдельная характеристика, а целостность лица, головы, наряда и общей концепции персонажа."],
 ] as const;
 
+const midnaMeasurements = [
+  { label: "Размер груди", value: "E Cup" },
+  { label: "Грудь", value: "65 см" },
+  { label: "Талия", value: "40 см" },
+  { label: "Бёдра", value: "120 см" },
+  { label: "Плечи", value: "25 см" },
+  { label: "Длина руки", value: "42 см" },
+  { label: "Длина ноги", value: "42 см" },
+];
+
+const bonnieMeasurements = [
+  { label: "Рост без головы", value: "около 149 см" },
+  { label: "Длина ушей", value: "18 см" },
+  { label: "Размер груди", value: "K Cup" },
+  { label: "Грудь", value: "87 см" },
+  { label: "Под грудью", value: "52,5 см" },
+  { label: "Талия", value: "53 см" },
+  { label: "Бёдра", value: "124 см" },
+  { label: "Плечи", value: "29 см" },
+  { label: "Длина руки", value: "63 см" },
+  { label: "Длина ноги", value: "72 см" },
+  { label: "Стопа", value: "16 см" },
+];
+
+const kirishimaEiraMeasurements = [
+  { label: "Размер груди", value: "P Cup" },
+  { label: "Грудь", value: "120 см" },
+  { label: "Талия", value: "72 см" },
+  { label: "Бёдра", value: "136 см" },
+  { label: "Плечи", value: "38 см" },
+  { label: "Длина руки", value: "76 см" },
+  { label: "Длина ноги", value: "87 см" },
+  { label: "Цвет на фото", value: "White" },
+];
+
+const renamonMeasurements = [
+  { label: "Грудь", value: "80 см" },
+  { label: "Талия", value: "42 см" },
+  { label: "Бёдра", value: "92 см" },
+  { label: "Плечи", value: "28 см" },
+  { label: "Длина руки", value: "54 см" },
+  { label: "Длина ноги", value: "60 см" },
+  { label: "Цвет на фото", value: "Yellow" },
+];
+
+const velkaraMeasurements = [
+  { label: "Размер груди", value: "G Cup" },
+  { label: "Грудь", value: "88 см" },
+  { label: "Талия", value: "56 см" },
+  { label: "Бёдра", value: "100 см" },
+  { label: "Плечи", value: "34 см" },
+  { label: "Длина руки", value: "60 см" },
+  { label: "Длина ноги", value: "70 см" },
+];
+
+const krystalMeasurements = [
+  { label: "Размер груди", value: "G Cup" },
+  { label: "Грудь", value: "88 см" },
+  { label: "Талия", value: "56 см" },
+  { label: "Бёдра", value: "100 см" },
+  { label: "Плечи", value: "34 см" },
+  { label: "Длина руки", value: "60 см" },
+  { label: "Длина ноги", value: "70 см" },
+];
+
+const torielMeasurements = [
+  { label: "Размер груди", value: "M Cup" },
+  { label: "Грудь", value: "100 см" },
+  { label: "Талия", value: "62 см" },
+  { label: "Бёдра", value: "128 см" },
+  { label: "Плечи", value: "25 см" },
+  { label: "Длина руки", value: "60 см" },
+  { label: "Длина ноги", value: "80 см" },
+];
+
+const miriamMeasurements = [
+  { label: "Размер груди", value: "E Cup" },
+  { label: "Грудь", value: "85 см" },
+  { label: "Талия", value: "54 см" },
+  { label: "Бёдра", value: "84 см" },
+  { label: "Плечи", value: "34 см" },
+  { label: "Длина руки", value: "67 см" },
+];
+
 const animeGalleryModels: GalleryModel[] = [
-  { name: "Midna", details: "130cm · E · #SZ6", folder: "130cm-midna", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Bonnie", details: "167cm · K · #SZ23", folder: "167cm-bonnie", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Kirishima Eira", details: "178cm · P · #S11", folder: "178cm-kirishima-eira", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Midna",
+    details: "#SZ6",
+    folder: "130cm-midna",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "130 см", material: "силикон", weight: "34 кг", specs: midnaMeasurements },
+  },
+  {
+    name: "Bonnie",
+    details: "#SZ23",
+    folder: "167cm-bonnie",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "167 см", material: "силикон", weight: "50 кг", specs: bonnieMeasurements },
+  },
+  {
+    name: "Kirishima Eira",
+    details: "#S11",
+    folder: "178cm-kirishima-eira",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "178 см", material: "силикон", weight: "63 кг", specs: kirishimaEiraMeasurements },
+  },
 ];
 
 const furryGalleryModels: GalleryModel[] = [
-  { name: "Renamon", details: "140cm · #SZ20", folder: "140cm-renamon", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Velkara", details: "140cm · G · #SZ18", folder: "140cm-velkara", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Krystal", details: "140cm · G · #SZ21", folder: "140cm-krystal", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Toriel", details: "155cm · M · #S78", folder: "155cm-toriel", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Miriam", details: "162cm · E · #SC1", folder: "162cm-miriam", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Renamon",
+    details: "#SZ20",
+    folder: "140cm-renamon",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "140 см", material: "силикон", weight: "38 кг", specs: renamonMeasurements },
+  },
+  {
+    name: "Velkara",
+    details: "#SZ18",
+    folder: "140cm-velkara",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "140 см", material: "силикон", weight: "38 кг", specs: velkaraMeasurements },
+  },
+  {
+    name: "Krystal",
+    details: "#SZ21",
+    folder: "140cm-krystal",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "140 см", material: "силикон", weight: "36 кг", specs: krystalMeasurements },
+  },
+  {
+    name: "Toriel",
+    details: "#SZ8",
+    folder: "155cm-toriel",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "силикон", weight: "48 кг", specs: torielMeasurements },
+  },
+  {
+    name: "Miriam",
+    details: "#SC1",
+    folder: "162cm-miriam",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "156 см", material: ["Голова — силикон", "Тело — TPE"], weight: "32 кг", specs: miriamMeasurements },
+  },
 ];
 
 export function DollsCastleProfile() {
