@@ -7,36 +7,100 @@ const officialWebsite = "https://butterflydoll.com.cn/";
 const email = "info@butterflydoll.com.cn";
 const whatsappUrl = "https://wa.me/8613777070002";
 
+const abbyMeasurements = [
+  { label: "Размер груди", value: "F Cup" },
+  { label: "Грудь", value: "75 см" },
+  { label: "Под грудью", value: "54 см" },
+  { label: "Талия", value: "52 см" },
+  { label: "Бёдра", value: "85 см" },
+  { label: "Плечи", value: "36 см" },
+  { label: "Стопа", value: "21 см" },
+];
+
+const mizukoBigMeasurements = [
+  { label: "Размер груди", value: "F Cup" },
+  { label: "Грудь", value: "75 см" },
+  { label: "Под грудью", value: "54 см" },
+  { label: "Талия", value: "52 см" },
+  { label: "Бёдра", value: "85 см" },
+  { label: "Плечи", value: "36 см" },
+  { label: "Стопа", value: "21 см" },
+  { label: "Обхват головы", value: "52 см" },
+  { label: "Обхват шеи", value: "21 см" },
+];
+
+const rionMeasurements = [
+  { label: "Размер груди", value: "F Cup" },
+  { label: "Грудь", value: "75 см" },
+  { label: "Под грудью", value: "54 см" },
+  { label: "Талия", value: "52 см" },
+  { label: "Бёдра", value: "85 см" },
+  { label: "Плечи", value: "36 см" },
+  { label: "Стопа", value: "21 см" },
+  { label: "Обхват головы", value: "52 см" },
+  { label: "Обхват шеи", value: "21 см" },
+];
+
+const kaguyaMeasurements = [
+  { label: "Вес отправления", value: "36 кг" },
+  { label: "Размер груди", value: "H Cup" },
+  { label: "Грудь", value: "76 см" },
+  { label: "Под грудью", value: "45 см" },
+  { label: "Талия", value: "43 см" },
+  { label: "Бёдра", value: "85 см" },
+  { label: "Плечи", value: "28 см" },
+  { label: "Стопа", value: "20 см" },
+  { label: "Обхват головы", value: "53 см" },
+  { label: "Обхват шеи", value: "20 см" },
+];
+
+const crimsonEyesMeasurements = [
+  { label: "Размер груди", value: "M Cup" },
+  { label: "Грудь", value: "90 см" },
+  { label: "Под грудью", value: "51 см" },
+  { label: "Талия", value: "51 см" },
+  { label: "Бёдра", value: "91 см" },
+  { label: "Плечи", value: "30 см" },
+  { label: "Стопа", value: "20 см" },
+  { label: "Обхват головы", value: "53 см" },
+  { label: "Обхват шеи", value: "19,5 см" },
+];
+
 const galleryModels: GalleryModel[] = [
   {
     name: "Abby",
     details: "BH-100 · BB140-01 · 140XL",
     folder: "bh-100-abby-140xl",
     photos: ["01.webp", "02.webp", "03.webp"],
+    characteristics: { height: "140 см", material: "TPE", weight: "28,5 кг", specs: abbyMeasurements },
   },
   {
     name: "Mizuko Big",
     details: "BH-116 · BB140-01 · 140XL",
     folder: "bh-116-mizuko-big-140xl",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "140 см", material: "TPE", weight: "28,5 кг", specs: mizukoBigMeasurements },
   },
   {
     name: "Rion",
     details: "BH-122 · BB140-01 · 140XL",
     folder: "bh-122-rion-140xl",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "140 см", material: "TPE", weight: "28,5 кг", specs: rionMeasurements },
   },
   {
     name: "Kaguya",
     details: "BH-133 · BB150-01 · 150L",
     folder: "bh-133-kaguya-150l",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "150 см", material: "TPE", weight: "31 кг", specs: kaguyaMeasurements },
   },
   {
     name: "Crimson Eyes",
-    details: "BH-134 · BB154 · XXL",
+    details: "BH-134 · BB154-01 · XXL",
     folder: "bh-134-crimson-eyes-154xxl",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "154 см", material: "TPE", weight: "38 кг", specs: crimsonEyesMeasurements },
   },
 ];
 
