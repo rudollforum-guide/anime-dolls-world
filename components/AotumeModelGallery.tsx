@@ -9,6 +9,13 @@ export type GalleryModel = {
   details?: string;
   folder: string;
   photos: string[];
+  characteristics?: {
+    height: string;
+    material: string | string[];
+    weightLabel?: string;
+    weight: string | string[];
+    specs: Array<{ label: string; value: string }>;
+  };
 };
 
 type BrandModelGalleryProps = {
@@ -28,38 +35,180 @@ type BrandModelGalleryProps = {
   };
 };
 
+const aotumeMeasurements = {
+  b145: [
+    { label: "Размер груди", value: "B Cup" },
+    { label: "Грудь", value: "60 см" },
+    { label: "Под грудью", value: "49 см" },
+    { label: "Талия", value: "42 см" },
+    { label: "Бёдра", value: "74 см" },
+    { label: "Плечи", value: "26 см" },
+    { label: "Длина руки", value: "38 см" },
+    { label: "Длина ноги", value: "68 см" },
+    { label: "Стопа", value: "18 см" },
+  ],
+  c155: [
+    { label: "Размер груди", value: "C Cup" },
+    { label: "Грудь", value: "65 см" },
+    { label: "Под грудью", value: "50 см" },
+    { label: "Талия", value: "49 см" },
+    { label: "Бёдра", value: "81 см" },
+    { label: "Плечи", value: "28 см" },
+    { label: "Длина руки", value: "45 см" },
+    { label: "Длина ноги", value: "73 см" },
+    { label: "Стопа", value: "19 см" },
+  ],
+  f155: [
+    { label: "Размер груди", value: "F Cup" },
+    { label: "Грудь", value: "73 см" },
+    { label: "Под грудью", value: "52 см" },
+    { label: "Талия", value: "50 см" },
+    { label: "Бёдра", value: "81 см" },
+    { label: "Плечи", value: "28 см" },
+    { label: "Длина руки", value: "45 см" },
+    { label: "Длина ноги", value: "73 см" },
+    { label: "Стопа", value: "19 см" },
+  ],
+  h155: [
+    { label: "Размер груди", value: "H Cup" },
+    { label: "Грудь", value: "82 см" },
+    { label: "Под грудью", value: "53 см" },
+    { label: "Талия", value: "51 см" },
+    { label: "Бёдра", value: "83 см" },
+    { label: "Плечи", value: "29 см" },
+    { label: "Длина руки", value: "46 см" },
+    { label: "Длина ноги", value: "74 см" },
+    { label: "Стопа", value: "19 см" },
+  ],
+  k160: [
+    { label: "Размер груди", value: "K Cup" },
+    { label: "Грудь", value: "102 см" },
+    { label: "Под грудью", value: "65 см" },
+    { label: "Талия", value: "60 см" },
+    { label: "Бёдра", value: "104 см" },
+    { label: "Плечи", value: "32 см" },
+    { label: "Длина руки", value: "50 см" },
+    { label: "Длина ноги", value: "79 см" },
+    { label: "Стопа", value: "21 см" },
+  ],
+} satisfies Record<string, Array<{ label: string; value: string }>>;
+
 const aotumeModels: GalleryModel[] = [
   {
     name: "Kamado Nezuko",
-    details: "145cm · Head #47",
+    details: "Head #47",
     folder: "kamado-nezuko",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "145 см", material: "TPE / силикон", weight: ["TPE — 23 кг", "Силикон — 23 кг"], specs: aotumeMeasurements.b145 },
   },
   {
-    name: "C.C",
-    details: "155cm · Head #35",
+    name: "Yami",
+    details: "Head #113",
+    folder: "145cm-yami",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "145 см", material: "TPE / силикон", weight: ["TPE — 23 кг", "Силикон — 23 кг"], specs: aotumeMeasurements.b145 },
+  },
+  {
+    name: "C.C.",
+    details: "Head #35",
     folder: "cc",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 26 кг", "Силикон — 27 кг"], specs: aotumeMeasurements.f155 },
+  },
+  {
+    name: "Albedo",
+    details: "Head #33",
+    folder: "155cm-albedo",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 26 кг", "Силикон — 27 кг"], specs: aotumeMeasurements.f155 },
   },
   {
     name: "Kakudate Karin",
-    details: "155cm · Head #64",
+    details: "Head #64",
     folder: "kakudate-karin",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 26 кг", "Силикон — 27 кг"], specs: aotumeMeasurements.f155 },
   },
   {
-    name: "Saigouji Yuuko",
-    details: "155cm · Head #101",
+    name: "Makise Kurisu",
+    details: "Head #77",
+    folder: "155cm-makise-kurisu",
+    photos: ["01.webp", "02.webp", "03.webp"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 27 кг", "Силикон — 27 кг"], specs: aotumeMeasurements.c155 },
+  },
+  {
+    name: "Yor Forger",
+    details: "Head #87",
+    folder: "155cm-yor-forger",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: ["Голова — силикон", "Тело — TPE"], weightLabel: "Вес тела", weight: "26 кг", specs: aotumeMeasurements.f155 },
+  },
+  {
+    name: "Fiona Frost",
+    details: "Head #91",
+    folder: "155cm-fiona-frost",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 27 кг", "Силикон — 27 кг"], specs: aotumeMeasurements.c155 },
+  },
+  {
+    name: "Saigyouji Yuyuko",
+    details: "Head #101",
     folder: "saigouji-yuuko",
     photos: ["01.webp", "02.webp", "03.webp"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 29 кг", "Силикон — 25 кг"], specs: aotumeMeasurements.h155 },
+  },
+  {
+    name: "IJN Owari",
+    details: "Head #105",
+    folder: "155cm-ijn-owari",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 29 кг", "Силикон — 25 кг"], specs: aotumeMeasurements.h155 },
+  },
+  {
+    name: "St. Louis",
+    details: "Head #111",
+    folder: "155cm-st-louis",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 29 кг", "Силикон — 25 кг"], specs: aotumeMeasurements.h155 },
+  },
+  {
+    name: "Emilia",
+    details: "Head #125",
+    folder: "155cm-emilia",
+    photos: ["01.webp", "02.jpg", "03.jpg"],
+    characteristics: { height: "155 см", material: "TPE / силикон", weight: ["TPE — 27 кг", "Силикон — 27 кг"], specs: aotumeMeasurements.c155 },
   },
   {
     name: "Gouden Leeuw",
-    details: "160cm · Head #132",
+    details: "Head #132",
     folder: "gouden-leeuw",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: { height: "160 см", material: "TPE / силикон", weight: ["TPE — 46 кг", "Силикон — 41 кг"], specs: aotumeMeasurements.k160 },
   },
 ];
+
+function CharacteristicValue({ value }: { value: string | string[] }) {
+  return Array.isArray(value) ? <>{value.map((line) => <span key={line}>{line}</span>)}</> : <>{value}</>;
+}
+
+function ModelCharacteristics({ model }: { model: GalleryModel }) {
+  if (!model.characteristics) return null;
+  const { height, material, weightLabel = "Вес", weight, specs } = model.characteristics;
+
+  return (
+    <div className="aotume-model-characteristics">
+      <dl className="aotume-model-characteristics-primary">
+        <div><dt>Рост</dt><dd>{height}</dd></div>
+        <div><dt>Материал</dt><dd><CharacteristicValue value={material} /></dd></div>
+        <div><dt>{weightLabel}</dt><dd><CharacteristicValue value={weight} /></dd></div>
+      </dl>
+      <details className="aotume-model-characteristics-details">
+        <summary>Все характеристики</summary>
+        <dl>{specs.map((spec) => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}</dl>
+      </details>
+    </div>
+  );
+}
 
 function photoPath(galleryRoot: string, model: GalleryModel, photo: string) {
   return `${galleryRoot}/${model.folder}/${photo}`;
@@ -148,7 +297,7 @@ export function BrandModelGallery({
             <p>{description}</p>
           </div>
 
-          <div className={`aotume-model-gallery-grid${layout === "triptych" ? " is-triptych" : ""}`}>
+          <div className={`aotume-model-gallery-grid${layout === "triptych" ? " is-triptych" : ""}${models.some((model) => model.characteristics) ? " has-characteristics" : ""}`}>
             {models.map((model, modelIndex) => (
               <article className={`aotume-model-gallery-card${layout === "triptych" ? " is-triptych" : ""}`} key={model.folder}>
                 {layout === "cover" ? (
@@ -200,6 +349,7 @@ export function BrandModelGallery({
                     </div>
                   </>
                 )}
+                <ModelCharacteristics model={model} />
               </article>
             ))}
           </div>
@@ -277,7 +427,7 @@ export function AotumeModelGallery() {
     <BrandModelGallery
       id="aotume"
       eyebrow="Образы Aotume Doll"
-      description="Пять персонажных образов с отдельными фотосетами. Откройте карточку, чтобы посмотреть все фотографии модели."
+      description="Тринадцать персонажных образов с отдельными фотосетами и характеристиками. Откройте карточку, чтобы посмотреть все фотографии модели."
       notice="Ниже представлены некоторые модели бренда для ознакомления. Это не полный каталог продукции. Полный список моделей и актуальные новинки доступны на официальном сайте производителя."
       galleryRoot="/images/brands/aotume-doll/gallery"
       models={aotumeModels}
