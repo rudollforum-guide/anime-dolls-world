@@ -1,3 +1,4 @@
+import { BrandModelGallery, type GalleryModel } from "@/components/AotumeModelGallery";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BrandProfileIcon } from "@/components/BrandProfileIcon";
 import { siteConfig } from "@/data/site";
@@ -6,6 +7,66 @@ const officialWebsite = "https://croissantdoll.com/";
 const aliexpressStore = "https://aliexpress.ru/store/1104058341?spm=a2g2w.detail.0.0.20e71f0a0GyoB5&page=1";
 const moonDoll = "https://www.moon-doll.com/";
 const email = "yjslcl321@gmail.com";
+
+const galleryModels: GalleryModel[] = [
+  {
+    name: "Kitagawa Marin",
+    details: "#B07 · 155P",
+    folder: "kitagawa-marin-155p",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "155 см",
+      material: ["Голова — soft vinyl / PVC", "Тело — S-TPE / ALM"],
+      weight: "26 кг",
+      specs: [
+        { label: "Размер груди", value: "D Cup" },
+        { label: "Грудь", value: "66 см" },
+        { label: "Талия", value: "46 см" },
+        { label: "Бёдра", value: "77 см" },
+        { label: "Плечи", value: "27 см" },
+        { label: "Стопа", value: "20 см" },
+        { label: "Размер упаковки", value: "145 × 40 × 34 см" },
+        { label: "Скелет", value: "EVO + M16" },
+        { label: "Пальцы", value: "шарнирный скелет доступен" },
+        { label: "Standing", value: "с болтами / без standing" },
+      ],
+    },
+  },
+  {
+    name: "Mythuyu Yukino",
+    details: "#B07 · 155M",
+    folder: "mythuyu-yukino-155m",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "155 см",
+      material: ["Голова — soft vinyl / PVC", "Тело — S-TPE / ALM"],
+      weight: "около 27 кг",
+      specs: [
+        { label: "Грудь", value: "85 см" },
+        { label: "Под грудью", value: "48 см" },
+        { label: "Талия", value: "50 см" },
+        { label: "Бёдра", value: "90 см" },
+        { label: "Плечи", value: "30 см" },
+        { label: "Обхват шеи", value: "22 см" },
+        { label: "Стопа", value: "22 см" },
+      ],
+    },
+  },
+  {
+    name: "Tsukatsuki RIO",
+    details: "#B04 · 168",
+    folder: "tsukatsuki-rio-168",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "168 см",
+      material: ["Голова — soft vinyl / PVC", "Тело — STPE / ALM"],
+      specs: [
+        { label: "Варианты тела", value: "168 / 168 Lightweight" },
+        { label: "Размер груди", value: "K Cup" },
+      ],
+    },
+  },
+];
 
 const catalogItems = [
   ["Обычные модели", "Готовые аниме-образы, среди которых встречаются варианты с ручным макияжем и готовым decal-макияжем."],
@@ -60,7 +121,15 @@ export function CroissantDollProfile() {
 
       <section className="section alt"><div className="container croissant-premium-panel"><div><p className="eyebrow">Готовые работы</p><h2>Премиальные и коллекционные изделия</h2><p>На сайте выделены отдельные категории готовых премиальных и коллекционных изделий.</p></div><CheckList items={["более сложное художественное оформление", "индивидуальная работа над образом", "готовая комплектация", "выставочная подача", "ограниченная доступность"]} className="croissant-chip-list" /><p>Категории Premium и Collector’s Grade являются внутренними обозначениями магазина. Они не являются независимой оценкой качества, инвестиционной ценности или редкости.</p></div></section>
 
-      <section className="section"><div className="container"><div className="croissant-gallery" data-gallery-state="planned"><span aria-hidden="true">✦</span><p className="eyebrow">Будущее обновление</p><h2>Галерея моделей</h2><p>Галерея моделей Croissant Doll будет добавлена позже.</p></div></div></section>
+      <BrandModelGallery
+        id="croissant-doll"
+        eyebrow="Демонстрационная подборка"
+        description="Три примера моделей Croissant Doll с разными ростовыми форматами, материалами и вариантами тела."
+        notice="Ниже представлены некоторые модели Croissant Doll для знакомства со стилем и направлениями бренда. Это не полный каталог. Актуальные характеристики, комплектацию и доступность необходимо проверять в карточке выбранной модели или уточнять у продавца."
+        galleryRoot="/images/brands/croissant-doll/gallery"
+        models={galleryModels}
+        layout="triptych"
+      />
 
       <section className="section alt"><div className="container"><div className="section-head"><div><p className="eyebrow">Варианты заказа</p><h2>Где купить</h2></div><p>Детали заказа и комплектацию необходимо подтверждать непосредственно у продавца.</p></div><div className="croissant-purchase-stack"><article className="croissant-purchase featured"><div><p className="eyebrow">Основной вариант покупки</p><h3>Croissant Doll Store на AliExpress</h3><p>На AliExpress доступен магазин Croissant Doll Store. Наличие конкретной модели и статус продавца необходимо проверить перед оплатой.</p><a className="button primary" href={aliexpressStore} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть Croissant Doll Store на AliExpress в новой вкладке">Открыть Croissant Doll Store</a></div><div><strong>Перед оплатой необходимо</strong><CheckList items={aliexpressChecks} /></div><p className="croissant-full-note">Страницы магазинов, ассортимент и правила AliExpress могут меняться. Anime Dolls World не подтверждает статус магазина независимо.</p></article><article className="croissant-purchase moon-doll-inquiry"><div><p className="eyebrow">Дополнительный вариант запроса</p><h3>Moon-Doll</h3><p>В текущем каталоге Moon-Doll отдельная коллекция Croissant Doll не заявлена. Возможность индивидуального заказа можно уточнить у менеджера магазина по ссылке, фотографии или точному названию модели.</p><p>Если нужной модели нет в каталоге Moon-Doll, можно уточнить возможность заказа через менеджера магазина.</p><a className="button secondary" href={moonDoll} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть сайт Moon-Doll для уточнения заказа Croissant Doll в новой вкладке">Уточнить в Moon-Doll</a></div><div className="notice">Moon-Doll не указан здесь как официальный дилер Croissant Doll. Наличие, цену, комплектацию, оплату и доставку необходимо подтвердить непосредственно у магазина.</div></article><article className="croissant-purchase official"><div><p className="eyebrow">Официальный источник</p><h3>Официальный сайт Croissant Doll</h3><p>Официальный сайт можно использовать для просмотра моделей, характеристик, материалов, вариантов комплектации, макияжа и кастомизации.</p><p>Перед оформлением заказа сайт рекомендует предварительно подтвердить детали у службы поддержки.</p></div><dl><div><dt>Сайт</dt><dd><a href={officialWebsite} target="_blank" rel="noopener noreferrer nofollow" aria-label="Открыть официальный сайт Croissant Doll в новой вкладке">croissantdoll.com</a></dd></div><div><dt>Контакт</dt><dd><a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer nofollow" aria-label="Написать Croissant Doll по электронной почте">{email}</a></dd></div></dl></article></div></div></section>
 
