@@ -11,13 +11,100 @@ const si70Variants = ["AT", "AR", "LB", "MK", "GB", "SP", "KA"] as const;
 const jVariants = ["J58", "J59", "J60", "J60 XS", "J60 P", "J85 B"] as const;
 
 const animeGalleryModels: GalleryModel[] = [
-  { name: "Barza", details: "120cm", folder: "120cm-barza", photos: ["01.webp", "02.webp", "03.webp"] },
-  { name: "Meru Halloween", details: "157cm", folder: "157cm-meru-halloween", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Meru", details: "160cm", folder: "160cm-meru", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "ULW SiF120 Barza",
+    details: "120cm",
+    folder: "120cm-barza",
+    photos: ["01.webp", "02.webp", "03.webp"],
+    characteristics: {
+      height: "120 см",
+      material: "силикон",
+      weight: "27,15 кг",
+      specs: [
+        { label: "Конструкция", value: "Full Silicone / Ultra Lightweight" },
+        { label: "Вес тела без головы", value: "22,7 кг" },
+        { label: "Грудь", value: "84 см" },
+        { label: "Под грудью", value: "53 см" },
+        { label: "Талия", value: "55,6 см" },
+        { label: "Бёдра", value: "88 см" },
+        { label: "Плечи", value: "34,5 см" },
+        { label: "Длина руки", value: "49 см" },
+        { label: "Длина ноги", value: "65,5 см" },
+      ],
+    },
+  },
+  {
+    name: "SiQ157 Meru Halloween",
+    details: "157cm",
+    folder: "157cm-meru-halloween",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "157 см",
+      material: "силикон",
+      weight: "33 кг",
+      specs: [
+        { label: "Рост тела без головы", value: "140 см" },
+        { label: "Конструкция", value: "Full Silicone" },
+        { label: "Верх груди", value: "72 см" },
+        { label: "Под грудью", value: "56 см" },
+        { label: "Талия", value: "53 см" },
+        { label: "Бёдра", value: "88 см" },
+        { label: "Длина ноги", value: "88 см" },
+        { label: "Длина руки", value: "64 см" },
+        { label: "Стопа", value: "20 см" },
+      ],
+    },
+  },
+  {
+    name: "FD160 Meru",
+    details: "160cm",
+    folder: "160cm-meru",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "160 см",
+      material: ["Голова — силикон", "Тело — TPE / STPE"],
+      weight: "около 45 кг",
+      specs: [
+        { label: "Рост тела без головы", value: "140 см" },
+        { label: "Грудь", value: "106 см" },
+        { label: "Под грудью", value: "70 см" },
+        { label: "Талия", value: "63 см" },
+        { label: "Бёдра", value: "102 см" },
+        { label: "Плечи", value: "36 см" },
+        { label: "Обхват бедра", value: "58 см" },
+        { label: "Длина ноги", value: "77 см" },
+        { label: "Длина руки", value: "63 см" },
+      ],
+    },
+  },
 ];
 
 const furryGalleryModels: GalleryModel[] = [
-  { name: "Monie", details: "141cm", folder: "141cm-monie", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Monie",
+    details: "FD141",
+    folder: "141cm-monie",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "141 см",
+      material: ["Голова — силикон", "Тело — TPE / STPE"],
+      weight: "41 кг",
+      specs: [
+        { label: "Рост тела без головы", value: "128 см" },
+        { label: "Материал хвоста", value: "силикон" },
+        { label: "Верх груди", value: "85 см" },
+        { label: "Под грудью", value: "61 см" },
+        { label: "Талия", value: "61 см" },
+        { label: "Бёдра", value: "106 см" },
+        { label: "Плечи", value: "31 см" },
+        { label: "Обхват бедра", value: "61 см" },
+        { label: "Длина ноги", value: "84 см" },
+        { label: "Длина руки", value: "52 см" },
+        { label: "Длина хвоста", value: "19 см" },
+        { label: "Стопа/копыто", value: "9 см" },
+      ],
+    },
+  },
 ];
 
 const visualDirections = [
