@@ -7,7 +7,23 @@ import { siteConfig } from "@/data/site";
 const officialCatalog = "https://fu-doll.com/product/";
 
 const galleryModels: GalleryModel[] = [
-  { name: "Petite", details: "153cm", folder: "153cm-petite", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "153cm Petite",
+    folder: "153cm-petite",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "153 см",
+      material: "силикон",
+      weight: "26 кг",
+      specs: [
+        { label: "Размер груди", value: "I Cup" },
+        { label: "Грудь", value: "81 см" },
+        { label: "Талия", value: "49 см" },
+        { label: "Бёдра", value: "82 см" },
+        { label: "Стопа", value: "21 см" },
+      ],
+    },
+  },
 ];
 
 const catalogDirections = [
