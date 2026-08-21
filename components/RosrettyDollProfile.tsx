@@ -7,11 +7,50 @@ import { siteConfig } from "@/data/site";
 const officialWebsite = "https://www.rosretty.com/";
 
 const animeGalleryModels: GalleryModel[] = [
-  { name: "Sakura", details: "161cm", folder: "161cm-sakura", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Sakura",
+    details: "RD-S29-161",
+    folder: "161cm-sakura",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "161 см",
+      material: ["Голова — силикон", "Тело — TPE"],
+      weight: "39,6 кг",
+      specs: [
+        { label: "Грудь", value: "92 см" },
+        { label: "Талия", value: "52 см" },
+        { label: "Бёдра", value: "96 см" },
+        { label: "Плечи", value: "36 см" },
+        { label: "Длина руки", value: "53 см" },
+        { label: "Длина ноги", value: "90 см" },
+        { label: "Стопа", value: "20 см" },
+      ],
+    },
+  },
 ];
 
 const furryGalleryModels: GalleryModel[] = [
-  { name: "Elena", details: "164cm", folder: "164cm-elena", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Elena",
+    details: "RD-S32-164",
+    folder: "164cm-elena",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "164 см",
+      material: ["Голова — силикон", "Тело — силикон"],
+      weight: ["Стандартная версия — 36 кг", "Облегчённая версия Super Loss — 31 кг"],
+      specs: [
+        { label: "Конструкция", value: "Full Silicone" },
+        { label: "Грудь", value: "83 см" },
+        { label: "Талия", value: "55 см" },
+        { label: "Бёдра", value: "92 см" },
+        { label: "Плечи", value: "35 см" },
+        { label: "Длина руки", value: "60 см" },
+        { label: "Длина ноги", value: "83 см" },
+        { label: "Стопа", value: "22 см" },
+      ],
+    },
+  },
 ];
 
 const catalogSections = [
