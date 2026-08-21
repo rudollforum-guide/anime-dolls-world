@@ -6,10 +6,27 @@ import { siteConfig } from "@/data/site";
 
 const galleryModels: GalleryModel[] = [
   {
-    name: "155cm/5ft1 I-cup Silicone Sex Doll – LZ01",
-    details: "155cm · Head #LZ01",
+    name: "LZ01",
+    details: "155cm",
     folder: "155cm-lz01",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "155 см",
+      material: "силикон",
+      weight: "30 кг",
+      specs: [
+        { label: "Размер груди", value: "I Cup" },
+        { label: "Грудь", value: "85 см" },
+        { label: "Талия", value: "50,5 см" },
+        { label: "Бёдра", value: "95 см" },
+        { label: "Плечи", value: "29 см" },
+        { label: "Длина руки", value: "58 см" },
+        { label: "Длина ноги", value: "82 см" },
+        { label: "Стопа", value: "20 см" },
+        { label: "Голова", value: "LZ01" },
+        { label: "Тип головы", value: "Hard Silicone / Soft Silicone" },
+      ],
+    },
   },
 ];
 
