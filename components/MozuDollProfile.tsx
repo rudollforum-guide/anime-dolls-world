@@ -45,11 +45,72 @@ const purchaseChecks = [
 ] as const;
 
 const galleryModels: GalleryModel[] = [
-  { name: "Mint", details: "141cm", folder: "141cm-mint", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Spark's", details: "148cm", folder: "148cm-sparks", photos: ["01.png", "02.png", "03.png"] },
-  { name: "Erin", details: "150cm", folder: "150cm-erin", photos: ["01.png", "02.png", "03.png"] },
-  { name: "Lilisi", details: "150cm", folder: "150cm-lilisi", photos: ["01.png", "02.png", "03.png"] },
-  { name: "Yuichi Hiiragi", details: "150cm", folder: "150cm-yuichi-hiiragi", photos: ["01.png", "02.png", "03.png"] },
+  {
+    name: "Mint",
+    details: "141cm",
+    folder: "141cm-mint",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "141 см",
+      material: ["Голова — PVC / vinyl-type", "Тело — TPE / MTPE / силикон"],
+      weight: ["около 22–23 кг", "TPE-конфигурация"],
+      specs: [
+        { label: "Грудь", value: "57 см" },
+        { label: "Под грудью", value: "48 см" },
+        { label: "Талия", value: "47 см" },
+        { label: "Бёдра", value: "76 см" },
+        { label: "Плечи", value: "20 см" },
+        { label: "Длина руки", value: "50 см" },
+        { label: "Стопа", value: "20 см" },
+      ],
+    },
+  },
+  {
+    name: "Spark's",
+    details: "148cm",
+    folder: "148cm-sparks",
+    photos: ["01.png", "02.png", "03.png"],
+    characteristics: {
+      height: "148 см",
+      material: ["Тело — TPE / MTPE", "Голова — hard-shell / silicone head option"],
+      weight: ["около 27 кг", "TPE-платформа"],
+      specs: [{ label: "Размер груди", value: "C Cup" }],
+    },
+  },
+  {
+    name: "Erin",
+    details: "150cm",
+    folder: "150cm-erin",
+    photos: ["01.png", "02.png", "03.png"],
+    characteristics: {
+      height: "150 см",
+      material: "Тело — TPE / MTPE / силикон",
+      weightLabel: "Вес тела",
+      weight: "28 кг",
+    },
+  },
+  {
+    name: "Lilisi",
+    details: "150cm",
+    folder: "150cm-lilisi",
+    photos: ["01.png", "02.png", "03.png"],
+    characteristics: {
+      height: "150 см",
+      material: ["Голова — Soft Vinyl", "Тело — TPE / MTPE / силикон"],
+      weight: ["23,5 кг", "TPE-конфигурация"],
+      specs: [{ label: "Размер груди", value: "M Cup" }],
+    },
+  },
+  {
+    name: "Kanzaki Sakura",
+    details: "150cm",
+    folder: "150cm-yuichi-hiiragi",
+    photos: ["01.png", "02.png", "03.png"],
+    characteristics: {
+      height: "150 см",
+      material: ["Голова — PVC", "Тело — TPE / MTPE / силикон"],
+    },
+  },
 ];
 
 export function MozuDollProfile() {

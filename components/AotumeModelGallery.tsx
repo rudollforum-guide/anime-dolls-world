@@ -13,8 +13,8 @@ export type GalleryModel = {
     height: string;
     material: string | string[];
     weightLabel?: string;
-    weight: string | string[];
-    specs: Array<{ label: string; value: string }>;
+    weight?: string | string[];
+    specs?: Array<{ label: string; value: string }>;
   };
 };
 
@@ -200,12 +200,14 @@ function ModelCharacteristics({ model }: { model: GalleryModel }) {
       <dl className="aotume-model-characteristics-primary">
         <div><dt>Рост</dt><dd>{height}</dd></div>
         <div><dt>Материал</dt><dd><CharacteristicValue value={material} /></dd></div>
-        <div><dt>{weightLabel}</dt><dd><CharacteristicValue value={weight} /></dd></div>
+        {weight && <div><dt>{weightLabel}</dt><dd><CharacteristicValue value={weight} /></dd></div>}
       </dl>
-      <details className="aotume-model-characteristics-details">
-        <summary>Все характеристики</summary>
-        <dl>{specs.map((spec) => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}</dl>
-      </details>
+      {specs && specs.length > 0 && (
+        <details className="aotume-model-characteristics-details">
+          <summary>Все характеристики</summary>
+          <dl>{specs.map((spec) => <div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}</dl>
+        </details>
+      )}
     </div>
   );
 }
