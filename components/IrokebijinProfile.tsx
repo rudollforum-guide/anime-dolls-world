@@ -79,7 +79,6 @@ const galleryModels: GalleryModel[] = [
       material: ["Голова — S-TPE", "Тело — Super Soft Platinum TPE / S-TPE"],
       weight: "35 кг",
       specs: [
-        { label: "Вес отправления", value: "43 кг" },
         { label: "Размер груди", value: "E Cup" },
         { label: "Грудь", value: "91 см" },
         { label: "Под грудью", value: "55 см" },
@@ -100,7 +99,6 @@ const galleryModels: GalleryModel[] = [
       material: "Extra Soft Platinum TPE / S-TPE",
       weight: "32 кг",
       specs: [
-        { label: "Вес отправления", value: "43 кг" },
         { label: "Размер груди", value: "C Cup" },
         { label: "Грудь", value: "85,3 см" },
         { label: "Под грудью", value: "58,4 см" },

@@ -42,7 +42,6 @@ const rionMeasurements = [
 ];
 
 const kaguyaMeasurements = [
-  { label: "Вес отправления", value: "36 кг" },
   { label: "Размер груди", value: "H Cup" },
   { label: "Грудь", value: "76 см" },
   { label: "Под грудью", value: "45 см" },
