@@ -173,7 +173,6 @@ export function WMDollProfile() {
         notice="Ниже представлены отдельные аниме-модели WM Doll для знакомства с этим направлением бренда. Это не полный каталог. Актуальный ассортимент и доступность конкретных конфигураций следует уточнять у продавца или производителя. Новые подтверждённые модели будут добавляться в галерею по мере появления информации."
         galleryRoot="/images/brands/wm-doll/gallery"
         models={galleryModels}
-        layout="triptych"
       />
 
       <section className="section alt">

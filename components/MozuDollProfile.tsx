@@ -203,7 +203,6 @@ export function MozuDollProfile() {
         notice="Ниже представлены некоторые ростовые модели MozuDoll для знакомства с аниме-направлением бренда. Это не полный каталог производителя. В Anime Dolls World основной акцент сделан на полноразмерных моделях; компактные серии MozuDoll сохраняются в профиле для полноты информации о бренде."
         galleryRoot="/images/brands/mozudoll/gallery"
         models={galleryModels}
-        layout="triptych"
       />
 
       <section className="section">

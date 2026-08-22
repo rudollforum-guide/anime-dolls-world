@@ -207,7 +207,6 @@ export function KiradolsProfile() {
         notice="Ниже представлены некоторые ростовые модели Kiradols для знакомства с текущим аниме-направлением бренда. Это демонстрационная подборка, а не полный каталог производителя. В Anime Dolls World основной акцент сделан на полноразмерных моделях. Актуальные характеристики, комплектацию и доступность следует проверять на официальном сайте Kiradols или у продавца."
         galleryRoot="/images/brands/kiradols/gallery"
         models={galleryModels}
-        layout="triptych"
       />
 
       <section className="section"><div className="container aotume-custom-card">

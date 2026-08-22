@@ -166,7 +166,6 @@ export function RosrettyDollProfile() {
         notice="Ниже представлены отдельные стилизованные модели Rosretty Doll для знакомства с аниме- и фурри-направлениями бренда. Это не полный каталог продукции. Если появятся новые подтверждённые модели этих направлений, галереи будут дополнены. Актуальный ассортимент следует проверять на официальном сайте производителя."
         galleryRoot="/images/brands/rosretty-doll/gallery/anime"
         models={animeGalleryModels}
-        layout="triptych"
       />
 
       <BrandModelGallery
@@ -176,7 +175,6 @@ export function RosrettyDollProfile() {
         description="Пример антропоморфной модели из фурри-направления Rosretty Doll."
         galleryRoot="/images/brands/rosretty-doll/gallery/furry"
         models={furryGalleryModels}
-        layout="triptych"
         tone="contrast"
       />
 

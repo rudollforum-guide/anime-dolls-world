@@ -114,7 +114,6 @@ export function YearndollProfile() {
         notice="Ниже представлена одна найденная стилизованная модель Yearndoll для знакомства с направлением бренда. Это не полный каталог. Официальный сайт производителя нами не подтверждён; ссылка ниже ведёт на сторонний магазин, где опубликована страница этой модели. Её можно использовать как ориентир при уточнении заказа у выбранного продавца."
         galleryRoot="/images/brands/yearndoll/gallery"
         models={galleryModels}
-        layout="triptych"
         externalLink={{
           href: "https://www.rosemarydoll.com/es/product/155cm-5ft1-i-cup-silicone-sex-doll-lz01-2/",
           label: "Посмотреть эту модель у RosemaryDoll",

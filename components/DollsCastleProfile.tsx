@@ -265,7 +265,6 @@ export function DollsCastleProfile() {
         notice="Ниже представлены некоторые модели Dolls Castle для знакомства с аниме- и фурри-направлениями бренда. Это не полный каталог продукции. В этой подборке основной акцент сделан на ростовых моделях; компактные и малые форматы не включены. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
         galleryRoot="/images/brands/dolls-castle/gallery/anime"
         models={animeGalleryModels}
-        layout="triptych"
         tone="contrast"
       />
 
@@ -276,7 +275,6 @@ export function DollsCastleProfile() {
         description="Примеры ростовых антропоморфных и фурри-моделей Dolls Castle."
         galleryRoot="/images/brands/dolls-castle/gallery/furry"
         models={furryGalleryModels}
-        layout="triptych"
       />
 
       <section className="section alt">

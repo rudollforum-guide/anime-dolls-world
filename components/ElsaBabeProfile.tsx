@@ -411,7 +411,6 @@ export function ElsaBabeProfile() {
         notice="Ниже представлены некоторые модели Elsa Babe для знакомства с аниме- и фурри-направлениями бренда. Это не полный каталог продукции. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
         galleryRoot="/images/brands/elsa-babe/gallery/anime"
         models={animeGalleryModels}
-        layout="triptych"
       />
 
       <BrandModelGallery
@@ -421,7 +420,6 @@ export function ElsaBabeProfile() {
         description="Подборка антропоморфных и фурри-моделей Elsa Babe."
         galleryRoot="/images/brands/elsa-babe/gallery/furry"
         models={furryGalleryModels}
-        layout="triptych"
         tone="contrast"
       />
 

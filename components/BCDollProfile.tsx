@@ -130,7 +130,6 @@ export function BCDollProfile() {
           notice="Ниже представлены некоторые модели BC Doll для знакомства с аниме-направлением бренда. Это не полный каталог. Актуальный ассортимент и новые модели следует проверять на официальном сайте производителя."
           galleryRoot="/images/brands/bc-doll/gallery"
           models={galleryModels}
-          layout="triptych"
           tone="contrast"
         />
 

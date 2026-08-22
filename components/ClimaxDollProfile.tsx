@@ -236,7 +236,6 @@ export function ClimaxDollProfile() {
         notice="Ниже представлены некоторые стилизованные модели ClimaxDoll, относящиеся к anime- и furry-направлениям. Это не полный каталог производителя. ClimaxDoll также выпускает компактные и малые модели, однако основной фокус Anime Dolls World сделан на ростовых форматах. Ориентир Anime Dolls World примерно 140–170+ см не является жёстким фильтром: отдельные интересные модели, такие как Barza 120cm, также могут включаться в демонстрационные подборки."
         galleryRoot="/images/brands/climaxdoll/gallery/anime"
         models={animeGalleryModels}
-        layout="triptych"
       />
 
       <BrandModelGallery
@@ -246,7 +245,6 @@ export function ClimaxDollProfile() {
         description="Отдельные антропоморфные и furry-модели ClimaxDoll."
         galleryRoot="/images/brands/climaxdoll/gallery/furry"
         models={furryGalleryModels}
-        layout="triptych"
         tone="contrast"
       />
 

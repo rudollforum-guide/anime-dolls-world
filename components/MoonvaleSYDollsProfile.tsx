@@ -228,7 +228,6 @@ export function MoonvaleSYDollsProfile() {
         notice="Ниже представлены некоторые модели бренда для ознакомления. Это не полный каталог продукции. Полный список моделей и актуальные новинки доступны на официальном сайте производителя."
         galleryRoot="/images/brands/moonvale-sy-dolls/gallery"
         models={galleryModels}
-        layout="triptych"
       />
 
       <section className="section alt">
