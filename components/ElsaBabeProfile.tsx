@@ -251,11 +251,101 @@ const animeGalleryModels: GalleryModel[] = [
 ];
 
 const furryGalleryModels: GalleryModel[] = [
-  { name: "Aida Rina", folder: "aida-rina", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Inujima Haruko", folder: "inujima-haruko", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Kako Motoko", folder: "kako-motoko", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Morikawa Yuki", folder: "morikawa-yuki", photos: ["01.jpg", "02.jpg", "03.jpg"] },
-  { name: "Nekoha Aya", folder: "nekoha-aya", photos: ["01.jpg", "02.jpg", "03.jpg"] },
+  {
+    name: "Aida Rina",
+    details: "ZHB002 · 150cm",
+    folder: "aida-rina",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "150 см",
+      material: "Platinum Silicone",
+      weight: "27,5 кг",
+      specs: [
+        { label: "Грудь", value: "72 см" },
+        { label: "Под грудью", value: "58 см" },
+        { label: "Талия", value: "50 см" },
+        { label: "Бёдра", value: "79 см" },
+        { label: "Плечи", value: "28 см" },
+        { label: "Длина руки", value: "40 см" },
+        { label: "Длина ноги", value: "76 см" },
+        { label: "Стопа", value: "21 см" },
+      ],
+    },
+  },
+  {
+    name: "Inujima Haruko",
+    details: "ZHB003 · 150cm",
+    folder: "inujima-haruko",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "150 см",
+      material: "Platinum Silicone",
+      weight: "27,5 кг",
+      specs: [
+        { label: "Грудь", value: "72 см" },
+        { label: "Под грудью", value: "58 см" },
+        { label: "Талия", value: "50 см" },
+        { label: "Бёдра", value: "79 см" },
+        { label: "Плечи", value: "28 см" },
+        { label: "Длина руки", value: "40 см" },
+        { label: "Длина ноги", value: "76 см" },
+        { label: "Стопа", value: "21 см" },
+      ],
+    },
+  },
+  {
+    name: "Kako Motoko",
+    details: "AHR007 · 148cm",
+    folder: "kako-motoko",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "66 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Morikawa Yuki",
+    details: "ZHB001 · 150cm",
+    folder: "morikawa-yuki",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "150 см",
+      material: "Platinum Silicone",
+      weight: "27,5 кг",
+      specs: [
+        { label: "Грудь", value: "72 см" },
+        { label: "Под грудью", value: "58 см" },
+        { label: "Талия", value: "50 см" },
+        { label: "Бёдра", value: "79 см" },
+        { label: "Плечи", value: "28 см" },
+        { label: "Длина руки", value: "40 см" },
+        { label: "Длина ноги", value: "76 см" },
+        { label: "Стопа", value: "21 см" },
+      ],
+    },
+  },
+  {
+    name: "Nekoha Aya",
+    details: "RAD037 · 148cm",
+    folder: "nekoha-aya",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "66 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
 ];
 
 const expertise = ["3D-анимация", "игровая графика", "кинопроизводство", "концепт-дизайн", "скульптура", "3D-моделирование", "разработка каркасов", "BJD-стилистика", "аниме-макияж"];
