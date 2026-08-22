@@ -6,7 +6,7 @@ import { siteConfig } from "@/data/site";
 import { BrandEmblem } from "@/components/BrandEmblem";
 
 const links = [
-  ["Бренды", "/brands/"], ["Аниме", "/anime-dolls/"], ["Фурри", "/furry-dolls/"],
+  ["Бренды", "/brands/"], ["Галерея", "/gallery/"], ["Аниме", "/anime-dolls/"], ["Фурри", "/furry-dolls/"],
   ["Магазины", "/stores/"], ["Выбор", "/buying/"], ["Уход", "/care/"], ["О проекте", "/about/"],
 ];
 

@@ -75,11 +75,20 @@ h1,h2 { font-family:"Playfair Display",Georgia,serif; line-height:1.08; letter-s
 .category-hero-card:focus-visible { outline:3px solid var(--gold);outline-offset:4px; }
 .gallery-section { background:radial-gradient(circle at 15% 15%,rgba(185,150,255,.09),transparent 34%),linear-gradient(180deg,#121017,#14101a);border-top:1px solid rgba(185,150,255,.07);border-bottom:1px solid rgba(185,150,255,.07); }
 .image-gallery { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px; }
-.image-gallery-card { position:relative;isolation:isolate;min-width:0;aspect-ratio:2/3;margin:0;overflow:hidden;border:1px solid rgba(185,150,255,.2);border-radius:24px;background:#21182a;box-shadow:0 16px 42px rgba(0,0,0,.22); }
+.image-gallery-card { position:relative;isolation:isolate;min-width:0;aspect-ratio:2/3;margin:0;overflow:hidden;border:1px solid rgba(185,150,255,.2);border-radius:24px;background:#21182a;box-shadow:0 16px 42px rgba(0,0,0,.22);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease; }
 .image-gallery-image { z-index:-2;object-fit:cover;object-position:center;transition:transform .5s ease,filter .4s ease; }
-.image-gallery-shade { position:absolute;z-index:-1;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(17,10,24,.03),rgba(23,12,31,.16));transition:background .4s ease;pointer-events:none; }
+.image-gallery-shade { position:absolute;z-index:-1;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(17,10,24,.03) 28%,rgba(18,9,26,.92) 100%);transition:background .4s ease;pointer-events:none; }
+.image-gallery-copy { position:absolute;right:0;bottom:0;left:0;display:grid;gap:4px;padding:20px;color:white;text-shadow:0 2px 16px rgba(0,0,0,.78);pointer-events:none; }
+.image-gallery-copy strong { overflow-wrap:anywhere;font-family:"Playfair Display",Georgia,serif;font-size:22px;line-height:1.1;letter-spacing:-.02em; }
+.image-gallery-copy>span:last-child { color:#d8d0df;font-size:12px;font-weight:700; }
+.image-gallery-badge { width:max-content;margin-bottom:4px;padding:4px 8px;border:1px solid rgba(255,255,255,.2);border-radius:99px;background:rgba(15,10,20,.68);font-size:9px;font-weight:800;letter-spacing:.11em;line-height:1.2;text-transform:uppercase; }
+.image-gallery-badge.is-anime { color:#f4c4e0; }
+.image-gallery-badge.is-furry { color:#d9c8ff; }
+.image-gallery-card:hover,.image-gallery-card:focus-visible { transform:translateY(-4px);border-color:rgba(242,149,201,.42);box-shadow:0 23px 54px rgba(0,0,0,.32),0 0 32px rgba(185,150,255,.12); }
 .image-gallery-card:hover .image-gallery-image { transform:scale(1.045);filter:saturate(1.04); }
-.image-gallery-card:hover .image-gallery-shade { background:linear-gradient(180deg,rgba(16,9,22,.12),rgba(18,9,26,.34)); }
+.image-gallery-card:hover .image-gallery-shade,.image-gallery-card:focus-visible .image-gallery-shade { background:linear-gradient(180deg,rgba(16,9,22,.1) 24%,rgba(18,9,26,.97) 100%); }
+.image-gallery-card:focus-visible { outline:3px solid var(--gold);outline-offset:4px; }
+.gallery-home-action { display:flex;justify-content:center;margin-top:32px; }
 .brand-card:hover,.store-card:hover { transform:translateY(-5px); border-color:rgba(242,149,201,.35); }
 .brand-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 .brand-card { background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:25px; display:grid; grid-template-columns:64px 1fr; gap:20px; transition:.25s; }
@@ -331,7 +340,8 @@ html.lightbox-open,html.lightbox-open body { overflow:hidden;overscroll-behavior
 .care-storage-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }.care-storage-grid section { padding:31px;border:1px solid var(--line);border-radius:27px;background:var(--panel); }.care-storage-grid .good { border-color:rgba(185,150,255,.24); }.care-storage-grid .bad { border-color:rgba(231,199,125,.24); }.care-storage-grid h3 { font-size:27px; }.care-storage-grid li { margin-bottom:8px;color:var(--muted); }.care-position-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px; }.care-position-grid section { padding:24px;border:1px solid var(--line);border-radius:22px;background:#1b1722; }.care-position-grid h3 { font-size:24px; }.care-position-grid p { color:var(--muted);font-size:13px; }.care-inspection-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:10px; }.care-inspection-grid div { display:flex;align-items:center;gap:11px;min-height:58px;padding:11px 13px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:#d8cedc;font-weight:700; }.care-inspection-grid span { color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:18px; }
 .care-stop-card,.care-help-card { padding:32px;border:1px solid var(--line);border-radius:27px;background:var(--panel); }.care-stop-card { border-color:rgba(242,149,201,.24); }.care-help-card { border-color:rgba(231,199,125,.24); }.care-stop-card li,.care-help-card li { margin-bottom:8px;color:var(--muted); }.care-memo-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px; }.care-memo-grid section { padding:28px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,#211d25,#17151b); }.care-memo-grid h3 { font-size:24px; }.care-memo-grid p { color:#cfc6d2;line-height:1.75; }
 .page-hero { padding:56px 0 72px;background:radial-gradient(circle at 80% 20%,rgba(185,150,255,.13),transparent 27%),#15121c;border-bottom:1px solid var(--line); }
-.brands-page-hero,.stores-page-hero,.about-page-hero,.privacy-page-hero,.disclaimer-page-hero,.anime-dolls-page-hero,.furry-dolls-page-hero,.buying-page-hero,.care-page-hero { position:relative;isolation:isolate;border-bottom-color:transparent;background-color:#15121c;background-repeat:no-repeat;background-size:cover;background-position:center 42%; }
+.brands-page-hero,.stores-page-hero,.about-page-hero,.privacy-page-hero,.disclaimer-page-hero,.anime-dolls-page-hero,.furry-dolls-page-hero,.buying-page-hero,.care-page-hero,.gallery-page-hero { position:relative;isolation:isolate;border-bottom-color:transparent;background-color:#15121c;background-repeat:no-repeat;background-size:cover;background-position:center 42%; }
+.gallery-page-hero { padding:48px 0 60px;background-image:radial-gradient(circle at 78% 24%,rgba(185,150,255,.18),transparent 28%),radial-gradient(circle at 62% 80%,rgba(242,149,201,.1),transparent 30%),linear-gradient(135deg,#15111c,#201428 58%,#111017); }
 .about-page-hero { background-position:50% 30%; }
 .privacy-page-hero { background-position:78% 35%; }
 .disclaimer-page-hero { background-position:78% 35%; }
@@ -339,10 +349,31 @@ html.lightbox-open,html.lightbox-open body { overflow:hidden;overscroll-behavior
 .furry-dolls-page-hero { background-image:url("/images/furry/furry-hero.png");background-position:75% 40%; }
 .buying-page-hero { background-image:url("/images/buying/buying-hero.png");background-position:72% 42%; }
 .care-page-hero { background-image:url("/images/care/care-hero.png");background-position:74% 42%; }
-.brands-page-hero:before,.stores-page-hero:before,.about-page-hero:before,.privacy-page-hero:before,.disclaimer-page-hero:before,.anime-dolls-page-hero:before,.furry-dolls-page-hero:before,.buying-page-hero:before,.care-page-hero:before { content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(90deg,rgba(12,9,17,.97) 0%,rgba(14,10,20,.91) 34%,rgba(14,10,20,.5) 62%,rgba(12,9,17,.2) 100%),linear-gradient(180deg,rgba(12,9,17,.08),rgba(12,9,17,.42));pointer-events:none; }
-.brands-page-hero:after,.stores-page-hero:after,.about-page-hero:after,.privacy-page-hero:after,.disclaimer-page-hero:after,.anime-dolls-page-hero:after,.furry-dolls-page-hero:after,.buying-page-hero:after,.care-page-hero:after { content:"";position:absolute;z-index:0;right:0;bottom:-1px;left:0;height:88px;background:linear-gradient(180deg,transparent,rgba(17,16,23,.72) 68%,#111017);pointer-events:none; }
-.brands-page-hero .container,.stores-page-hero .container,.about-page-hero .container,.privacy-page-hero .container,.disclaimer-page-hero .container,.anime-dolls-page-hero .container,.furry-dolls-page-hero .container,.buying-page-hero .container,.care-page-hero .container { position:relative;z-index:1; }
+.brands-page-hero:before,.stores-page-hero:before,.about-page-hero:before,.privacy-page-hero:before,.disclaimer-page-hero:before,.anime-dolls-page-hero:before,.furry-dolls-page-hero:before,.buying-page-hero:before,.care-page-hero:before,.gallery-page-hero:before { content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(90deg,rgba(12,9,17,.97) 0%,rgba(14,10,20,.91) 34%,rgba(14,10,20,.5) 62%,rgba(12,9,17,.2) 100%),linear-gradient(180deg,rgba(12,9,17,.08),rgba(12,9,17,.42));pointer-events:none; }
+.brands-page-hero:after,.stores-page-hero:after,.about-page-hero:after,.privacy-page-hero:after,.disclaimer-page-hero:after,.anime-dolls-page-hero:after,.furry-dolls-page-hero:after,.buying-page-hero:after,.care-page-hero:after,.gallery-page-hero:after { content:"";position:absolute;z-index:0;right:0;bottom:-1px;left:0;height:88px;background:linear-gradient(180deg,transparent,rgba(17,16,23,.72) 68%,#111017);pointer-events:none; }
+.brands-page-hero .container,.stores-page-hero .container,.about-page-hero .container,.privacy-page-hero .container,.disclaimer-page-hero .container,.anime-dolls-page-hero .container,.furry-dolls-page-hero .container,.buying-page-hero .container,.care-page-hero .container,.gallery-page-hero .container { position:relative;z-index:1; }
 .page-hero h1 { font-size:clamp(46px,7vw,78px);max-width:900px;margin-bottom:20px; }
+.gallery-page-hero h1 { font-size:clamp(44px,6vw,70px); }
+.gallery-directory-section { background:radial-gradient(circle at 14% 10%,rgba(185,150,255,.08),transparent 28%),var(--bg); }
+.gallery-directory-head { display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:30px; }
+.gallery-directory-head h2 { max-width:720px;margin:0;font-size:clamp(34px,5vw,54px); }
+.gallery-directory-head>p { max-width:440px;margin:0;color:var(--muted); }
+.gallery-filters { position:relative;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:14px;padding:18px;border:1px solid var(--line);border-radius:22px;background:rgba(29,24,37,.86);box-shadow:0 14px 38px rgba(0,0,0,.18); }
+.gallery-category-filters { display:flex;flex-wrap:wrap;gap:8px; }
+.gallery-category-filters button { min-height:44px;padding:0 17px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.035);cursor:pointer;font-size:13px;font-weight:800;transition:background .2s,border-color .2s,transform .2s; }
+.gallery-category-filters button:hover { transform:translateY(-1px);border-color:rgba(242,149,201,.35); }
+.gallery-category-filters button.is-active { border-color:rgba(185,150,255,.5);background:linear-gradient(135deg,rgba(185,150,255,.22),rgba(242,149,201,.14));color:white;box-shadow:0 0 24px rgba(185,150,255,.1); }
+.gallery-category-filters button:focus-visible,.gallery-brand-filter select:focus-visible { outline:3px solid var(--gold);outline-offset:3px; }
+.gallery-brand-filter { display:grid;gap:5px;min-width:230px; }
+.gallery-brand-filter span { color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+.gallery-brand-filter select { min-height:44px;width:100%;padding:0 38px 0 13px;border:1px solid var(--line);border-radius:13px;background:#211b2c;color:var(--ink);cursor:pointer; }
+.gallery-result-count { margin:0 0 20px;color:var(--muted);font-size:13px; }
+.gallery-browser-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px; }
+.gallery-load-more { display:flex;justify-content:center;margin-top:34px; }
+.gallery-load-more .button { min-width:190px; }
+.gallery-empty-state { padding:54px 24px;border:1px dashed rgba(185,150,255,.32);border-radius:24px;background:rgba(185,150,255,.045);text-align:center; }
+.gallery-empty-state h2 { margin-bottom:10px;font-size:30px; }
+.gallery-empty-state p { margin-bottom:24px;color:var(--muted); }
 .lede { color:#cfc7d4;font-size:18px;max-width:780px; }
 .brand-profile-icon { width:320px;height:320px;justify-self:center;align-self:center;padding:6px;overflow:hidden;border:1px solid rgba(231,199,125,.44);border-radius:42px;background:linear-gradient(145deg,rgba(242,149,201,.16),rgba(185,150,255,.12));box-shadow:0 34px 78px rgba(0,0,0,.42),0 0 68px rgba(185,150,255,.22); }
 .brand-profile-icon img { display:block;width:100%;height:100%;border-radius:35px;object-fit:cover; }
@@ -967,6 +998,8 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .hero:before { background:linear-gradient(90deg,rgba(14,12,19,.98) 0%,rgba(15,12,21,.91) 52%,rgba(18,13,25,.48) 78%,rgba(11,9,15,.2) 100%); }
   .direction-grid { grid-template-columns:1fr; }
   .image-gallery { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .gallery-browser-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .gallery-directory-head { align-items:flex-start;flex-direction:column; }
   .brand-grid { grid-template-columns:1fr; }
   .content-grid { grid-template-columns:1fr; }
   .info-card { position:static; }
@@ -1052,7 +1085,18 @@ html[data-age-confirmed] .age-layer { visibility:hidden;opacity:0; }
   .hero-content { padding:80px 0; }
   .hero h1 { font-size:55px; }
   .image-gallery { grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
+  .gallery-browser-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
   .image-gallery-card { border-radius:18px; }
+  .image-gallery-copy { padding:14px 12px; }
+  .image-gallery-copy strong { font-size:17px; }
+  .image-gallery-copy>span:last-child { font-size:10px; }
+  .image-gallery-badge { padding:3px 6px;font-size:8px; }
+  .gallery-page-hero { padding:30px 0 48px; }
+  .gallery-directory-section { padding-top:70px; }
+  .gallery-filters { align-items:stretch;flex-direction:column;padding:14px; }
+  .gallery-category-filters { display:grid;grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .gallery-category-filters button { min-width:0;padding-inline:10px; }
+  .gallery-brand-filter { min-width:0;width:100%; }
   .aotume-hero { padding-bottom:62px; }
   .aotume-hero-grid,.aotume-two-column,.aotume-custom-card { grid-template-columns:1fr; }
   .aotume-moon-layout,.aotume-official-card { grid-template-columns:1fr; }.aotume-official-card dl { grid-column:1;grid-row:auto;margin-top:14px; }
