@@ -12,33 +12,241 @@ const email = "service@elsababe.com";
 const animeGalleryModels: GalleryModel[] = [
   {
     name: "Suwabe Haruka",
-    details: "140cm · M · Pink · AHR023",
+    details: "AHR023 · 140cm",
     folder: "140cm-suwabe-haruka",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "140 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "73 см" },
+        { label: "Талия", value: "42 см" },
+        { label: "Бёдра", value: "80 см" },
+      ],
+    },
   },
   {
     name: "Miyashiro Chiharu",
-    details: "148cm · L · Pink · AHR024",
+    details: "AHR024 · 148cm",
     folder: "148cm-miyashiro-chiharu",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
   },
   {
-    name: "Seino",
-    details: "151cm · L · Pink · RAD040",
+    name: "Natsuki Asuka",
+    details: "AHR012 · 148cm",
+    folder: "natsuki-asuka-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Mizuta Nina",
+    details: "AHR019 · 148cm",
+    folder: "mizuta-nina-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Kaneda Shio",
+    details: "AHR027 · 148cm",
+    folder: "kaneda-shio-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Itsuki Sango",
+    details: "AHR029 · 148cm",
+    folder: "itsuki-sango-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Hanasaka Yuka",
+    details: "RAD025 · 148cm",
+    folder: "hanasaka-yuka-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Utashiro Shiori",
+    details: "RAD028 · 148cm",
+    folder: "utashiro-shiori-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Mochizuki Rize",
+    details: "RAD045 · 148cm",
+    folder: "mochizuki-rize-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Kazama Momiji",
+    details: "RAD049 · 148cm",
+    folder: "kazama-momiji-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Yumeno Ayano",
+    details: "AHR021 · 148cm",
+    folder: "yumeno-ayano-148cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "148 см",
+      material: "Platinum Silicone",
+      weight: "25 кг",
+      specs: [
+        { label: "Грудь", value: "78 / 72 / 66 см" },
+        { label: "Талия", value: "41 см" },
+        { label: "Бёдра", value: "74 см" },
+      ],
+    },
+  },
+  {
+    name: "Seino Lemon",
+    details: "RAD040 · 151cm L",
     folder: "151cm-seino",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "151 см",
+      material: "Platinum Silicone",
+      specs: [
+        { label: "Размер тела", value: "L" },
+        { label: "Голова", value: "RAD040" },
+      ],
+    },
+  },
+  {
+    name: "Kira Chiyuki",
+    details: "RAHC017 · 160cm",
+    folder: "kira-chiyuki-160cm",
+    photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "160 см",
+      material: "Platinum Silicone",
+      weight: "34 кг",
+      specs: [
+        { label: "Грудь", value: "102 см" },
+        { label: "Талия", value: "56 см" },
+        { label: "Бёдра", value: "89 см" },
+      ],
+    },
   },
   {
     name: "Ogata Maika",
-    details: "163cm · L · Pink · AHRC032",
+    details: "AHRC032 · 163cm",
     folder: "163cm-ogata-maika",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "163 см",
+      material: "Platinum Silicone",
+      weight: "39 кг",
+      specs: [
+        { label: "Грудь", value: "100 см" },
+        { label: "Талия", value: "51 см" },
+        { label: "Бёдра", value: "100 см" },
+      ],
+    },
   },
   {
     name: "Shirai Mino",
-    details: "176cm · M · Pink Skin · AHRC033",
+    details: "AHRC033 · 176cm",
     folder: "176cm-shirai-mino",
     photos: ["01.jpg", "02.jpg", "03.jpg"],
+    characteristics: {
+      height: "176 см",
+      material: "Platinum Silicone",
+      weight: "37 кг",
+      specs: [
+        { label: "Грудь", value: "86 см" },
+        { label: "Талия", value: "55 см" },
+        { label: "Бёдра", value: "94 см" },
+      ],
+    },
   },
 ];
 
